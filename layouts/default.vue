@@ -1,10 +1,49 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="bg-gray-900">
+    <header>
+      <Navbar/>
+    </header>
+
+    <main>
+      <nuxt />
+    </main>
+
+    <Footer />
   </div>
 </template>
 
+<script>
+  import Navbar from '../components/layout/Navbar';
+  import Footer from '../components/layout/Footer';
+
+  export default {
+    components: {
+      Navbar,
+      Footer
+    }  
+  }
+</script>
+
 <style>
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #777777;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #444444;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
