@@ -14,6 +14,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.7/css/all.css' },
+    ],
+    script: [
+      { src: 'https://www.google.com/recaptcha/api.js', async: true, defer: true }
     ]
   },
   /*
