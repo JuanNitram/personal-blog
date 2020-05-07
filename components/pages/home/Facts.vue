@@ -1,6 +1,6 @@
 <template>
     <div class="mx-auto px-2 lg:px-32 pb-12 text-gray-400">
-        <div class="w-full px-5 py-12">
+        <div class="w-full px-5 py-4">
             <h1 class="text-2xl font-bold text-center lg:text-left">
                 <span class="border-b-2 border-blue-800 text-gray-100">Fun Facts</span>
             </h1>
