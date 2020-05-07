@@ -1,7 +1,7 @@
 <template>
     <div id="hero" class="block lg:flex mx-auto px-2 lg:px-72 py-12">
         <div class="w-full lg:w-1/2 flex flex-col justify-center items-center py-6">
-            <img id="personal-image" src="~/assets/img/me.png" class="rounded-full border-gray-700 w-56 h-56 lg:w-56 lg:h-96 shadow-lg"/>
+            <img id="personal-image" src="~/assets/img/me.png" class="rounded-full border-gray-700 w-56 h-56 lg:w-96 lg:h-96 shadow-lg"/>
         </div>
         <div class="w-full lg:w-1/2 flex flex-col justify-center">
             <h3 class="text-md lg:text-xl text-center lg:text-left text-gray-400">Juan Vargas</h3>
