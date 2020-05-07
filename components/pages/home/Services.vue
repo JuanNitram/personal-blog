@@ -35,3 +35,13 @@
         </div>
     </div>
 </template>
+
+<script>
+    import Title from '../../shared/Title';
+
+    export default {
+        components: {
+            Title
+        }    
+    }
+</script>

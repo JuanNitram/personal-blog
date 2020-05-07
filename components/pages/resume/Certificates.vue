@@ -1,6 +1,6 @@
 <template>
     <div class="w-full">
-        <div class="pb-6">
+        <div class="pb-0 lg:pb-6">
             <Title text="Certificates"/>
         </div>
 

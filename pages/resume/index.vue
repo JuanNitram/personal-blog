@@ -2,7 +2,7 @@
     <div id="resume" class="pt-12">
         <Breadcrumb text="Resume" />
 
-        <div class="block lg:flex px-6 lg:px-40 py-20">
+        <div class="block lg:flex px-6 lg:px-40 py-12">
             <div class="w-full lg:w-1/2 mr-0 lg:mr-4 mb-10 lg:mb-0">
                 <Education/>
             </div>
