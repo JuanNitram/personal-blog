@@ -1,6 +1,9 @@
 language: generic 
 sudo: required
 
+before_install:
+    - sudo apt-get install sshpass
+    
 deploy:
     provider: script
     script: sshpass -p $SERVER_PASSWORD ssh deploy@130.211.226.34 -o "StrictHostKeyChecking no" bash deploy.sh
