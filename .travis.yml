@@ -1,0 +1,7 @@
+language: generic 
+sudo: required
+
+deploy:
+    provider: script
+    script: sshpass -p $SERVER_PASSWORD ssh deploy@130.211.226.34 -o "StrictHostKeyChecking no" bash deploy.sh
+    

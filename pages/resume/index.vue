@@ -14,6 +14,10 @@
         <div class="block lg:flex px-6 lg:px-40 pb-20">
             <Certificates/>
         </div>
+
+        <div class="block lg:flex px-6 lg:px-40 pb-20">
+            <Skills/>
+        </div>
     </div>
 </template>
 
@@ -22,6 +26,7 @@
     import Education from '../../components/pages/resume/Education';
     import Experience from '../../components/pages/resume/Experience';
     import Certificates from '../../components/pages/resume/Certificates';
+    import Skills from '../../components/pages/resume/Skills';
 
     export default {
         transition: 'page',
@@ -30,7 +35,8 @@
             Breadcrumb,
             Education,
             Experience,
-            Certificates
+            Certificates,
+            Skills
         }
     }
 </script>
