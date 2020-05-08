@@ -50,6 +50,7 @@
                             <p class="w-full block text-4xl font-bold text-center text-gray-100">
                                 <a data-to="/" @click="handleRedirect">
                                     About Me
+                                    
                                 </a>
                             </p>
                             <p class="w-full block text-4xl font-bold text-center text-gray-100">
