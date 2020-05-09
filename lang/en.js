@@ -2,7 +2,7 @@ export default {
     description: "I'm currently a software developer, taking responsibility for tasks in both backend and frontend. I have been working the last 5 years developing systems of different requirements, such as ecommerce, people recruitment platform, business platform and different types of websites.",
     downloadCv: "Download CV",
     contactMe: "Contact Me",
-    services: 'My services',
+    services: 'Services',
     funFacts: 'Fun Facts',
     resume: 'Resume',
     yearsExperience: '5 years of experience',

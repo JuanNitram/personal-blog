@@ -2,7 +2,7 @@ export default {
     description: "Actualmente soy desarrollador de software, asumiendo la responsabilidad de las tareas tanto en backend como en frontend. He trabajado durante los últimos 5 años desarrollando sistemas de diferentes requisitos, como comercio electrónico, plataforma de reclutamiento de personas, plataforma de negocios y diferentes tipos de sitios web.",
     downloadCv: "Descargar CV",
     contactMe: "Contáctame",
-    services: "Mis servicios",
+    services: "Servicios",
     funFacts: "Datos curiosos",
     resume: 'Resumen',
     yearsExperience: '5 años de experiencia',
