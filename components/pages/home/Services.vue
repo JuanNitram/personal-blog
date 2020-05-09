@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="w-full lg:w-1/2 p-5 flex justify-between">
-                <i class="fas fa-file-code fa-2x px-5 lg:px-0 lg:pb-0 text-blue-800 text-blue-800"></i>
+                <i class="far fa-file-code fa-2x px-5 lg:px-0 lg:pb-0 text-blue-800 text-blue-800"></i>
                 <div class="px-0 lg:px-8 text-left">
                     <h1 class="text-md text-gray-100 font-bold pb-2">Software Outsourcing</h1>
                     <p>
