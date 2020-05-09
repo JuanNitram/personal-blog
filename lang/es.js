@@ -15,9 +15,6 @@ export default {
     secondEducationSchool: 'Universidad de la República',
     secondEducationTitle: 'Computer Engineering',
     secondEducationDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam repudiandae praesentium totam deserunt similique omnis.',
-    thirdEducationSchool: '',
-    thirdEducationTitle: '',
-    thirdEducationDescription: '',
     
     experience: 'Experiencia',
     firstExperienceCompany: 'Freelancer',
