@@ -1,6 +1,6 @@
 <template>
     <div id="resume" class="pt-12">
-        <Breadcrumb text="Resume" secondary-text="5 years of experience" />
+        <Breadcrumb :text="$t('resume')" :secondary-text="$t('yearsExperience')" />
 
         <div class="block lg:flex px-6 lg:px-40 py-12">
             <div class="w-full lg:w-1/2 mr-0 lg:mr-4 mb-10 lg:mb-0">
