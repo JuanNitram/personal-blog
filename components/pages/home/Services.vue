@@ -5,7 +5,9 @@
         </div>
         <div class="block lg:flex">
             <div class="w-full lg:w-1/2 p-5 flex justify-between">
-                <i class="fas fa-desktop fa-2x px-5 lg:px-0 lg:pb-0 text-blue-800 text-blue-800"></i>
+                <div class="w-48 lg:w-32">
+                    <i class="fas fa-desktop mr-2 lg:px-0 lg:pb-0 text-blue-800 text-blue-800" style="font-size: 1.6em"></i>
+                </div>
                 <div class="px-0 lg:px-8 text-left">
                     <h1 class="text-md text-gray-100 font-bold pb-2">Web Development</h1>
                     <p>
@@ -14,7 +16,9 @@
                 </div>
             </div>
             <div class="w-full lg:w-1/2 p-5 flex justify-between">
-                <i class="fas fa-mobile-alt fa-2x px-5 lg:px-0 lg:pb-0 text-blue-800 text-blue-800"></i>
+                <div class="w-48 lg:w-32">
+                    <i class="fas fa-mobile-alt fa-2x mr-2 lg:px-0 lg:pb-0 text-blue-800 text-blue-800"></i>
+                </div>
                 <div class="px-0 lg:px-8 text-left">
                     <h1 class="text-md text-gray-100 font-bold pb-2">Mobile Development</h1>
                     <p>
@@ -24,19 +28,12 @@
             </div>
         </div>
         <div class="block lg:flex">
-            <div class="w-full lg:w-1/2 p-5 flex justify-between">
-                <i class="far fa-file-code fa-2x px-5 lg:px-0 lg:pb-0 text-blue-800 text-blue-800"></i>
+            <div class="w-full lg:w-1/2 p-5 flex justify-center">
+                <div class="w-48 lg:w-32">
+                    <i class="far fa-file-code fa-2x mr-2 lg:px-0 lg:pb-0 text-blue-800 text-blue-800"></i>
+                </div>
                 <div class="px-0 lg:px-8 text-left">
                     <h1 class="text-md text-gray-100 font-bold pb-2">Product Development</h1>
-                    <p>
-                        Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex.
-                    </p>
-                </div>
-            </div>
-            <div class="w-full lg:w-1/2 p-5 flex justify-between">
-                <i class="far fa-file-code fa-2x px-5 lg:px-0 lg:pb-0 text-blue-800 text-blue-800"></i>
-                <div class="px-0 lg:px-8 text-left">
-                    <h1 class="text-md text-gray-100 font-bold pb-2">Software Outsourcing</h1>
                     <p>
                         Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex.
                     </p>
