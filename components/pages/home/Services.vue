@@ -1,5 +1,5 @@
 <template>
-    <div id="services" class="mx-auto px-2 lg:px-32 text-gray-400" data-aos="fade">
+    <div id="services" class="mx-auto px-2 lg:px-32 text-gray-400">
         <div class="w-full px-5 pb-4">
             <Title :text="$t('services')"/>
         </div>
