@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <div class="block lg:hidden px-0 lg:px-5">
+        <div class="block lg:hidden px-0 lg:px-5 overflow-hidden">
             <no-ssr>
                 <Flickity :options="options">
                     <div class="carousel-cell"><i class="fab fa-laravel fa-5x"></i></div>
