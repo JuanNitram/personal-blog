@@ -1,5 +1,9 @@
 <template>
   <div class="bg-gray-900">
+    <transition name="page">
+      <Preloader v-show="loading"/>
+    </transition>
+
     <header>
       <Navbar/>
     </header>
@@ -15,12 +19,26 @@
 <script>
   import Navbar from '../components/layout/Navbar';
   import Footer from '../components/layout/Footer';
+  import Preloader from '../components/layout/Preloader';
 
   export default {
     components: {
       Navbar,
-      Footer
-    }  
+      Footer,
+      Preloader
+    },
+    
+    data() {
+      return {
+        loading: true
+      }
+    },
+
+    mounted() {
+      setTimeout(() => {
+        this.loading = false
+      }, 3000)
+    }
   }
 </script>
 
