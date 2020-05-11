@@ -43,13 +43,13 @@
                     <div class="modal-content h-full container mx-auto h-auto text-left p-4">
                         <div class="flex h-full justify-between items-center">
                             <div class="block mx-auto">
-                                <p class="w-full block text-4xl font-bold text-center text-blue-800 mb-5">
+                                <p class="w-full block text-4xl font-bold text-center text-blue-800">
                                     <a data-to="/" @click="handleRedirect">
                                         About Me
                                         
                                     </a>
                                 </p>
-                                <p class="w-full block text-4xl font-bold text-center text-blue-800 mb-5">
+                                <p class="w-full block text-4xl font-bold text-center text-blue-800">
                                     <a data-to="/resume" @click="handleRedirect">
                                         Resume
                                     </a>
@@ -59,7 +59,7 @@
                                         Blog
                                     </a>
                                 </p> -->
-                                <p class="w-full block text-4xl font-bold text-center text-blue-800 mb-5">
+                                <p class="w-full block text-4xl font-bold text-center text-blue-800">
                                     <a data-to="/contact" @click="handleRedirect">
                                         Contact
                                     </a>
