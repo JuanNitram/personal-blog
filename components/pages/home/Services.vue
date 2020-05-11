@@ -11,7 +11,7 @@
                 <div class="px-0 lg:px-8 text-left">
                     <h1 class="text-md text-gray-100 font-bold pb-2">Web Design & Development</h1>
                     <p>
-                        As a software developer I'm trained to implement quality web applications, using the latest technologies of the moment.
+                        Development of quality web applications, scalable and maintainable, using the latest technologies of the moment such as VueJs.
                     </p>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                 <div class="px-0 lg:px-8 text-left">
                     <h1 class="text-md text-gray-100 font-bold pb-2">Mobile Development</h1>
                     <p>
-                        Formed for the development of native mobile applications that provide high quality using the most used technologies of the moment
+                         Development of native mobile applications that provide high quality using the most used technologies such as NativeScript & React Native.
                     </p>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 <template>
     <div id="contact" class="pt-12">
-        <Breadcrumb text="Contact"/>
+        <Breadcrumb text="Contact" secondary-text="Get in Touch"/>
 
         <div class="flex px-4 lg:px-40 py-10 pt-16 lg:pt-20 lg:py-20">
             <div class="w-full">
@@ -16,7 +16,7 @@
                     </div>
                     <div class="p-2  px-4 lg:px-8 px-4 lg:px-8">
                         <h1 class="font-bold text-gray-100 text-xl">+598 99 082 658</h1>
-                        <p class="text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <!-- <p class="text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p> -->
                     </div>
                 </div>
                 <div class="flex pt-10">
@@ -25,7 +25,7 @@
                     </div>
                     <div class="p-2  px-4 lg:px-8">
                         <h1 class="font-bold text-gray-100 text-xl">Montevideo, Uruguay</h1>
-                        <p class="text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <!-- <p class="text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p> -->
                     </div>
                 </div>
                 <div class="flex pt-10">
@@ -34,7 +34,7 @@
                     </div>
                     <div class="p-2  px-4 lg:px-8">
                         <h1 class="font-bold text-gray-100 text-xl">me@juanvargas.me</h1>
-                        <p class="text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <!-- <p class="text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p> -->
                     </div>
                 </div>
             </div>

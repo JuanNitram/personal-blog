@@ -46,19 +46,28 @@
 
         <div class="block lg:flex pb-0 lg:pb-6 px-0 lg:px-5">
             <div class="w-full lg:w-1/2 pb-2 lg:pb-0 block mr-8">
-                <StatusBar text="CSS" width="80%"/>
+                <StatusBar text="MySql" width="75%"/>
             </div>
             <div class="w-full lg:w-1/2 block ml-0 lg:ml-8">
-                <StatusBar text="ReactJs" width="70%"/>
+                <StatusBar text="MongoDb" width="65%"/>
+            </div>
+        </div>
+
+        <div class="block lg:flex pb-0 lg:pb-6 px-0 lg:px-5">
+            <div class="w-full lg:w-1/2 pb-2 lg:pb-0 block mr-8">
+                <StatusBar text="Bootstrap 4" width="80%"/>
+            </div>
+            <div class="w-full lg:w-1/2 block ml-0 lg:ml-8">
+                <StatusBar text="ReactJs" width="85%"/>
             </div>
         </div>
 
         <div class="block lg:flex pb-10 px-0 lg:px-5">
             <div class="w-full lg:w-1/2 block mr-0 lg:mr-8">
-                <StatusBar text="CSS" width="80%"/>
+                <StatusBar text="Tailwind CSS" width="88%"/>
             </div>
             <div class="w-full lg:w-1/2 block ml-0 lg:ml-8">
-                <StatusBar text="NodeJs" width="80%"/>
+                <StatusBar text="NodeJs" width="83%"/>
             </div>
         </div>
 
@@ -86,7 +95,7 @@
 
         <div class="block lg:flex pb-6 px-0 lg:px-5">
             <div class="w-full lg:w-1/2 block pb-2 lg:pb-0 mr-0 lg:mr-8">
-                <StatusBar text="Agile/Scrum Methodology" width="80%"/>
+                <StatusBar text="Agile/Scrum Methodology" width="94%"/>
             </div>
             <div class="w-full lg:w-1/2 block ml-0 lg:ml-8">
                 <StatusBar text="API Design" width="90%"/>

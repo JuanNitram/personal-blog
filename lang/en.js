@@ -19,9 +19,9 @@ export default {
     
     experience: 'Experience',
     firstExperienceCompany: 'Freelancer',
-    firstExperienceDescription: 'As a freelancer I dedicated myself to working in frontend and backend. I have implemented different platforms using the VueJs library and NuxtJs framework in frontend and using nodejs with the expressjs library and the Laravel framework in the backend.',
+    firstExperienceDescription: 'As a freelancer I dedicated myself to working in frontend and backend. I have implemented different platforms using the VueJs library and NuxtJs framework in frontend and using NodeJs with ExpressJs library and the Laravel framework in the backend.',
     secondExperienceCompany: 'Sitios - Digital Agency',
-    secondExperienceDescription: 'I worked in the backend area. Implementing solutions for different platforms using the Laravel framework.Co',
+    secondExperienceDescription: 'I worked in the backend area. Implementing solutions for different platforms using Laravel framework.',
     thirdExperienceCompany: 'Light-it',
-    thirdExperienceDescription: 'I have been working as a full stack developer, working on both the frontend and the backend using Vuejs, Reactjs, Nodejs and Laravel technologies.',
+    thirdExperienceDescription: 'I have been working as a Full Stack Developer using Vuejs, Reactjs frontend libraries and Nodejs and Laravel Framework on backend.',
 }
