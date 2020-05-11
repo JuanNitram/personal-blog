@@ -2,12 +2,12 @@
     <nav id="navbar" class="flex items-center justify-between flex-wrap bg-transparent p-6">
         <div class="flex items-center flex-shrink-0 text-gray-400 mr-6">
             <nuxt-link to="/">
-                <img src="~assets/img/logo-2.svg" class="h-12"/>
+                <img src="~assets/img/logo-3.svg" class="h-12"/>
             </nuxt-link>
         </div>
         <div class="block lg:hidden">
             <button class="flex items-center px-3 py-2 rounded text-gray-400 border-gray-400 hover:text-white hover:border-white" @click="handleButtonClick">
-                <svg class="fill-current h-8 w-8 text-blue-800" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                <svg class="fill-current h-8 w-8 text-gray-100" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
             </button>
         </div>
 
