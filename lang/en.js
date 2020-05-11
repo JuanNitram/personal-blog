@@ -7,6 +7,7 @@ export default {
     resume: 'Resume',
     yearsExperience: '5 years of experience',
     current: 'Current',
+    stack: 'Tech Stack',
     
     education: 'Education',
     firstEducationSchool: 'Universidad del Trabajo Uruguay',

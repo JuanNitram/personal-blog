@@ -4,7 +4,7 @@
             <Title text="Certificates"/>
         </div>
 
-        <div class="block lg:flex">
+        <div class="block lg:flex px-0 lg:px-5">
             <div class="w-full lg:w-1/2 flex border border-gray-800 rounded-lg mr-0 lg:mr-8 mt-8 lg:mt-0">
                 <div class="flex items-center justify-center p-10 bg-gray-800" style="min-width: 9rem;">
                     <i class="fas fa-undo fa-2x text-gray-900"></i>
@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <div class="block lg:flex mt-8">
+        <div class="block lg:flex mt-8 px-0 lg:px-5">
             <div class="w-full lg:w-1/2 flex border border-gray-800 rounded-lg mr-8">
                 <div class="flex items-center justify-center p-10 bg-gray-800" style="min-width: 9rem;">
                     <i class="fas fa-undo fa-2x text-gray-900"></i>

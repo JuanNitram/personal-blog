@@ -3,7 +3,7 @@
         <div class="w-full px-5 pb-4">
             <Title :text="$t('services')"/>
         </div>
-        <div class="block lg:flex">
+        <div class="block lg:flex px-0 lg:px-5">
             <div class="w-full lg:w-1/2 p-5 flex justify-between">
                 <div class="w-48 lg:w-32">
                     <i class="fas fa-desktop mr-2 lg:px-0 lg:pb-0 text-blue-800 text-blue-800" style="font-size: 1.6em"></i>
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="block lg:flex">
+        <div class="block lg:flex px-0 lg:px-5">
             <div class="w-full lg:w-1/2 p-5 flex justify-center">
                 <div class="w-48 lg:w-32">
                     <i class="far fa-file-code fa-2x mr-2 lg:px-0 lg:pb-0 text-blue-800 text-blue-800"></i>
