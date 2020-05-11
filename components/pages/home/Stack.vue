@@ -22,12 +22,22 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="px-0 lg:px-5">
+            <no-ssr>
+                <Flickity>
+                    <div class="carousel-cell"><i class="fab fa-laravel fa-5x"></i></div>
+                    <div class="carousel-cell"><i class="fab fa-node fa-5x"></i></div>
+                    <div class="carousel-cell"><i class="fab fa-js fa-5x"></i></div>
+                    <div class="carousel-cell"><i class="fab fa-vuejs fa-5x"></i></div>
+                </Flickity>
+            </no-ssr>
+        </div> -->
     </div>
 </template>
 
 <script>
     import Title from '../../shared/Title';
-
+    
     export default {
         components: {
             Title

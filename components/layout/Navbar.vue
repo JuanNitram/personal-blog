@@ -13,16 +13,16 @@
 
         <div class="hidden lg:flex lg:items-center lg:w-auto">
             <div class="text-sm lg:flex-grow">
-                <nuxt-link to="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-4">
+                <nuxt-link to="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white mr-4">
                     About Me
                 </nuxt-link>
-                <nuxt-link to="/resume" class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-4">
+                <nuxt-link to="/resume" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white mr-4">
                     Resume
                 </nuxt-link>
-                <!-- <nuxt-link to="/blog" class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-4">
+                <!-- <nuxt-link to="/blog" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white mr-4">
                     Blog
                 </nuxt-link> -->
-                <nuxt-link to="/contact" class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white">
+                <nuxt-link to="/contact" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white">
                     Contact
                 </nuxt-link>
             </div>

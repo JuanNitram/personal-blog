@@ -27,6 +27,7 @@ export default {
   ],
 
   plugins: [
+    { src: '~/plugins/VueFlickity.js', ssr: false }
   ],
   
   buildModules: [
