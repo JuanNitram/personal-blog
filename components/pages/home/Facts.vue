@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto px-2 lg:px-32 pb-12 pt-12 text-gray-400">
+    <div class="mx-auto px-2 lg:px-32 pb-12 pt-12 text-gray-400" data-aos="fade">
         <div class="w-full px-5 py-4">
             <Title :text="$t('funFacts')"/>
         </div>

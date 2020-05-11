@@ -1,5 +1,5 @@
 <template>
-    <div id="stack" class="mx-auto px-2 lg:px-32 pb-16 pt-12 text-gray-400">
+    <div id="stack" class="mx-auto px-2 lg:px-32 pb-16 pt-12 text-gray-400" data-aos="fade">
         <div class="w-full px-5 pb-10">
             <Title :text="$t('stack')"/>
         </div>
@@ -47,7 +47,7 @@
         data() {
             return {
                 options: {
-                    autoPlay: 3000,
+                    autoPlay: 2000,
                     pageDots: false,
                     prevNextButtons: false,
                     wrapAround: true,

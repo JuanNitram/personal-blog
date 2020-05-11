@@ -1,5 +1,5 @@
 <template>
-    <div id="contact-form" class="w-full px-2 pt-5">
+    <div id="contact-form" class="w-full px-2 pt-5" data-aos="fade">
         <form>
             <div class="block lg:flex">
                 <div class="w-full lg:w-1/2 pr-0 lg:pr-2">

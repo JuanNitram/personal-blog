@@ -1,7 +1,7 @@
 <template>
-    <div id="hero" class="block lg:flex mx-auto px-4 lg:px-72 pb-20 lg:pb-8">
+    <div id="hero" class="block lg:flex mx-auto px-4 lg:px-72 pb-20 lg:pb-8" data-aos="fade">
         <div class="w-full lg:w-1/2 flex flex-col justify-center items-center py-6">
-          <img id="personal-image" src="~/assets/img/me-3.jpeg" class="rounded-full border-gray-700 w-64 h-64 lg:w-96 lg:h-96 shadow-lg"/>
+          <img id="personal-image" src="~/assets/img/me-2.jpeg" class="rounded-full border-gray-700 w-64 h-64 lg:w-96 lg:h-96 shadow-lg"/>
         </div>
         <div class="w-full lg:w-1/2 flex flex-col justify-center">
             <h3 class="text-lg lg:text-xl text-center lg:text-left text-gray-400">Juan Vargas</h3>
