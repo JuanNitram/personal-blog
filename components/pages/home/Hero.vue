@@ -8,8 +8,10 @@
             <h1 class="text-3xl lg:text-4xl text-center lg:text-left text-gray-100">Software Developer</h1>
             <p class="text-sm lg:text-md text-center lg:text-left text-gray-400">{{ $t('description') }}</p>
             <div class="hidden lg:flex justify-center lg:justify-start pt-6">
-                <Button :text="$t('downloadCv')" />
-                <Button :text="$t('contactMe')" />
+                <!-- <Button :text="$t('downloadCv')" /> -->
+                <nuxt-link to="/contact">
+                  <Button :text="$t('contactMe')" />
+                </nuxt-link>
             </div>
         </div>
   </div>

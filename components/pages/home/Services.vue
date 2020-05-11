@@ -9,9 +9,9 @@
                     <i class="fas fa-desktop mr-2 lg:px-0 lg:pb-0 text-blue-800 text-blue-800" style="font-size: 1.6em"></i>
                 </div>
                 <div class="px-0 lg:px-8 text-left">
-                    <h1 class="text-md text-gray-100 font-bold pb-2">Web Development</h1>
+                    <h1 class="text-md text-gray-100 font-bold pb-2">Web Design & Development</h1>
                     <p>
-                        Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex.
+                        As a software developer I'm trained to implement quality web applications, using the latest technologies of the moment.
                     </p>
                 </div>
             </div>
@@ -22,20 +22,7 @@
                 <div class="px-0 lg:px-8 text-left">
                     <h1 class="text-md text-gray-100 font-bold pb-2">Mobile Development</h1>
                     <p>
-                        Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="block lg:flex px-0 lg:px-5">
-            <div class="w-full lg:w-1/2 p-5 flex justify-center">
-                <div class="w-48 lg:w-32">
-                    <i class="far fa-file-code fa-2x mr-2 lg:px-0 lg:pb-0 text-blue-800 text-blue-800"></i>
-                </div>
-                <div class="px-0 lg:px-8 text-left">
-                    <h1 class="text-md text-gray-100 font-bold pb-2">Product Development</h1>
-                    <p>
-                        Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex.
+                        Formed for the development of native mobile applications that provide high quality using the most used technologies of the moment
                     </p>
                 </div>
             </div>

@@ -11,17 +11,17 @@ export default {
     
     education: 'Education',
     firstEducationSchool: 'Universidad del Trabajo Uruguay',
-    firstEducationTitle: 'Technological High School',
-    firstEducationDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam repudiandae praesentium totam deserunt similique omnis.',
+    firstEducationTitle: 'Technological Bacherol in IT',
+    firstEducationDescription: 'The graduate is a Technological Bachelor in the IT area, trained on the job to work as a high-level technical assistant, handling himself with solvency in the support tasks related to the administration and management of a computer system.',
     secondEducationSchool: 'University of Republic',
     secondEducationTitle: 'Computer Engineering',
-    secondEducationDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam repudiandae praesentium totam deserunt similique omnis.',
+    secondEducationDescription: 'The Computer Engineering training aims at a wide and coherent coverage in the planning, development, maintenance and application of systems, which together with the acquired experience, will be projected in a competent professional.',
     
     experience: 'Experience',
     firstExperienceCompany: 'Freelancer',
-    firstExperienceDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam repudiandae praesentium totam deserunt similique omnis.',
+    firstExperienceDescription: 'As a freelancer I dedicated myself to working in frontend and backend. I have implemented different platforms using the VueJs library and NuxtJs framework in frontend and using nodejs with the expressjs library and the Laravel framework in the backend.',
     secondExperienceCompany: 'Sitios - Digital Agency',
-    secondExperienceDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam repudiandae praesentium totam deserunt similique omnis.',
+    secondExperienceDescription: 'I worked in the backend area. Implementing solutions for different platforms using the Laravel framework.Co',
     thirdExperienceCompany: 'Light-it',
-    thirdExperienceDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam repudiandae praesentium totam deserunt similique omnis.',
+    thirdExperienceDescription: 'I have been working as a full stack developer, working on both the frontend and the backend using Vuejs, Reactjs, Nodejs and Laravel technologies.',
 }

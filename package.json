@@ -1,7 +1,7 @@
 {
-  "name": "personal-blog",
+  "name": "JuanVargas",
   "version": "1.0.0",
-  "description": "My awesome Nuxt.js project",
+  "description": "Juan Vargas Resume",
   "author": "Juan Vargas",
   "private": true,
   "scripts": {
