@@ -19,6 +19,6 @@
       Services,
       Facts,
       Stack
-    }
+    },
   }
 </script>

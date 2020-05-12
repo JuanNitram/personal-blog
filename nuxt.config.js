@@ -36,6 +36,7 @@ export default {
   plugins: [
     { src: '~/plugins/VueFlickity.js', ssr: false },
     { src: '~/plugins/VeeValidate.js'},
+    { src: '~/plugins/GoogleAnalytics.js', mode: 'client' }
   ],
   
   buildModules: [
