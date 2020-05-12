@@ -23,7 +23,7 @@
                 <div class="g-recaptcha rounded-lg" data-sitekey="6LclE_MUAAAAAFi3KKCAOGXhGFCRbkaIyvaOjU6z" data-theme="dark"></div>
             </div>
             <div class="block lg:flex pt-4">
-                <Button text="Send message"/>
+                <Button text="Send message" :loading="loading"/>
             </div>
         </form>
     </div>
