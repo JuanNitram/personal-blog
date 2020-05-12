@@ -14,7 +14,7 @@
                     <div class="flex flex-col justify-center p-5 lg:p-0">
                         <i class="fas fa-mobile-alt fa-2x text-blue-800"></i>
                     </div>
-                    <div class="p-2  px-4 lg:px-8 px-4 lg:px-8">
+                    <div class="p-2 flex px-4 lg:px-8 px-4 lg:px-8 items-center">
                         <h1 class="font-bold text-gray-100 text-xl">+598 99 082 658</h1>
                         <!-- <p class="text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p> -->
                     </div>
@@ -23,7 +23,7 @@
                     <div class="flex flex-col justify-center p-5 lg:p-0">
                         <i class="fas fa-map-marker-alt fa-2x text-blue-800"></i>
                     </div>
-                    <div class="p-2  px-4 lg:px-8">
+                    <div class="p-2 flex px-4 lg:px-8 items-center">
                         <h1 class="font-bold text-gray-100 text-xl">Montevideo, Uruguay</h1>
                         <!-- <p class="text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p> -->
                     </div>
@@ -32,7 +32,7 @@
                     <div class="flex flex-col justify-center p-5 lg:p-0">
                         <i class="far fa-envelope fa-2x text-blue-800"></i>
                     </div>
-                    <div class="p-2  px-4 lg:px-8">
+                    <div class="p-2 flex px-4 lg:px-8 items-center">
                         <h1 class="font-bold text-gray-100 text-xl">me@juanvargas.me</h1>
                         <!-- <p class="text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p> -->
                     </div>
