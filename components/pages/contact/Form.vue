@@ -57,12 +57,16 @@
 
                         this.$axios.post('/contact/send', this.form).then(({ data }) => {
                             if(data.status === 'success'){
-                                
+                                this.form.name = '';
+                                this.form.email = '';
+                                this.form.phone = '';
+                                this.form.message = '';
                             }
                         }).catch(ex => {
                             console.log(ex);
                         }).finally(() => {
                             this.loading = false;
+                            this.$validator.reset();
                         })
                     }
                 })
