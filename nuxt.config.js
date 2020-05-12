@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 import en from './lang/en';
 import es from './lang/es';
@@ -34,6 +35,7 @@ export default {
 
   plugins: [
     { src: '~/plugins/VueFlickity.js', ssr: false },
+    { src: '~/plugins/VeeValidate.js'},
   ],
   
   buildModules: [
@@ -42,7 +44,6 @@ export default {
 
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/dotenv',
     [
       'nuxt-i18n',
       {
@@ -60,6 +61,7 @@ export default {
   ],
 
   axios: {
+    baseURL: process.env.API_URL
   },
 
   build: {
