@@ -1,5 +1,5 @@
 <template>
-    <div id="stack" class="mx-auto px-2 md:px-12 lg:px-32 pb-16 pt-12 text-gray-400">
+    <div id="stack" class="mx-auto px-2 md:px-12 lg:px-16 xl:px-32 pb-16 pt-12 text-gray-400">
         <div class="w-full px-5 pb-10">
             <Title :text="$t('stack')"/>
         </div>
