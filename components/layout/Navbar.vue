@@ -1,5 +1,5 @@
 <template>
-    <nav id="navbar" class="flex items-center justify-between flex-wrap bg-transparent p-6">
+    <nav id="navbar" class="flex items-center justify-between flex-wrap bg-transparent p-6 px-6 lg:px-16">
         <div class="flex items-center flex-shrink-0 text-gray-400 mr-6">
             <nuxt-link to="/">
                 <img src="~assets/img/logo-2.svg" class="h-12"/>
