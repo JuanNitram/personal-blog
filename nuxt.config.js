@@ -66,11 +66,21 @@ export default {
           }
         }
       }
-    ]
+    ],
+    '@nuxtjs/sitemap'
   ],
 
   axios: {
     baseURL: process.env.API_URL
+  },
+
+  sitemap: {
+    hostname: process.env.BASE_URL,
+    gzip: true,
+    routes: [
+      '/resume',
+      '/contact',
+    ]
   },
 
   build: {
