@@ -13,7 +13,15 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       { name: "msapplication-TileColor", content: "#da532c"},
-      { name: "theme-color", content: "#ffffff"}
+      { name: "theme-color", content: "#ffffff"},
+
+      { property: 'og:title', content: 'Juan Vargas | Software Developer' },
+      { property: 'og:description', content: 'Software developer from Montevideo, Uruguay. Creative programmer with good knowledge of frontend development.' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: `${process.env.BASE_URL}` },
+      { property: 'og:image', content: `${process.env.BASE_URL}/favicon/favicon.jpg` },
+      { property: 'og:image:secure_url', content: `${process.env.BASE_URL}/favicon/favicon.jpg` },
+      { property: 'og:image:type', content: 'image/jpeg' },
     ],
     link: [
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.7/css/all.css' },
