@@ -2,8 +2,8 @@
   <div>
     <Hero/>
     <Services />
+    <Testimonials/>
     <Facts />
-    <!-- <Stack /> -->
   </div>
 </template>
 
@@ -11,14 +11,14 @@
   import Hero from '../components/pages/home/Hero';
   import Services from '../components/pages/home/Services';
   import Facts from '../components/pages/home/Facts';
-  import Stack from '../components/pages/home/Stack';
+  import Testimonials from '../components/pages/home/Testimonials';
 
   export default {
     components: {
       Hero,
       Services,
       Facts,
-      Stack
+      Testimonials
     },
   }
 </script>

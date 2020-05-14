@@ -8,6 +8,7 @@ export default {
     yearsExperience: '5 years of experience',
     current: 'Current',
     stack: 'Tech Stack',
+    testimonials: 'Testimonials',
     
     education: 'Education',
     firstEducationSchool: 'Universidad del Trabajo Uruguay',
