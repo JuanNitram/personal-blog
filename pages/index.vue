@@ -3,7 +3,7 @@
     <Hero/>
     <Services />
     <Facts />
-    <Stack />
+    <!-- <Stack /> -->
   </div>
 </template>
 
