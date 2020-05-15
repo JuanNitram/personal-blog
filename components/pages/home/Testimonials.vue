@@ -6,25 +6,25 @@
         <div class="block md:flex lg:flex px-10 pt-0 md:pt-4">
             <div class="w-full md:w-1/2 lg:w-1/2 bg-gray-800 border-2 border-gray-700 rounded-md p-6 flex justify-between mr-0 md:mr-6 mt-10 xl:mt-0">
                 <div class="px-0 lg:px-8 text-left relative pt-10 lg:pt-0">
-                    <img src="~/assets/img/me-3.jpeg" class="rounded-full border-gray-700 w-20 h-20 shadow-lg absolute" style="top: -50px; left: -60px"/>
+                    <img src="~/assets/img/albert.jpg" class="rounded-full border-gray-700 w-20 h-20 shadow-lg absolute" style="top: -50px; left: -60px"/>
                     <p class="italic text-gray-100">
-                        "Development of scalable, testable and maintainable web applications, using the latest technologies of the moment."
+                        "He is a man who is very committed to the delivery time and quality of his work."
                     </p>
                     <p class="pt-5 text-gray-100">
-                        <span class="font-bold text-sm">Juan Vargas</span>
-                        <span class="text-xs block text-gray-300">Developer</span>
+                        <span class="font-bold text-sm">Albert Spencer</span>
+                        <span class="text-xs block text-gray-300">Customer</span>
                     </p>
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/2 bg-gray-800 border-2 border-gray-700 rounded-md p-6 flex justify-between ml-0 md:ml-6 mt-10 xl:mt-0">
                 <div class="px-0 lg:px-8 text-left relative pt-10 lg:pt-0">
-                    <img src="~/assets/img/me-3.jpeg" class="rounded-full border-gray-700 w-20 h-20 shadow-lg absolute" style="top: -50px; left: -60px"/>
+                    <img src="~/assets/img/carlos.jpeg" class="rounded-full border-gray-700 w-20 h-20 shadow-lg absolute" style="top: -50px; left: -60px"/>
                     <p class="italic text-gray-100">
-                        "Development of native mobile applications that provide high quality using technologies such as NativeScript and React Native."
+                        "Juan is one of the most dedicated person that I have ever worked with"
                     </p>
                     <p class="pt-5 text-gray-100">
-                        <span class="font-bold text-sm">Juan Vargas</span>
-                        <span class="text-xs block text-gray-300">Developer</span>
+                        <span class="font-bold text-sm">Carlos Rey</span>
+                        <span class="text-xs block text-gray-300">Software Engineer</span>
                     </p>
                 </div>
             </div>
