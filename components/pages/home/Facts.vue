@@ -106,4 +106,8 @@
         width: 100%;
         justify-content: center;
     }
+
+    .flickity-enabled:focus {
+        outline: none;
+    }
 </style>
