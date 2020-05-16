@@ -107,7 +107,7 @@
         justify-content: center;
     }
 
-    .flickity-enabled:focus {
+    .flickity-enabled {
         outline: none;
     }
 </style>
