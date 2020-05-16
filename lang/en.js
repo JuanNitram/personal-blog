@@ -9,12 +9,25 @@ export default {
     current: 'Current',
     stack: 'Tech Stack',
     testimonials: 'Testimonials',
+
+    firstService: 'Web Design & Development',
+    secondService: 'Mobile Development',
+    firstServiceDescription: 'Development of scalable, testable and maintainable web applications, using the latest technologies of the moment.',
+    secondServiceDescription: 'Development of native mobile applications that provide high quality using technologies such as NativeScript and React Native.',
     
+    firstTestimonial: '"He is a man who is very committed to the delivery time and quality of his work."',
+    secondTestimonial: '"Juan is one of the most dedicated person that I have ever worked with"',
+
+    firstFact: 'Working hours',
+    secondFact: 'Happy clients',
+    thirdFact: 'Watched series',
+    fourFact: 'Coffe consumed',
+
     education: 'Education',
     firstEducationSchool: 'Universidad del Trabajo Uruguay',
     firstEducationTitle: 'Technological Bacherol in IT',
     firstEducationDescription: 'The graduate is a Technological Bachelor in the IT area, trained on the job to work as a high-level technical assistant, handling himself with solvency in the support tasks related to the administration and management of a computer system.',
-    secondEducationSchool: 'University of Republic',
+    secondEducationSchool: 'Universidad de la República',
     secondEducationTitle: 'Computer Engineering',
     secondEducationDescription: 'The Computer Engineering training aims at a wide and coherent coverage in the planning, development, maintenance and application of systems, which together with the acquired experience, will be projected in a competent professional.',
     

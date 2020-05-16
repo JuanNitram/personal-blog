@@ -1,5 +1,5 @@
 <template>
-    <div class=w-full>
+    <div class=w-full data-aos="fade-up">
         <div class="pb-6">
             <Title text="Personal Skills"/>
         </div>

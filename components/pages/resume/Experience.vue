@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div data-aos="fade-up">
         <div class="pb-6">
             <Title :text="$t('experience')"/>
         </div>

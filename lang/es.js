@@ -10,19 +10,32 @@ export default {
     stack: 'Tech Stack',
     testimonials: 'Testimonios',
 
+    firstService: 'Web Design & Development',
+    secondService: 'Mobile Development',
+    firstServiceDescription: 'Desarrollo de aplicaciones web escalables, testeables y mantenibles utilizando las ultimas tecnologías del momento',
+    secondServiceDescription: 'Desarrollo de aplicaciones móviles nativas de alta calidad utilizando tecnologías como NativeScript y React Native.',
+
+    firstTestimonial: '"Es una persona muy comprometida con el tiempo de entrega y la calidad de su trabajo."',
+    secondTestimonial: '"Juan es una de las personas más dedicadas con las que he trabajado en conjunto."',
+
+    firstFact: 'Horas trabajadas',
+    secondFact: 'Clientes felices',
+    thirdFact: 'Series',
+    fourFact: 'Café consumido',
+
     education: 'Educación',
     firstEducationSchool: 'Universidad del Trabajo Uruguay',
     firstEducationTitle: 'Bachillerato informática',
-    firstEducationDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam repudiandae praesentium totam deserunt similique omnis.',
+    firstEducationDescription: 'The graduate is a Technological Bachelor in the IT area, trained on the job to work as a high-level technical assistant, handling himself with solvency in the support tasks related to the administration and management of a computer system.',
     secondEducationSchool: 'Universidad de la República',
     secondEducationTitle: 'Computer Engineering',
-    secondEducationDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam repudiandae praesentium totam deserunt similique omnis.',
+    secondEducationDescription: 'The Computer Engineering training aims at a wide and coherent coverage in the planning, development, maintenance and application of systems, which together with the acquired experience, will be projected in a competent professional.',
     
     experience: 'Experiencia',
     firstExperienceCompany: 'Freelancer',
-    firstExperienceDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam repudiandae praesentium totam deserunt similique omnis.',
+    firstExperienceDescription: 'Como freelancer me dedique a trabajar tanto en frontend como en backend. Implemente diferentes plataformas web utilizando la librería VueJs y el framework NuxtJs en el frontend, NodeJs y el framework Laravel en el backend.',
     secondExperienceCompany: 'Sitios - Agencia Digital',
-    secondExperienceDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam repudiandae praesentium totam deserunt similique omnis.',
+    secondExperienceDescription: 'Trabajé principalmente en el área de el backend. Implementando soluciones para distintas plataformas utilizando el framework Laravel.',
     thirdExperienceCompany: 'Light-it',
-    thirdExperienceDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam repudiandae praesentium totam deserunt similique omnis.',
+    thirdExperienceDescription: 'Actualmente he estado trabajando como Full Stack Developer utilizando las librerías Vuejs, ReactJs en el frontend, Nodejs y Laravel Framework en el backend.',
 }

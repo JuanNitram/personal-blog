@@ -39,12 +39,14 @@ export default {
   loading: { color: '#fff' },
 
   css: [
+    'aos/dist/aos.css'
   ],
 
   plugins: [
     { src: '~/plugins/VueFlickity.js', ssr: false },
     { src: '~/plugins/VeeValidate.js'},
-    { src: '~/plugins/GoogleAnalytics.js', mode: 'client' }
+    { src: '~/plugins/GoogleAnalytics.js', mode: 'client' },
+    { src: '~/plugins/Aos.js', mode: 'client' }
   ],
   
   buildModules: [

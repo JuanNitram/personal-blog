@@ -1,5 +1,5 @@
 <template>
-    <div id="services" class="mx-auto px-2 md:px-12 lg:px-16 xl:px-32 text-gray-400">
+    <div id="services" class="mx-auto px-2 md:px-12 lg:px-16 xl:px-32 text-gray-400" data-aos="fade-up">
         <div class="w-full px-5 pb-4">
             <Title :text="$t('services')"/>
         </div>
@@ -9,9 +9,9 @@
                     <i class="fas fa-desktop mr-2 lg:px-0 lg:pb-0 text-blue-800 text-blue-800" style="font-size: 1.6em"></i>
                 </div>
                 <div class="px-0 lg:px-8 text-left">
-                    <h1 class="text-md text-gray-100 font-bold pb-2">Web Design & Development</h1>
+                    <h1 class="text-md text-gray-100 font-bold pb-2">{{ $t('firstService') }}</h1>
                     <p>
-                        Development of scalable, testable and maintainable web applications, using the latest technologies of the moment.
+                        {{ $t('firstServiceDescription') }}
                     </p>
                 </div>
             </div>
@@ -20,9 +20,9 @@
                     <i class="fas fa-mobile-alt fa-2x mr-2 lg:px-0 lg:pb-0 text-blue-800 text-blue-800"></i>
                 </div>
                 <div class="px-0 lg:px-8 text-left">
-                    <h1 class="text-md text-gray-100 font-bold pb-2">Mobile Development</h1>
+                    <h1 class="text-md text-gray-100 font-bold pb-2">{{ $t('secondService') }}</h1>
                     <p>
-                        Development of native mobile applications that provide high quality using technologies such as NativeScript and React Native.
+                        {{ $t('secondServiceDescription') }}
                     </p>
                 </div>
             </div>

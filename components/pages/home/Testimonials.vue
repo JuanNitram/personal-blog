@@ -1,5 +1,5 @@
 <template>
-<div id="testimonials" class="mx-auto px-2 md:px-12 lg:px-16 xl:px-32 text-gray-400 pt-20">
+<div id="testimonials" class="mx-auto px-2 md:px-12 lg:px-16 xl:px-32 text-gray-400 pt-20" data-aos="fade-up">
         <div class="w-full px-5 pb-10">
             <Title :text="$t('testimonials')"/>
         </div>
@@ -8,7 +8,7 @@
                 <div class="px-0 lg:px-8 text-left relative pt-10 lg:pt-0">
                     <img src="~/assets/img/albert.jpg" class="rounded-full border-gray-700 w-20 h-20 shadow-lg absolute" style="top: -50px; left: -60px"/>
                     <p class="italic text-gray-100">
-                        "He is a man who is very committed to the delivery time and quality of his work."
+                        {{ $t('firstTestimonial') }}
                     </p>
                     <p class="pt-5 text-gray-100">
                         <span class="font-bold text-sm">Albert Spencer</span>
@@ -20,7 +20,7 @@
                 <div class="px-0 lg:px-8 text-left relative pt-10 lg:pt-0">
                     <img src="~/assets/img/carlos.jpeg" class="rounded-full border-gray-700 w-20 h-20 shadow-lg absolute" style="top: -50px; left: -60px"/>
                     <p class="italic text-gray-100">
-                        "Juan is one of the most dedicated person that I have ever worked with"
+                        {{ $t('secondTestimonial') }}
                     </p>
                     <p class="pt-5 text-gray-100">
                         <span class="font-bold text-sm">Carlos Rey</span>
