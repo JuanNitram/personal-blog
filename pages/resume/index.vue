@@ -37,6 +37,12 @@
             Experience,
             Certificates,
             Skills
+        },
+
+        head() {
+            return {
+                title: 'Juan Vargas | Resume'
+            }
         }
     }
 </script>

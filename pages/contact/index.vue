@@ -33,7 +33,7 @@
                         <i class="far fa-envelope fa-2x text-blue-800"></i>
                     </div>
                     <div class="p-2 flex px-4 lg:px-8 items-center">
-                        <h1 class="font-bold text-gray-100 text-xl">me@juanvargas.me</h1>
+                        <h1 class="font-bold text-gray-100 text-xl">juanmvg2006@gmail.com</h1>
                         <!-- <p class="text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p> -->
                     </div>
                 </div>
@@ -56,6 +56,12 @@
             Breadcrumb,
             Title,
             Form
+        },
+
+        head() {
+            return {
+                title: 'Juan Vargas | Contact'
+            }
         }
     }
 </script>

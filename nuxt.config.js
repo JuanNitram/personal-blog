@@ -7,7 +7,7 @@ export default {
   mode: 'universal',
 
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Juan Vargas',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -77,6 +77,10 @@ export default {
   sitemap: {
     hostname: process.env.BASE_URL,
     gzip: true,
+    exclude: [
+      '/es/**',
+      '/blog'
+    ],
     routes: [
       '/resume',
       '/contact',
