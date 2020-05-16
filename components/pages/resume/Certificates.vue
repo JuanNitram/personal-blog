@@ -10,8 +10,8 @@
                     <i class="fas fa-undo fa-2x text-gray-900"></i>
                 </div>
                 <div class="block my-auto px-5">
-                    <h1 class="font-bold text-xl text-gray-100">Agile project management fundamentals</h1>
-                    <!-- <h2 class="text-sm text-gray-400">Membership ID: xxxx</h2> -->
+                    <h1 class="font-bold text-md lg:text-xl text-gray-100">Agile project management fundamentals</h1>
+                    <!-- <h2 class="text-md text-gray-400">Membership ID: xxxx</h2> -->
                     <h3 class="text-xs text-gray-400">February 2020</h3>
                 </div>
             </div>
@@ -20,8 +20,8 @@
                     <i class="fab fa-docker fa-2x text-gray-900"></i>
                 </div>
                 <div class="block my-auto px-5">
-                    <h1 class="font-bold text-xl text-gray-100">Docker and Kubernetes</h1>
-                    <!-- <h2 class="text-sm text-gray-400">Membership ID: xxxx</h2> -->
+                    <h1 class="font-bold text-md lg:text-xl text-gray-100">Docker and Kubernetes</h1>
+                    <!-- <h2 class="text-md text-gray-400">Membership ID: xxxx</h2> -->
                     <h3 class="text-xs text-gray-400">Currently coursing</h3>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                     <i class="fas fa-undo fa-2x text-gray-900"></i>
                 </div>
                 <div class="block my-auto px-5">
-                    <h1 class="font-bold text-xl text-gray-100">Learn Scrum</h1>
+                    <h1 class="font-bold text-md lg:text-xl text-gray-100">Learn Scrum</h1>
                     <!-- <h2 class="text-sm text-gray-400">Membership ID: xxxx</h2> -->
                     <h3 class="text-xs text-gray-400">March 2020</h3>
                 </div>
