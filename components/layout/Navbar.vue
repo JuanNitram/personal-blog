@@ -33,7 +33,7 @@
             </div>
         </div>
 
-        <transition name="page">
+        <transition name="zoom">
             <div v-show="showDropdown" class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
                 <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-95"></div>
 
