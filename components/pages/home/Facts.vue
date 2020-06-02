@@ -22,14 +22,14 @@
                 <div class="bg-gray-800 border-2 border-gray-700 rounded-md p-4 flex flex-col justify-between items-center">
                     <i class="fas fa-film fa-3x text-blue-800"></i>
                     <h2 class="text-xl text-gray-100 text-center py-2">{{ $t('thirdFact') }}</h2>
-                    <h1 class="text-4xl text-gray-100 text-center font-bold">28</h1>
+                    <h1 class="text-4xl text-gray-100 text-center font-bold">29</h1>
                 </div>
             </div>
             <div class="w-full lg:w-1/4 px-10 py-5 lg:px-2 xl:px-5 lg:py-5">
                 <div class="bg-gray-800 border-2 border-gray-700 rounded-md p-4 flex flex-col justify-between items-center">
                     <i class="fas fa-coffee fa-3x text-blue-800"></i>
                     <h2 class="text-xl text-gray-100 text-center py-2">{{ $t('fourFact') }}</h2>
-                    <h1 class="text-4xl text-gray-100 text-center font-bold">1,789</h1>
+                    <h1 class="text-4xl text-gray-100 text-center font-bold">1,903</h1>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
                             <div class="bg-gray-800 border-2 border-gray-700 rounded-md p-4 flex flex-col justify-between items-center">
                                 <i class="far fa-lightbulb fa-3x text-blue-800"></i>
                                 <h2 class="text-xl text-gray-100 text-center py-2">Watched series</h2>
-                                <h1 class="text-4xl text-gray-100 text-center font-bold">28</h1>
+                                <h1 class="text-4xl text-gray-100 text-center font-bold">29</h1>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                             <div class="bg-gray-800 border-2 border-gray-700 rounded-md p-4 flex flex-col justify-between items-center">
                                 <i class="fas fa-coffee fa-3x text-blue-800"></i>
                                 <h2 class="text-xl text-gray-100 text-center py-2">Coffe consumed</h2>
-                                <h1 class="text-4xl text-gray-100 text-center font-bold">1,789</h1>
+                                <h1 class="text-4xl text-gray-100 text-center font-bold">1,903</h1>
                             </div>
                         </div>
                     </div>
