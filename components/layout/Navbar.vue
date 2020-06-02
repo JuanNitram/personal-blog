@@ -9,7 +9,7 @@
             <!-- <button class="flex items-center px-3 py-2 rounded text-gray-400 border-gray-400 hover:text-white hover:border-white" @click="handleButtonClick">
                 <svg class="fill-current h-8 w-8 text-blue-800" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
             </button> -->
-            <button class="hamburger hamburger--elastic" :class="{ 'is-active' : showDropdown}" type="button" aria-label="Menu" aria-controls="navigation" @click="handleButtonClick">
+            <button class="hamburger hamburger--elastic hidden" style="outline: none" :class="{ 'is-active' : showDropdown}" type="button" aria-label="Menu" aria-controls="navigation" @click="handleButtonClick">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -112,10 +112,10 @@
     }
 
     .hamburger-inner::after {
-        background-color: #2c5282;
+        background-color: #2c5282!important;
     }
 
     .hamburger-inner {
-        background-color: #2c5282;
+        background-color: #2c5282!important;
     }
 </style>

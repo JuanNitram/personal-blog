@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed flex h-full w-full justify-center items-center bg-gray-900 z-50">
+    <div class="fixed flex h-full w-full justify-center items-center bg-gray-900" style="z-index: 150">
         <div class="relative flex justify-center items-center text-blue-800 font-bold" style="font-size: 40px; top: 22px">J</div>
         <div class="hexagon"></div>
     </div>
