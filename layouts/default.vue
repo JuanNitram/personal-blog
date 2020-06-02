@@ -9,7 +9,9 @@
     </header>
 
     <main>
-      <nuxt />
+      <transition name="zoom">
+        <nuxt />
+      </transition>
     </main>
 
     <Footer />
@@ -67,5 +69,27 @@
   }
   .page-enter, .page-leave-to {
     opacity: 0;
+  }
+
+  .zoom-enter-active,
+  .zoom-leave-active {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: zoom;
+  }
+
+  .zoom-leave-active {
+    animation-direction: reverse;
+  }
+
+  @keyframes zoom {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 </style>
