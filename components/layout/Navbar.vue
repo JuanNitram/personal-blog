@@ -5,9 +5,14 @@
                 <img src="~assets/img/logo-2.svg" class="h-12"/>
             </nuxt-link>
         </div>
-        <div class="block lg:hidden">
-            <button class="flex items-center px-3 py-2 rounded text-gray-400 border-gray-400 hover:text-white hover:border-white" @click="handleButtonClick">
+        <div class="block lg:hidden" style="z-index: 100">
+            <!-- <button class="flex items-center px-3 py-2 rounded text-gray-400 border-gray-400 hover:text-white hover:border-white" @click="handleButtonClick">
                 <svg class="fill-current h-8 w-8 text-blue-800" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button> -->
+            <button class="hamburger hamburger--elastic" :class="{ 'is-active' : showDropdown}" type="button" aria-label="Menu" aria-controls="navigation" @click="handleButtonClick">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
             </button>
         </div>
 
@@ -35,9 +40,9 @@
                 <div class="modal-container fixed w-full h-full z-50 overflow-y-auto ">
                     
                     <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-6 mr-6 text-black text-sm z-50" @click="showDropdown = false">
-                        <svg class="fill-current text-blue-800" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 18 18">
+                        <!-- <svg class="fill-current text-blue-800" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 18 18">
                             <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-                        </svg>
+                        </svg> -->
                     </div>
 
                     <div class="modal-content h-full container mx-auto h-auto text-left p-4">
@@ -100,5 +105,17 @@
 <style>
     #navbar {
         min-height: 10vh;
+    }
+
+    .hamburger-inner::before {
+        background-color: #2c5282;
+    }
+
+    .hamburger-inner::after {
+        background-color: #2c5282;
+    }
+
+    .hamburger-inner {
+        background-color: #2c5282;
     }
 </style>

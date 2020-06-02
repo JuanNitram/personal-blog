@@ -39,7 +39,8 @@ export default {
   loading: { color: '#fff' },
 
   css: [
-    'aos/dist/aos.css'
+    'aos/dist/aos.css',
+    'hamburgers/dist/hamburgers.css'
   ],
 
   plugins: [
