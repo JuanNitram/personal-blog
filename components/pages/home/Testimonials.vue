@@ -1,9 +1,9 @@
 <template>
-<div id="testimonials" class="mx-auto px-2 md:px-12 lg:px-16 xl:px-32 text-gray-400 pt-20" data-aos="fade-up">
-        <div class="w-full px-5 pb-10">
+<div id="testimonials" class="mx-auto px-2 md:px-12 lg:px-16 xl:px-32 text-gray-400 pt-20">
+        <div class="w-full px-5 pb-10" data-aos="fade-up">
             <Title :text="$t('testimonials')"/>
         </div>
-        <div class="block md:flex lg:flex px-10 pt-0 md:pt-4">
+        <div class="block md:flex lg:flex px-10 pt-0 md:pt-4" data-aos="fade-up">
             <div class="w-full md:w-1/2 lg:w-1/2 bg-gray-800 border-2 border-gray-700 rounded-md p-6 flex justify-between mr-0 md:mr-6 mt-10 xl:mt-0">
                 <div class="px-0 lg:px-8 text-left relative pt-10 lg:pt-0">
                     <img src="~/assets/img/albert.jpg" class="rounded-full border-gray-700 w-20 h-20 shadow-lg absolute" style="top: -50px; left: -60px"/>

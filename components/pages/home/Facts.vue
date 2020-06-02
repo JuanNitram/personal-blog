@@ -1,9 +1,9 @@
 <template>
-    <div class="mx-auto px-2 md:px-12 lg:px-16 xl:px-32 pb-20 pt-20 text-gray-400" data-aos="fade-up">
-        <div class="w-full px-5 py-4">
+    <div class="mx-auto px-2 md:px-12 lg:px-16 xl:px-32 pb-20 pt-20 text-gray-400">
+        <div class="w-full px-5 py-4" data-aos="fade-up">
             <Title :text="$t('funFacts')"/>
         </div>
-        <div class="hidden lg:flex flex-col lg:flex-row px-0 lg:px-5">
+        <div class="hidden lg:flex flex-col lg:flex-row px-0 lg:px-5" data-aos="fade-up">
             <div class="w-full lg:w-1/4 px-10 py-5 lg:px-2 xl:px-5 lg:py-5">
                 <div class="bg-gray-800 border-2 border-gray-700 rounded-md p-4 flex flex-col justify-between items-center">
                     <i class="fas fa-laptop fa-3x text-blue-800"></i>
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div class="block lg:hidden px-0 lg:px-5 overflow-hidden">
+        <div class="block lg:hidden px-0 lg:px-5 overflow-hidden" data-aos="fade-up">
             <no-ssr>
                 <Flickity :options="options">
                     <div class="carousel-cell">
