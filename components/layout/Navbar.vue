@@ -5,7 +5,7 @@
                 <img src="~assets/img/logo-2.svg" class="h-12"/>
             </nuxt-link>
         </div>
-        <div class="block lg:hidden" style="z-index: 100">
+        <div class="block" style="z-index: 100">
             <!-- <button class="flex items-center px-3 py-2 rounded text-gray-400 border-gray-400 hover:text-white hover:border-white" @click="handleButtonClick">
                 <svg class="fill-current h-8 w-8 text-blue-800" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
             </button> -->
@@ -16,22 +16,6 @@
             </button>
         </div>
 
-        <div class="hidden lg:flex lg:items-center lg:w-auto">
-            <div class="text-sm lg:flex-grow">
-                <nuxt-link to="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white mr-4">
-                    About Me
-                </nuxt-link>
-                <nuxt-link to="/resume" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white mr-4">
-                    Resume
-                </nuxt-link>
-                <!-- <nuxt-link to="/blog" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white mr-4">
-                    Blog
-                </nuxt-link> -->
-                <nuxt-link to="/contact" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white">
-                    Contact
-                </nuxt-link>
-            </div>
-        </div>
 
         <transition name="zoom">
             <div v-show="showDropdown" class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
@@ -46,13 +30,12 @@
                         <div class="flex h-full justify-between items-center">
                             <div class="block mx-auto">
                                 <p class="w-full block text-4xl md:text-6xl font-bold text-center text-blue-800">
-                                    <a data-to="/" @click="handleRedirect">
+                                    <a data-to="/" @click="handleRedirect" class="cursor-pointer">
                                         About Me
-                                        
                                     </a>
                                 </p>
                                 <p class="w-full block text-4xl md:text-6xl font-bold text-center text-blue-800">
-                                    <a data-to="/resume" @click="handleRedirect">
+                                    <a data-to="/resume" @click="handleRedirect" class="cursor-pointer">
                                         Resume
                                     </a>
                                 </p>
@@ -62,7 +45,7 @@
                                     </a>
                                 </p> -->
                                 <p class="w-full block text-4xl md:text-6xl font-bold text-center text-blue-800">
-                                    <a data-to="/contact" @click="handleRedirect">
+                                    <a data-to="/contact" @click="handleRedirect" class="cursor-pointer">
                                         Contact
                                     </a>
                                 </p>
@@ -107,6 +90,17 @@
                 setTimeout(() => {
                     this.showDropdown = false;
                 }, 200)
+            }
+        },
+
+        watch: {
+            showDropdown(value) {
+                console.log(document.getElementsByTagName('body'), value)
+                if(value === true) {
+                    document.getElementsByTagName("body")[0].style.overflow = "hidden";
+                } else {
+                    document.getElementsByTagName("body")[0].style.overflow = "";
+                }
             }
         }
     }
