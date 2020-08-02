@@ -53,6 +53,7 @@
                                     <div class="py-2 lg:py-0">
                                         <a href="https://uy.linkedin.com/in/juan-vargas-807b72142" target="_blank">
                                             <i class="fab fa-linkedin-in fa-lg mr-2"></i>
+                                            
                                         </a>
                                         <a href="https://github.com/JuanNitram" target="_blank">
                                             <i class="fab fa-github fa-lg"></i>
