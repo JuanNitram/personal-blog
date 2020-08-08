@@ -14,7 +14,7 @@ export default {
     secondService: 'Mobile Development',
     firstServiceDescription: 'Development of scalable, testable and maintainable web applications, using the latest technologies of the moment.',
     secondServiceDescription: 'Development of native mobile applications that provide high quality using technologies such as NativeScript and React Native.',
-    
+
     firstTestimonial: '"He is a man who is very committed to the delivery time and quality of his work."',
     secondTestimonial: '"Juan is one of the most dedicated person that I have ever worked with"',
 
@@ -30,7 +30,7 @@ export default {
     secondEducationSchool: 'Universidad de la República',
     secondEducationTitle: 'Computer Engineering',
     secondEducationDescription: 'The Computer Engineering training aims at a wide and coherent coverage in the planning, development, maintenance and application of systems, which together with the acquired experience, will be projected in a competent professional.',
-    
+
     experience: 'Experience',
     firstExperienceCompany: 'Freelancer',
     firstExperienceDescription: 'As a freelancer I dedicated myself to working in frontend and backend. I have implemented different platforms using the VueJs library and NuxtJs framework in frontend and using NodeJs with ExpressJs library and the Laravel framework in the backend.',
@@ -38,4 +38,5 @@ export default {
     secondExperienceDescription: 'I worked in the backend area. Implementing solutions for different platforms using Laravel framework.',
     thirdExperienceCompany: 'Light-it',
     thirdExperienceDescription: 'I have been working as a Full Stack Developer using Vuejs, Reactjs frontend libraries and Nodejs and Laravel Framework on backend.',
+    fourthExperienceDescription: 'I have been working as a Full Stack Developer using Vuejs, Nativescript frontend libraries and Laravel Framework on backend.',
 }

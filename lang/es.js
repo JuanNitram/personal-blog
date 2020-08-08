@@ -30,7 +30,7 @@ export default {
     secondEducationSchool: 'Universidad de la República',
     secondEducationTitle: 'Computer Engineering',
     secondEducationDescription: 'The Computer Engineering training aims at a wide and coherent coverage in the planning, development, maintenance and application of systems, which together with the acquired experience, will be projected in a competent professional.',
-    
+
     experience: 'Experiencia',
     firstExperienceCompany: 'Freelancer',
     firstExperienceDescription: 'Como freelancer me dedique a trabajar tanto en frontend como en backend. Implemente diferentes plataformas web utilizando la librería VueJs y el framework NuxtJs en el frontend, NodeJs y el framework Laravel en el backend.',
@@ -38,4 +38,5 @@ export default {
     secondExperienceDescription: 'Trabajé principalmente en el área de el backend. Implementando soluciones para distintas plataformas utilizando el framework Laravel.',
     thirdExperienceCompany: 'Light-it',
     thirdExperienceDescription: 'Actualmente he estado trabajando como Full Stack Developer utilizando las librerías Vuejs, ReactJs en el frontend, Nodejs y Laravel Framework en el backend.',
+    fourthExperienceDescription: 'Trabajo como Full Stack Developer utilizando las librerías Vuejs, Nativescript en el frontend y Laravel Framework en el backend.',
 }
