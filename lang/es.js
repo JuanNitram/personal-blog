@@ -39,4 +39,5 @@ export default {
     thirdExperienceCompany: 'Light-it',
     thirdExperienceDescription: 'Actualmente he estado trabajando como Full Stack Developer utilizando las librerías Vuejs, ReactJs en el frontend, Nodejs y Laravel Framework en el backend.',
     fourthExperienceDescription: 'Trabajo como Full Stack Developer utilizando las librerías Vuejs, Nativescript en el frontend y Laravel Framework en el backend.',
+    fifthExperienceDescription: 'Actualmente trabajo como líder tecnológico, responsable del proceso de implementación y mantenimiento de proyectos. Usando tecnologías como Ionic y ElectronJs en el lado del frontend y Laravel Framework en el backend.',
 }

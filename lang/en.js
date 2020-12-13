@@ -37,6 +37,7 @@ export default {
     secondExperienceCompany: 'Sitios - Digital Agency',
     secondExperienceDescription: 'I worked in the backend area. Implementing solutions for different platforms using Laravel framework.',
     thirdExperienceCompany: 'Light-it',
-    thirdExperienceDescription: 'I have been working as a Full Stack Developer using Vuejs, Reactjs frontend libraries and Nodejs and Laravel Framework on backend.',
-    fourthExperienceDescription: 'I have been working as a Full Stack Developer using Vuejs, Nativescript frontend libraries and Laravel Framework on backend.',
+    thirdExperienceDescription: 'I have worked as a Full Stack Developer using Vuejs, Reactjs frontend libraries and Nodejs and Laravel Framework on backend.',
+    fourthExperienceDescription: 'I have worked as a Full Stack Developer using Vuejs, Nativescript frontend libraries and Laravel Framework on backend.',
+    fifthExperienceDescription: "Actually I'm working as a tech lead, encharged of the deployment process, and project maintainability. Using technologies like Ionic and ElectronJs on the frontend side, and Laravel Framework on the backend.",
 }
