@@ -11,9 +11,9 @@
             </div>
         </div>
 
-        <div class="block lg:flex px-6 lg:px-24 xl:px-40 pb-20">
+        <!-- <div class="block lg:flex px-6 lg:px-24 xl:px-40 pb-20">
             <Certificates/>
-        </div>
+        </div> -->
 
         <!-- <div class="block lg:flex px-6 lg:px-24 xl:px-40 pb-20">
             <Skills/>

@@ -13,7 +13,7 @@
             </a>
           </div>
           <div class="pb-2 lg:pb-0">
-            © 2020 All rights reserved
+            <!-- © 2020 All rights reserved -->
           </div>
         </div>
     </footer>

@@ -1,11 +1,11 @@
 export default {
-    description: "I'm currently a software developer, taking responsibility for tasks in both backend and frontend. I have been working the last 5 years developing systems of different requirements, such as ecommerce, people recruitment platform, business platform and different types of websites.",
+    description: "Currently, I working as a team leader, carrying out administrative and technical tasks. Day by day, I'm in charge of maintaining, implementing, and designing solutions for new software functionalities of a wide variety of software products ensuring the quality and the correct operation of it.",
     downloadCv: "Download CV",
     contactMe: "Contact Me",
     services: 'What I do',
     funFacts: 'Fun Facts',
     resume: 'Resume',
-    yearsExperience: '5 years of experience',
+    yearsExperience: 'Six years of development experience',
     current: 'Current',
     stack: 'Tech Stack',
     testimonials: 'Testimonials',
@@ -39,5 +39,6 @@ export default {
     thirdExperienceCompany: 'Light-it',
     thirdExperienceDescription: 'I have worked as a Full Stack Developer using Vuejs, Reactjs frontend libraries and Nodejs and Laravel Framework on backend.',
     fourthExperienceDescription: 'I have worked as a Full Stack Developer using Vuejs, Nativescript frontend libraries and Laravel Framework on backend.',
-    fifthExperienceDescription: "Actually I'm working as a tech lead, encharged of the deployment process, and project maintainability. Using technologies like Ionic and ElectronJs on the frontend side, and Laravel Framework on the backend.",
+    fifthExperienceDescription: "I have worked as a tech lead, responsible of the deployment process, and project maintainability. Using technologies like Ionic, Flutter and ElectronJs on the frontend side, and Laravel Framework on the backend.",
+    sixthExperienceDescription: "I've been working as a team leader, guiding and helping a multidisciplinary group of experienced developers. I'm in charge of plan the project development from the first projects steps, thinking the app architecture and helping the project manager with the project planning.",
 }

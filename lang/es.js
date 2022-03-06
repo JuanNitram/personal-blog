@@ -1,11 +1,11 @@
 export default {
-    description: "Actualmente soy desarrollador de software, asumiendo la responsabilidad de las tareas tanto en backend como en frontend. He trabajado durante los últimos 5 años desarrollando sistemas de diferentes requisitos, como comercio electrónico, plataforma de reclutamiento de personas, plataforma de negocios y diferentes tipos de sitios web.",
+    description: "Actualmente, me desempeño como líder de equipo, realizando tareas administrativas y técnicas. En mi día a día, estoy a cargo de mantener, implementar y diseñar soluciones para nuevas funcionalidades de software de una amplia variedad de productos de software asegurando la calidad y el correcto funcionamiento del mismo.",
     downloadCv: "Descargar CV",
     contactMe: "Contáctame",
     services: "Servicios",
     funFacts: "Datos curiosos",
     resume: 'Resumen',
-    yearsExperience: '5 años de experiencia',
+    yearsExperience: '6 años de experiencia en desarrollo',
     current: 'Actual',
     stack: 'Tech Stack',
     testimonials: 'Testimonios',
@@ -39,5 +39,6 @@ export default {
     thirdExperienceCompany: 'Light-it',
     thirdExperienceDescription: 'Actualmente he estado trabajando como Full Stack Developer utilizando las librerías Vuejs, ReactJs en el frontend, Nodejs y Laravel Framework en el backend.',
     fourthExperienceDescription: 'Trabajo como Full Stack Developer utilizando las librerías Vuejs, Nativescript en el frontend y Laravel Framework en el backend.',
-    fifthExperienceDescription: 'Actualmente trabajo como líder tecnológico, responsable del proceso de implementación y mantenimiento de proyectos. Usando tecnologías como Ionic y ElectronJs en el lado del frontend y Laravel Framework en el backend.',
+    fifthExperienceDescription: 'Actualmente trabajo como líder tecnológico, responsable del proceso de implementación y mantenimiento de proyectos. Usando tecnologías como Ionic, Flutter y ElectronJs en el lado del frontend y Laravel Framework en el backend.',
+    sixthExperienceDescription: "He estado trabajando como líder de equipo, guiando y ayudando a un grupo multidisciplinario de desarrolladores experimentados. Estoy a cargo de planificar el desarrollo del proyecto desde los primeros pasos del proyecto, pensando en la arquitectura de la aplicación y ayudando al gerente del proyecto con la planificación del proyecto.",
 }

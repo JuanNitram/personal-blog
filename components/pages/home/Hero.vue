@@ -5,7 +5,7 @@
         </div>
         <div class="w-full lg:w-1/2 flex flex-col justify-center">
             <h3 class="text-lg lg:text-xl text-center lg:text-left text-gray-400">Juan Vargas</h3>
-            <h1 class="text-3xl lg:text-4xl text-center lg:text-left text-gray-100">Software Developer</h1>
+            <h1 class="text-3xl lg:text-4xl text-center lg:text-left text-gray-100">Development Team Leader</h1>
             <p class="text-sm lg:text-md text-center lg:text-left text-gray-400">{{ $t('description') }}</p>
             <div class="hidden lg:flex justify-center lg:justify-start pt-6">
                 <!-- <Button :text="$t('downloadCv')" /> -->

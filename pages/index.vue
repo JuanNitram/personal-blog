@@ -1,9 +1,9 @@
 <template>
   <div>
     <Hero/>
-    <Services />
+    <!-- <Services /> -->
     <!-- <Testimonials/> -->
-    <Facts />
+    <!-- <Facts /> -->
   </div>
 </template>
 
