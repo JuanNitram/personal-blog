@@ -8,7 +8,7 @@
       <Navbar/>
     </header>
 
-    <main :class="$route.path === '/resume' ? '' : 'h-screen'">
+    <main :class="$route.path === '/resume' || $route.path === '/contact' ? '' : 'h-screen'">
       <transition name="zoom">
         <nuxt />
       </transition>
