@@ -8,7 +8,7 @@
       <Navbar/>
     </header>
 
-    <main>
+    <main class="h-screen">
       <transition name="zoom">
         <nuxt />
       </transition>

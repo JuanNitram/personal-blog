@@ -4,9 +4,9 @@
           <img id="personal-image" src="~/assets/img/me-4.JPG" class="rounded-full border-gray-700 w-64 h-64 lg:w-72 lg:h-72 xl:w-96 xl:h-96 shadow-lg"/>
         </div>
         <div class="w-full lg:w-1/2 flex flex-col justify-center">
-            <h3 class="text-lg lg:text-xl text-center lg:text-left text-gray-400">Juan Vargas</h3>
+            <h3 class="text-2xl lg:text-3xl text-center lg:text-left text-gray-400">Juan Vargas</h3>
             <h1 class="text-3xl lg:text-4xl text-center lg:text-left text-gray-100">Development Team Leader</h1>
-            <p class="text-sm lg:text-md text-center lg:text-left text-gray-400">{{ $t('description') }}</p>
+            <p class="text-md lg:text-lg text-center lg:text-left text-gray-400">{{ $t('description') }}</p>
             <div class="hidden lg:flex justify-center lg:justify-start pt-6">
                 <!-- <Button :text="$t('downloadCv')" /> -->
                 <nuxt-link to="/contact">

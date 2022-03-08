@@ -1,5 +1,5 @@
 <template>
-    <footer class='w-full text-center border-t-2 border-gray-800 p-4 pin-b'>
+    <footer class='w-full flex justify-center items-center border-t-2 border-gray-800 bg-gray-900 p-4 pin-b fixed bottom-0 h-16'>
         <div class="block lg:flex justify-between text-gray-100 text-sm">
           <div class="py-2 lg:py-0">
             <a href="https://uy.linkedin.com/in/juan-vargas-807b72142" target="_blank">
