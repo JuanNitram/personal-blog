@@ -8,7 +8,7 @@
       <Navbar/>
     </header>
 
-    <main class="h-screen">
+    <main :class="$route.path === '/resume' ? '' : 'h-screen'">
       <transition name="zoom">
         <nuxt />
       </transition>
@@ -37,6 +37,7 @@
     },
 
     mounted() {
+      console.log(this.$route, this.$route.path);
       setTimeout(() => {
         this.loading = false
       }, 1000)

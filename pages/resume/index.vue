@@ -1,5 +1,5 @@
 <template>
-    <div id="resume" class="pt-12">
+    <div id="resume" class="py-12">
         <Breadcrumb :text="$t('resume')" :secondary-text="$t('yearsExperience')" />
 
         <div class="block lg:flex px-6 lg:px-24 xl:px-40 py-12">
