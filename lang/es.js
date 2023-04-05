@@ -1,5 +1,5 @@
 export default {
-    description: "Actualmente, me desempeño como líder de equipo, realizando tareas administrativas y técnicas. En mi día a día, estoy a cargo de mantener, implementar y diseñar soluciones para nuevas funcionalidades de software de una amplia variedad de productos de software asegurando la calidad y el correcto funcionamiento del mismo.",
+    description: "¡Hola! Mi nombre es Juan y soy un líder técnico apasionado por la creación y administración de sistemas de servidores, la planificación de proyectos y la administración de productos. Con una amplia experiencia en administración de servidores, he trabajado en una variedad de proyectos que van desde implementaciones a pequeña escala hasta entornos de producción a gran escala. También he trabajado con clústeres de Kubernetes, lo que me ha permitido ganar experiencia en orquestación y escalado de contenedores. Además, tengo una sólida experiencia en integraciones de API de terceros. Mi objetivo es aprovechar mi conocimiento técnico y experiencia para brindar soluciones innovadoras que satisfagan las necesidades de mis clientes.",
     downloadCv: "Descargar CV",
     contactMe: "Contáctame",
     services: "Servicios",
