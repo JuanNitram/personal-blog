@@ -1,6 +1,6 @@
 <template>
     <h1 class="text-2xl font-bold text-left">
-        <span class="border-b-2 relative border-blue-800 text-gray-100">{{ text }}</span>
+        <span class="relative border-blue-100 text-gray-400">{{ text }}</span>
     </h1>
 </template>
 
@@ -18,7 +18,7 @@
         left: 35%;
         right: 0;
         bottom: -2px;
-        border-top: 2px solid #444444;
+        border-top: 2px solid #949494;
         content: '';
     }
 </style>

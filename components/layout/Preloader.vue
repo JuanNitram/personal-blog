@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed flex h-full w-full justify-center items-center bg-gray-900"
+    class="fixed flex h-full w-full justify-center items-center bg-white"
     style="z-index: 150"
   >
     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
@@ -20,7 +20,7 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #2c5282;
+  background: #949494;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 .lds-ellipsis div:nth-child(1) {

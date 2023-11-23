@@ -7,7 +7,7 @@
         </div>
         <div class="block" style="z-index: 100">
             <!-- <button class="flex items-center px-3 py-2 rounded text-gray-400 border-gray-400 hover:text-white hover:border-white" @click="handleButtonClick">
-                <svg class="fill-current h-8 w-8 text-blue-800" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                <svg class="fill-current h-8 w-8 text-gray-400" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
             </button> -->
             <button class="hamburger hamburger--elastic hidden" style="outline: none" :class="{ 'is-active' : showDropdown}" type="button" aria-label="Menu" aria-controls="navigation" @click="handleButtonClick">
                 <span class="hamburger-box">
@@ -19,7 +19,7 @@
 
         <transition name="zoom">
             <div v-show="showDropdown" class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
-                <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-95"></div>
+                <div class="modal-overlay absolute w-full h-full bg-white opacity-95"></div>
 
                 <div class="modal-container fixed w-full h-full z-50 overflow-y-auto ">
                     
@@ -29,27 +29,27 @@
                     <div class="modal-content h-full container mx-auto h-auto text-left p-4">
                         <div class="flex h-full justify-between items-center">
                             <div class="block mx-auto">
-                                <p class="w-full block text-4xl md:text-6xl font-bold text-center text-blue-800">
+                                <p class="w-full block text-4xl md:text-6xl font-bold text-center text-gray-400">
                                     <a data-to="/" @click="handleRedirect" class="cursor-pointer">
                                         About Me
                                     </a>
                                 </p>
-                                <p class="w-full block text-4xl md:text-6xl font-bold text-center text-blue-800">
+                                <p class="w-full block text-4xl md:text-6xl font-bold text-center text-gray-400">
                                     <a data-to="/resume" @click="handleRedirect" class="cursor-pointer">
                                         Resume
                                     </a>
                                 </p>
-                                <!-- <p class="w-full block text-4xl font-bold text-center text-blue-800">
+                                <!-- <p class="w-full block text-4xl font-bold text-center text-gray-400">
                                     <a data-to="/blog" @click="handleRedirect">
                                         Blog
                                     </a>
                                 </p> -->
-                                <p class="w-full block text-4xl md:text-6xl font-bold text-center text-blue-800">
+                                <p class="w-full block text-4xl md:text-6xl font-bold text-center text-gray-400">
                                     <a data-to="/contact" @click="handleRedirect" class="cursor-pointer">
                                         Contact
                                     </a>
                                 </p>
-                                <div class="w-full absolute bottom-0 left-0 right-0 block text-center text-blue-800 md:hidden">
+                                <div class="w-full absolute bottom-0 left-0 right-0 block text-center text-gray-400 md:hidden">
                                     <div class="py-2 lg:py-0">
                                         <a href="https://uy.linkedin.com/in/juan-vargas-807b72142" target="_blank">
                                             <i class="fab fa-linkedin-in fa-lg mr-2"></i>
@@ -113,14 +113,14 @@
     }
 
     .hamburger-inner::before {
-        background-color: #2c5282;
+        background-color: #949494;
     }
 
     .hamburger-inner::after {
-        background-color: #2c5282!important;
+        background-color: #949494!important;
     }
 
     .hamburger-inner {
-        background-color: #2c5282!important;
+        background-color: #949494!important;
     }
 </style>

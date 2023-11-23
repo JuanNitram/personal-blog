@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900">
+  <div>
     <transition name="page">
       <Preloader v-show="loading"/>
     </transition>
