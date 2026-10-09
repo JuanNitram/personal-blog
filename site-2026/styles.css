@@ -373,3 +373,14 @@ code { font: 500 .88em/1 var(--mono); padding: 3px 7px; border-radius: 6px; back
   .how { grid-template-columns: 1fr; }
   .how ul { grid-template-columns: 1fr; }
 }
+.apis { display: grid; grid-template-columns: 1fr 1.4fr; gap: 14px; margin-top: 14px; }
+.apis .tile { padding: 32px; }
+.apis h3 { margin: 0 0 8px; font-family: var(--serif); font-weight: 400; font-size: 44px; line-height: 1; letter-spacing: -0.02em; }
+.apis p { margin: 0 0 18px; color: inherit; opacity: .8; }
+.apis .tags { padding: 0; }
+.stripe { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+.stripe:hover { background: var(--accent); }
+.stripe .tags span { background: transparent; border-color: currentColor; color: inherit; }
+.stripe .rank { font: 500 13px/1 var(--mono); opacity: .7; display: block; margin-bottom: 18px; }
+.api-list h3 { font-size: 32px; margin-bottom: 18px; }
+@media (max-width: 860px) { .apis { grid-template-columns: 1fr; } }
