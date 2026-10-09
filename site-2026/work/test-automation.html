@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Automation</title>
+  <meta name="description" content="Case study — Juan Vargas on starting a Playwright test automation project from scratch at Tithely, making QA visible, and building with AI.">
+  <meta property="og:title" content="Case study: Test automation, started from scratch | Juan Vargas">
+  <meta property="og:type" content="article">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav aria-label="Main">
+    <a href="../index.html" class="logo" aria-label="Home">jv.</a>
+    <a href="../index.html#cases">Case studies</a>
+    <a href="../index.html#path" class="hide-sm">Path</a>
+    <button id="theme" type="button" aria-label="Toggle color theme">◐</button>
+    <a href="../index.html#contact" class="cta">Let's talk</a>
+  </nav>
+
+  <main class="wrap case">
+    <a class="back" href="../index.html#cases">← All case studies</a>
+    <div class="eyebrow">Case study 06 · Tithely · Quality</div>
+    <h1>Test automation, <em>started from scratch.</em></h1>
+    <p class="lede">Today I work as a developer and SDET at Tithely, owning integrations and building automated tests with Playwright. A couple of test projects already existed, but I started a new one from zero, and this time with AI writing most of the code while I make the decisions.</p>
+
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Developer · SDET · lead</dd></div>
+      <div><dt>Era</dt><dd>AI-assisted</dd></div>
+      <div><dt>Stack</dt><dd>Playwright · Docker · CI</dd></div>
+      <div><dt>Also</dt><dd>Integrations · Jira/Xray</dd></div>
+    </dl>
+
+    <section class="chapter">
+      <div class="eyebrow">Context</div>
+      <div class="prose">
+        <h2>Testing existed. Nobody could see it.</h2>
+        <p>The team mixes in-house developers with contract SDETs. They did QA, but nothing in reporting showed it, and critical flows like <strong>sign-in</strong> relied mostly on people clicking through by hand.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Diagnosis</div>
+      <div class="prose">
+        <h2>The tool was there. The setup was broken.</h2>
+        <p>The org already had <strong>Xray</strong> for test management. Looking closely, I found why it showed nothing:</p>
+        <div class="findings">
+          <div class="finding tile">
+            <span class="n">✕</span>
+            <div>
+              <h3>Tests with no type</h3>
+              <p>Test issues were created with no Test Type, so they never counted as real tests in coverage reports.</p>
+            </div>
+          </div>
+          <div class="finding tile">
+            <span class="n">✕</span>
+            <div>
+              <h3>Executions linked to nothing</h3>
+              <p>Test Executions were logged with no linked Tests, so finished QA runs proved nothing to anyone reading the board.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">What I built</div>
+      <div class="prose">
+        <figure class="figure tile">
+          <svg viewBox="0 0 720 200" role="img" aria-label="Manual QA in Xray and Playwright end-to-end tests both run through containerized CI and feed visible reporting">
+            <rect class="box" x="10" y="20" width="200" height="56" rx="14"/>
+            <text x="110" y="45" text-anchor="middle">Manual QA</text>
+            <text class="sub" x="110" y="64" text-anchor="middle">Xray, fixed</text>
+            <rect class="box" x="10" y="124" width="200" height="56" rx="14"/>
+            <text x="110" y="149" text-anchor="middle">Playwright E2E</text>
+            <text class="sub" x="110" y="168" text-anchor="middle">new project, from zero</text>
+            <path class="wire" d="M210 48 C 260 48, 260 100, 290 100"/>
+            <path class="wire" d="M210 152 C 260 152, 260 100, 290 100"/>
+            <rect class="box" x="290" y="72" width="170" height="56" rx="14"/>
+            <text x="375" y="97" text-anchor="middle">Containerized CI</text>
+            <text class="sub" x="375" y="116" text-anchor="middle">same env everywhere</text>
+            <path class="wire" d="M460 100 L 520 100"/>
+            <rect class="hot" x="520" y="72" width="190" height="56" rx="14"/>
+            <text class="hot-text" x="615" y="105" text-anchor="middle">Visible coverage</text>
+          </svg>
+          <figcaption>Manual and automated testing both end up in a report people can read.</figcaption>
+        </figure>
+        <ol class="steps">
+          <li><div><strong>A new automation project, from zero</strong>Started a fresh Playwright project instead of patching the existing ones, with coverage for the QA hub and the sign-in flows.</div></li>
+          <li><div><strong>Fix Xray adoption</strong>Set proper Test Types and linked executions to their tests, so manual QA shows up in coverage and reporting.</div></li>
+          <li><div><strong>Containerized CI/CD</strong>Set up a containerized environment so tests run the same way locally and in the pipeline, and tuned CI timeouts so slow is not mistaken for broken.</div></li>
+          <li><div><strong>Own the integrations</strong>Beyond tests, I take care of several of the product's integrations.</div></li>
+          <li><div><strong>Team status tooling</strong>Wrote a <code>/team-status</code> Claude Code command that gathers tickets, story points, blockers and risk per person into one view.</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">AI era</div>
+      <div class="prose">
+        <h2>Same judgment, different keyboard.</h2>
+        <p>Most projects on this site I wrote by hand. This one is different: <strong>the code is generated with AI</strong>. My job moved to deciding what to test, shaping the architecture, and reviewing what comes out. The years of handcrafting are exactly what make that review worth something.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Skills</div>
+      <div class="prose">
+        <h2>What this project shows.</h2>
+        <div class="tags"><span>Playwright</span><span>Docker</span><span>CI/CD</span><span>Xray</span><span>QA process</span><span>Integrations</span><span>AI-assisted development</span></div>
+        <div class="related">
+          <a class="rel tile" href="signup-analytics.html"><small>Evidence first</small><b>Making signup data worth trusting</b></a>
+          <a class="rel tile" href="studeo-podcasts.html"><small>Infrastructure</small><b>From one load balancer to Kubernetes</b></a>
+        </div>
+      </div>
+    </section>
+
+    <blockquote class="quote">AI writes the code. <em>Someone still has to know what good looks like.</em></blockquote>
+
+    <a class="next tile" href="rural-king.html">
+      <div><small>Next case study</small><b>A store scanner, rendered on the server</b></div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="yr">2026</span> Juan Vargas</span>
+      <span>Made in Montevideo · <span id="clock">--:--</span> UYT</span>
+    </div>
+  </footer>
+  <script src="../site.js"></script>
+</body>
+</html>

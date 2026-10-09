@@ -13,277 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0b0b0c;
-      --bg-2: #131315;
-      --card: rgba(255, 255, 255, 0.035);
-      --card-hover: rgba(255, 255, 255, 0.06);
-      --line: rgba(255, 255, 255, 0.09);
-      --text: #f2f1ec;
-      --muted: #9a9a95;
-      --accent: #d4ff3a;
-      --accent-ink: #0b0b0c;
-      --glow-1: rgba(212, 255, 58, 0.16);
-      --glow-2: rgba(120, 90, 255, 0.18);
-      --radius: 28px;
-      --serif: "Instrument Serif", Georgia, serif;
-      --sans: "Inter Tight", system-ui, -apple-system, sans-serif;
-      --mono: "JetBrains Mono", ui-monospace, monospace;
-    }
-    @media (prefers-color-scheme: light) {
-      :root:not([data-theme="dark"]) {
-        --bg: #f4f2ec;
-        --bg-2: #ebe8df;
-        --card: rgba(0, 0, 0, 0.03);
-        --card-hover: rgba(0, 0, 0, 0.055);
-        --line: rgba(0, 0, 0, 0.1);
-        --text: #141413;
-        --muted: #66655f;
-        --accent: #3a2bff;
-        --accent-ink: #ffffff;
-        --glow-1: rgba(58, 43, 255, 0.12);
-        --glow-2: rgba(255, 140, 60, 0.14);
-      }
-    }
-    :root[data-theme="light"] {
-      --bg: #f4f2ec;
-      --bg-2: #ebe8df;
-      --card: rgba(0, 0, 0, 0.03);
-      --card-hover: rgba(0, 0, 0, 0.055);
-      --line: rgba(0, 0, 0, 0.1);
-      --text: #141413;
-      --muted: #66655f;
-      --accent: #3a2bff;
-      --accent-ink: #ffffff;
-      --glow-1: rgba(58, 43, 255, 0.12);
-      --glow-2: rgba(255, 140, 60, 0.14);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 17px;
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-      transition: background-color .4s ease, color .4s ease;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
-    ::selection { background: var(--accent); color: var(--accent-ink); }
-
-    /* ambient aurora + grain */
-    .aurora {
-      position: fixed; inset: -20vh -20vw; z-index: -2; pointer-events: none;
-      background:
-        radial-gradient(40vw 40vw at 15% 10%, var(--glow-1), transparent 60%),
-        radial-gradient(45vw 45vw at 90% 30%, var(--glow-2), transparent 60%),
-        radial-gradient(35vw 35vw at 50% 100%, var(--glow-1), transparent 60%);
-      filter: blur(20px);
-      animation: drift 24s ease-in-out infinite alternate;
-    }
-    @keyframes drift {
-      to { transform: translate3d(-3vw, 4vh, 0) rotate(4deg); }
-    }
-    .grain {
-      position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .07;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    }
-
-    .wrap { width: min(1200px, 100% - 32px); margin-inline: auto; }
-
-    /* nav */
-    nav {
-      position: fixed; top: 16px; left: 50%; transform: translateX(-50%); z-index: 50;
-      display: flex; align-items: center; gap: 4px;
-      padding: 6px; border: 1px solid var(--line); border-radius: 999px;
-      background: color-mix(in oklab, var(--bg) 70%, transparent);
-      backdrop-filter: blur(16px) saturate(1.4);
-      -webkit-backdrop-filter: blur(16px) saturate(1.4);
-      max-width: calc(100% - 32px);
-    }
-    nav a, nav button {
-      font: 500 14px/1 var(--sans); color: var(--muted);
-      padding: 10px 14px; border-radius: 999px; border: 0; background: none; cursor: pointer;
-      transition: color .2s, background-color .2s; white-space: nowrap;
-    }
-    nav a:hover, nav button:hover { color: var(--text); background: var(--card-hover); }
-    nav .logo { color: var(--text); font-family: var(--serif); font-size: 20px; padding: 6px 14px; }
-    nav .cta { background: var(--text); color: var(--bg); }
-    nav .cta:hover { background: var(--accent); color: var(--accent-ink); }
-    @media (max-width: 560px) { nav .hide-sm { display: none; } }
-
-    /* hero */
-    .hero { min-height: 100svh; display: grid; align-content: center; padding: 120px 0 64px; }
-    .status {
-      display: inline-flex; align-items: center; gap: 10px; width: fit-content;
-      font: 500 13px/1 var(--mono); color: var(--muted);
-      padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--card);
-    }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: #3ddc84; box-shadow: 0 0 0 0 rgba(61,220,132,.6); animation: ping 2s infinite; }
-    @keyframes ping { 70% { box-shadow: 0 0 0 10px rgba(61,220,132,0); } 100% { box-shadow: 0 0 0 0 rgba(61,220,132,0); } }
-    h1 {
-      font-family: var(--serif); font-weight: 400;
-      font-size: clamp(56px, 13vw, 196px); line-height: .88; letter-spacing: -0.03em;
-      margin: 28px 0 0;
-    }
-    h1 .line { display: block; overflow: hidden; }
-    h1 .line span { display: inline-block; animation: rise 1.1s cubic-bezier(.2,.8,.2,1) both; }
-    h1 .line:nth-child(2) span { animation-delay: .12s; }
-    h1 em { font-style: italic; color: var(--accent); }
-    @keyframes rise { from { transform: translateY(105%); } }
-    .hero-foot {
-      margin-top: 48px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: end;
-      animation: fade 1s .5s both;
-    }
-    @keyframes fade { from { opacity: 0; transform: translateY(12px); } }
-    .hero-foot p { margin: 0; font-size: clamp(18px, 2vw, 22px); color: var(--muted); max-width: 34ch; }
-    .hero-foot p strong { color: var(--text); font-weight: 500; }
-    .hero-meta { display: flex; justify-content: flex-end; gap: 32px; font-family: var(--mono); font-size: 13px; color: var(--muted); }
-    .hero-meta b { display: block; color: var(--text); font-family: var(--sans); font-size: 28px; font-weight: 600; letter-spacing: -0.02em; }
-    @media (max-width: 760px) {
-      .hero-foot { grid-template-columns: 1fr; }
-      .hero-meta { justify-content: flex-start; }
-    }
-
-    /* section heads */
-    section { padding: 96px 0; }
-    .eyebrow { font: 500 13px/1 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .12em; display: flex; gap: 12px; align-items: center; }
-    .eyebrow::before { content: ""; width: 24px; height: 1px; background: currentColor; }
-    h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 6vw, 80px); line-height: 1; letter-spacing: -0.02em; margin: 18px 0 48px; }
-    h2 em { color: var(--accent); }
-
-    /* bento */
-    .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
-    .tile {
-      position: relative; overflow: hidden;
-      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-      padding: 28px; transition: background-color .3s, transform .3s, border-color .3s;
-    }
-    .tile::after {
-      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s;
-      background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), var(--glow-1), transparent 60%);
-    }
-    .tile:hover { background: var(--card-hover); }
-    .tile:hover::after { opacity: 1; }
-    .t-photo { grid-column: span 2; grid-row: span 2; padding: 0; min-height: 420px; }
-    .t-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(.25) contrast(1.05); transition: filter .5s, transform .8s; }
-    .t-photo:hover img { filter: none; transform: scale(1.03); }
-    .t-photo .tag {
-      position: absolute; left: 16px; bottom: 16px; z-index: 1;
-      font: 500 13px/1 var(--mono); padding: 10px 14px; border-radius: 999px;
-      background: color-mix(in oklab, var(--bg) 75%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-    }
-    .t-bio { grid-column: span 4; }
-    .t-bio p { margin: 0; font-size: clamp(19px, 2vw, 24px); line-height: 1.45; letter-spacing: -0.01em; }
-    .t-bio p span { color: var(--muted); }
-    .t-stat { grid-column: span 2; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px; }
-    .t-stat .num { font-family: var(--serif); font-size: 72px; line-height: 1; }
-    .t-stat .lbl { color: var(--muted); font-size: 15px; }
-    .t-accent { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
-    .t-accent .lbl { color: inherit; opacity: .75; }
-    .t-accent:hover { background: var(--accent); }
-    .t-stack { grid-column: span 6; padding: 22px 0; }
-    .marquee { display: flex; gap: 12px; width: max-content; animation: scroll 38s linear infinite; }
-    .t-stack:hover .marquee { animation-play-state: paused; }
-    @keyframes scroll { to { transform: translateX(-50%); } }
-    .chip { font: 500 15px/1 var(--sans); padding: 12px 18px; border: 1px solid var(--line); border-radius: 999px; white-space: nowrap; }
-    .chip i { font-style: normal; color: var(--accent); margin-right: 8px; }
-    .t-stack { mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
-    @media (max-width: 900px) {
-      .t-photo { grid-column: span 6; min-height: 360px; grid-row: auto; }
-      .t-bio { grid-column: span 6; }
-      .t-stat { grid-column: span 3; }
-    }
-    @media (max-width: 520px) { .t-stat { grid-column: span 6; } }
-
-    /* projects */
-    .projects { display: grid; gap: 14px; }
-    .project {
-      position: relative; display: grid; grid-template-columns: 1fr 1.1fr; gap: 0; overflow: hidden;
-      border: 1px solid var(--line); border-radius: var(--radius); background: var(--card);
-      transition: border-color .3s;
-    }
-    .project:hover { border-color: color-mix(in oklab, var(--accent) 50%, var(--line)); }
-    .p-visual {
-      position: relative; min-height: 340px; overflow: hidden; border-right: 1px solid var(--line);
-      background: var(--bg-2);
-    }
-    .p-visual svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-    .p-visual .big {
-      position: absolute; left: 24px; bottom: 16px; font-family: var(--serif); font-size: clamp(64px, 9vw, 120px); line-height: 1; letter-spacing: -0.03em;
-      color: var(--text); opacity: .95;
-    }
-    .p-body { padding: 36px; display: flex; flex-direction: column; gap: 18px; }
-    .p-top { display: flex; justify-content: space-between; gap: 12px; font: 500 13px/1.3 var(--mono); color: var(--muted); flex-wrap: wrap; }
-    .p-body h3 { font-size: clamp(26px, 3vw, 36px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; margin: 0; }
-    .p-body p { margin: 0; color: var(--muted); }
-    .p-body ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
-    .p-body li { display: grid; grid-template-columns: 20px 1fr; gap: 8px; }
-    .p-body li::before { content: "↳"; color: var(--accent); font-family: var(--mono); }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px; }
-    .tags span { font: 500 12px/1 var(--mono); padding: 8px 12px; border-radius: 999px; background: var(--card-hover); border: 1px solid var(--line); }
-    @media (max-width: 860px) {
-      .project { grid-template-columns: 1fr; }
-      .p-visual { min-height: 220px; border-right: 0; border-bottom: 1px solid var(--line); }
-      .p-body { padding: 24px; }
-    }
-
-    /* animated visuals */
-    .orbit { transform-origin: 50% 50%; animation: spin 40s linear infinite; }
-    .orbit.r { animation-duration: 60s; animation-direction: reverse; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .pulse { animation: pulse 3s ease-in-out infinite; }
-    @keyframes pulse { 50% { opacity: .35; } }
-
-    /* timeline */
-    .timeline { border-top: 1px solid var(--line); }
-    .row {
-      display: grid; grid-template-columns: 140px 1fr 1.4fr; gap: 24px; align-items: baseline;
-      padding: 26px 4px; border-bottom: 1px solid var(--line); transition: padding .3s, background-color .3s;
-    }
-    .row:hover { background: var(--card); padding-left: 16px; }
-    .row .yr { font: 500 14px/1 var(--mono); color: var(--muted); }
-    .row .role { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
-    .row .role small { display: block; font-size: 15px; font-weight: 400; color: var(--muted); margin-top: 4px; letter-spacing: 0; }
-    .row p { margin: 0; color: var(--muted); font-size: 15px; }
-    .now { color: var(--accent); }
-    @media (max-width: 760px) {
-      .row { grid-template-columns: 1fr; gap: 8px; }
-    }
-
-    /* contact */
-    .contact { text-align: center; padding: 140px 0 120px; }
-    .contact h2 { font-size: clamp(52px, 10vw, 150px); margin: 20px 0 40px; line-height: .9; }
-    .contact .eyebrow { justify-content: center; }
-    .contact .eyebrow::before { display: none; }
-    .links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 10px; padding: 16px 24px; border-radius: 999px;
-      border: 1px solid var(--line); font-weight: 500; transition: background-color .25s, color .25s, transform .25s;
-    }
-    .btn:hover { transform: translateY(-2px); background: var(--card-hover); }
-    .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
-    .btn.primary:hover { background: var(--text); color: var(--bg); }
-    .btn svg { width: 18px; height: 18px; fill: currentColor; }
-    footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font: 500 13px/1.4 var(--mono); }
-    footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-
-    /* scroll reveal (progressive) */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
-    .reveal.in { opacity: 1; transform: none; }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; }
-      .reveal { opacity: 1; transform: none; }
-      html { scroll-behavior: auto; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="aurora" aria-hidden="true"></div>
@@ -292,7 +22,8 @@
   <nav aria-label="Main">
     <a href="#top" class="logo" aria-label="Home">jv.</a>
     <a href="#about" class="hide-sm">About</a>
-    <a href="#work">Work</a>
+    <a href="#profile" class="hide-sm">Profile</a>
+    <a href="#cases">Work</a>
     <a href="#path" class="hide-sm">Path</a>
     <button id="theme" type="button" aria-label="Toggle color theme">◐</button>
     <a href="#contact" class="cta">Let's talk</a>
@@ -301,16 +32,16 @@
   <main id="top">
     <!-- HERO -->
     <header class="hero wrap">
-      <span class="status"><span class="dot"></span>Technical Lead @ BuildOnline · Montevideo, UY</span>
+      <span class="status"><span class="dot"></span>Technical Lead @ BuildOnline · for Tithely · Montevideo, UY</span>
       <h1>
         <span class="line"><span>Juan Vargas</span></span>
         <span class="line"><span>builds <em>systems</em> that ship.</span></span>
       </h1>
       <div class="hero-foot">
-        <p>Tech lead who likes the whole picture — <strong>servers, Kubernetes, architecture and planning</strong> — and still enjoys writing the code.</p>
+        <p>Tech lead and hands-on engineer. I've built <strong>church software, retail store tools, podcast platforms, marketplaces</strong> and an offline app for a prison, usually leading the team and always writing code.</p>
         <div class="hero-meta">
           <div><b id="years">9+</b>years building</div>
-          <div><b>7</b>roles</div>
+          <div><b>15</b>case studies</div>
           <div><b>∞</b>coffees</div>
         </div>
       </div>
@@ -328,7 +59,7 @@
         </div>
 
         <div class="tile t-bio reveal">
-          <p>I'm a Technical Lead with a passion for creating and managing server systems, project planning and product management. <span>I've worked on everything from small deployments to large-scale production environments, run Kubernetes clusters for container orchestration and scaling, and wired up lots of third-party APIs. My goal: use that experience to build solutions that really fit what clients need.</span></p>
+          <p>I'm a Technical Lead at BuildOnline, working with Tithely since 2020. I turn business rules into architecture, then build it. <span>I've designed products from zero, like Sermonly, and worked across many more. I move between Laravel, Flutter, Ionic, Electron and Hotwire, run things on Kubernetes, and connect anything with an API. On almost every project I've also been the tech lead: leading people, assigning work, and acting as the link between the client and the code. Most of it I wrote by hand, before AI. Now I use AI to go faster, and the years of handcrafting are what let me judge its output.</span></p>
         </div>
 
         <div class="tile t-stat t-accent reveal">
@@ -350,112 +81,169 @@
       </div>
     </section>
 
-    <!-- WORK -->
-    <section id="work" class="wrap">
-      <div class="eyebrow reveal">02 — Selected work</div>
-      <h2 class="reveal">A few things <em>I've built</em> &amp; led.</h2>
+    <!-- PROFILE -->
+    <section id="profile" class="wrap">
+      <div class="eyebrow reveal">02 — Profile</div>
+      <h2 class="reveal">What I'm <em>good at.</em></h2>
+      <div class="caps">
+        <div class="tile cap reveal">
+          <h3>Turning business rules into systems</h3>
+          <p>Shifts, bookings, payments, subscriptions, seller replies: I like taking messy real-world rules and giving them a clean model.</p>
+          <div class="cap-links"><a href="work/nanny-company.html">Nanny Company</a><a href="work/vin-trackers.html">Vin Trackers</a><a href="work/guestio.html">Guestio</a></div>
+        </div>
+        <div class="tile cap reveal">
+          <h3>Payments &amp; subscriptions</h3>
+          <p>Stripe one-off payments and recurring plans, plus checking what billing code really does before it ships.</p>
+          <div class="cap-links"><a href="work/sermonly.html">Sermonly</a><a href="work/guestio.html">Guestio</a><a href="work/annual-billing.html">Annual billing</a></div>
+        </div>
+        <div class="tile cap reveal">
+          <h3>Integrations</h3>
+          <p>AI, Bible Gateway, CCLI, Carfax, Postmark inbound email, WhatsApp, analytics tools: if it has an API, I've probably connected something to it.</p>
+          <div class="cap-links"><a href="work/sermonly.html">Sermonly</a><a href="work/vin-trackers.html">Vin Trackers</a><a href="work/mi-reserva.html">Mi Reserva</a></div>
+        </div>
+        <div class="tile cap reveal">
+          <h3>One product, many screens</h3>
+          <p>Desktop, web and mobile with Electron, Ionic, Flutter and Hotwire, including web content living inside native apps.</p>
+          <div class="cap-links"><a href="work/breeze-worship.html">Breeze Worship</a><a href="work/rural-king.html">Rural King</a><a href="work/media-picker.html">Media</a></div>
+        </div>
+        <div class="tile cap reveal">
+          <h3>Offline &amp; real-world devices</h3>
+          <p>Apps that work with no signal, store handhelds with scanners, QR codes at the door.</p>
+          <div class="cap-links"><a href="work/sigt.html">Sigt</a><a href="work/rural-king.html">Rural King</a><a href="work/3pv.html">3pv</a></div>
+        </div>
+        <div class="tile cap reveal">
+          <h3>Infrastructure &amp; quality</h3>
+          <p>Kubernetes with autoscaling in production, containerized CI, Playwright E2E tests, and data I can prove is right.</p>
+          <div class="cap-links"><a href="work/studeo-podcasts.html">Studeo</a><a href="work/test-automation.html">Test automation</a><a href="work/signup-analytics.html">Signup analytics</a></div>
+        </div>
+      </div>
+      <div class="tile how reveal">
+        <div><span class="eyebrow">How I work</span></div>
+        <ul>
+          <li><b>Lead and build.</b> Tech lead on most projects, still writing the code myself.</li>
+          <li><b>Verify, then act.</b> Live data and the actual code beat meeting notes and dashboards.</li>
+          <li><b>Client ↔ code.</b> I translate between what the business needs and what gets built.</li>
+          <li><b>Handcrafted, now AI-assisted.</b> Years of writing every line by hand are what make AI output reviewable.</li>
+          <li><b>Bilingual.</b> Spanish with the team, English with leadership and clients.</li>
+        </ul>
+      </div>
+    </section>
 
-      <div class="projects">
-        <!-- Project 1 -->
-        <article class="project tile reveal">
-          <div class="p-visual" aria-hidden="true">
-            <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice">
-              <g class="orbit" style="transform-origin:200px 160px">
-                <circle cx="200" cy="160" r="120" fill="none" stroke="currentColor" stroke-opacity=".15" stroke-dasharray="4 8"/>
-                <circle cx="320" cy="160" r="9" fill="var(--accent)"/>
-                <circle cx="80" cy="160" r="6" fill="currentColor" fill-opacity=".5"/>
-              </g>
-              <g class="orbit r" style="transform-origin:200px 160px">
-                <circle cx="200" cy="160" r="76" fill="none" stroke="currentColor" stroke-opacity=".2"/>
-                <rect x="190" y="74" width="20" height="20" rx="5" fill="currentColor" fill-opacity=".6"/>
-                <rect x="190" y="226" width="20" height="20" rx="5" fill="currentColor" fill-opacity=".35"/>
-              </g>
-              <polygon points="200,128 228,144 228,176 200,192 172,176 172,144" fill="var(--accent)" class="pulse"/>
-            </svg>
-            <span class="big">01</span>
-          </div>
-          <div class="p-body">
-            <div class="p-top"><span>BuildOnline</span><span class="now">2020 — now</span></div>
-            <h3>From developer to Technical Lead of a multi-platform product</h3>
-            <p>Grew from Software Developer to Team Leader to Technical Lead on the same product — owning how it gets built, deployed and kept healthy.</p>
-            <ul>
-              <li>Owned the deployment process and long-term maintainability of the project.</li>
-              <li>Shipped clients across mobile, web and desktop with Ionic, Flutter and Electron on a Laravel backend.</li>
-              <li>Leading a multidisciplinary team of experienced devs: app architecture from day one and project planning with the PM.</li>
-              <li>Run infrastructure on Kubernetes for container orchestration and scaling.</li>
-            </ul>
-            <div class="tags"><span>Laravel</span><span>Kubernetes</span><span>Flutter</span><span>Ionic</span><span>Electron</span><span>Leadership</span></div>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project tile reveal">
-          <div class="p-visual" aria-hidden="true">
-            <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice">
-              <g fill="none" stroke="currentColor" stroke-opacity=".18">
-                <rect x="70" y="60" width="150" height="100" rx="12"/>
-                <rect x="250" y="40" width="80" height="150" rx="16"/>
-                <line x1="220" y1="110" x2="250" y2="110" stroke-dasharray="3 5"/>
-              </g>
-              <rect x="86" y="78" width="70" height="8" rx="4" fill="currentColor" fill-opacity=".45"/>
-              <rect x="86" y="96" width="110" height="8" rx="4" fill="currentColor" fill-opacity=".2"/>
-              <rect x="86" y="114" width="90" height="8" rx="4" fill="currentColor" fill-opacity=".2"/>
-              <rect x="264" y="60" width="52" height="52" rx="12" fill="var(--accent)" class="pulse"/>
-              <rect x="264" y="124" width="52" height="8" rx="4" fill="currentColor" fill-opacity=".3"/>
-              <rect x="264" y="140" width="36" height="8" rx="4" fill="currentColor" fill-opacity=".2"/>
-            </svg>
-            <span class="big">02</span>
-          </div>
-          <div class="p-body">
-            <div class="p-top"><span>Upwork · Freelance</span><span>2020</span></div>
-            <h3>Web + native mobile apps for clients around the world</h3>
-            <p>Full-stack freelance work end to end: talk with the client, design the API, build the web app and the native mobile app.</p>
-            <ul>
-              <li>Built Vue.js web front-ends on top of Laravel APIs.</li>
-              <li>Delivered native mobile apps with NativeScript sharing the same backend.</li>
-              <li>Managed scope, delivery dates and quality directly with each client.</li>
-            </ul>
-            <div class="tags"><span>Vue.js</span><span>NativeScript</span><span>Laravel</span><span>REST APIs</span></div>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="project tile reveal">
-          <div class="p-visual" aria-hidden="true">
-            <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice">
-              <g stroke="currentColor" stroke-opacity=".22" fill="none">
-                <path d="M60 250 C 140 250, 140 110, 220 110 S 300 60, 350 60"/>
-                <path d="M60 280 C 150 280, 170 180, 240 180 S 320 150, 350 150" stroke-dasharray="4 6"/>
-              </g>
-              <circle cx="60" cy="250" r="7" fill="currentColor" fill-opacity=".5"/>
-              <circle cx="220" cy="110" r="7" fill="currentColor" fill-opacity=".5"/>
-              <circle cx="350" cy="60" r="11" fill="var(--accent)" class="pulse"/>
-              <circle cx="240" cy="180" r="6" fill="currentColor" fill-opacity=".35"/>
-            </svg>
-            <span class="big">03</span>
-          </div>
-          <div class="p-body">
-            <div class="p-top"><span>Light-it</span><span>2019</span></div>
-            <h3>Full-stack product work in a software studio</h3>
-            <p>Worked as a Full Stack Developer across several client products, moving between front-end and back-end as each project needed.</p>
-            <ul>
-              <li>Built interfaces with both Vue.js and React.</li>
-              <li>Developed back-end services with Node.js and the Laravel framework.</li>
-            </ul>
-            <div class="tags"><span>Vue.js</span><span>React</span><span>Node.js</span><span>Laravel</span></div>
-          </div>
-        </article>
+    <!-- CASE STUDIES -->
+    <section id="cases" class="wrap">
+      <div class="eyebrow reveal">03 — Case studies</div>
+      <h2 class="reveal">Projects I've built &amp; led, <em>in depth.</em></h2>
+      <h3 class="group reveal">Through BuildOnline · Tithely &amp; Rural King</h3>
+      <p class="group-note reveal">Since 2020 I've worked as a contractor through BuildOnline, mostly for Tithely. These are products I've designed, built and maintained there, from Sermonly to the test platform I work on today. Also: scrapers that checked church websites for giving buttons, to see which churches already had an online giving provider.</p>
+      <div class="case-cards three">
+        <a class="tile case-card reveal" href="work/sermonly.html">
+          <div class="p-top"><span>Sermonly</span><span>Built from zero</span></div>
+          <h3>A Notion for churches, built from zero</h3>
+          <p>Designed and built solo: AI, wording and Bible Gateway integrations, Stripe subscriptions, ~8,000 users — on Electron, web and Ionic.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card reveal" href="work/media-picker.html">
+          <div class="p-top"><span>Media</span><span>NPM package</span></div>
+          <h3>One media library, everywhere</h3>
+          <p>Tithely's multimedia library and storage, plus the NPM package that opens it as a modal inside many Tithely products.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card reveal" href="work/breeze-worship.html">
+          <div class="p-top"><span>Breeze Worship</span><span>Flutter · by hand</span></div>
+          <h3>Setlists for church bands, in Flutter</h3>
+          <p>CCLI song sheets, MP3s and setlist editing — Flutter with BLoC, and a hand-built bridge to render PDFs with HTML/JS.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card reveal" href="work/signup-analytics.html">
+          <div class="p-top"><span>Analytics</span><span>GA4 · PostHog</span></div>
+          <h3>Making signup data worth trusting</h3>
+          <p>Audited GA4, PostHog and GTM by hand, found three silent bugs, then shipped the production cutover — and watched it.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card reveal" href="work/annual-billing.html">
+          <div class="p-top"><span>Billing</span><span>In progress</span></div>
+          <h3>Annual billing, de-risked before it ships</h3>
+          <p>Caught where planning notes and code disagreed on subscription behavior, and found unticketed scope before the deadline did.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card reveal" href="work/test-automation.html">
+          <div class="p-top"><span>Quality</span><span>AI era</span></div>
+          <h3>Test automation, started from scratch</h3>
+          <p>A new Playwright project from zero, Xray fixed so QA counts, containerized CI — built with AI, reviewed by me.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card case-wide reveal" href="work/rural-king.html">
+          <div class="p-top"><span>Rural King</span><span>Laravel · Hotwire</span></div>
+          <h3>A store scanner, rendered on the server</h3>
+          <p>A replacement for Rural King's in-store handheld app: scan products, manage stock, check other US stores and work through tasks — server-rendered screens inside native iOS and Android wrappers.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+      </div>
+      <h3 class="group reveal">Client work · handcrafted before AI</h3>
+      <p class="group-note reveal">Every feature in these projects was written by hand, before AI coding tools. That's where I learned to turn abstract business rules into real architecture — usually as tech lead, assigning work and connecting the client with the code.</p>
+      <div class="case-cards three">
+        <a class="tile case-card reveal" href="work/studeo-podcasts.html">
+          <div class="p-top"><span>Studeo</span><span>Infra · Podcasts</span></div>
+          <h3>From one load balancer to Kubernetes</h3>
+          <p>Podcast management with feeds for Spotify, Apple and Google Podcasts — and the move to Kubernetes with autoscaling, in production.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card reveal" href="work/vin-trackers.html">
+          <div class="p-top"><span>Vin Trackers</span><span>Data · Integrations</span></div>
+          <h3>Finding cars before anyone else</h3>
+          <p>Private-market vehicle listings from an API and Facebook in one place, Carfax checks, and seller replies captured with Postmark inbound email.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card reveal" href="work/guestio.html">
+          <div class="p-top"><span>Guestio</span><span>Marketplace · Stripe</span></div>
+          <h3>A marketplace for podcast guests</h3>
+          <p>Visibility and bookings for podcasters, with Stripe payments and the subscriptions behind Pro accounts.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card reveal" href="work/cap-photographers.html">
+          <div class="p-top"><span>CAP</span><span>Marketplace · Maps</span></div>
+          <h3>Find a photographer on the map</h3>
+          <p>An app for Creative Agent Partners connecting photographers and clients: map search, messaging, photo uploads and payments.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card reveal" href="work/nanny-company.html">
+          <div class="p-top"><span>Nanny Company</span><span>Scheduling · Admin</span></div>
+          <h3>Every shift, on one calendar</h3>
+          <p>Book nannies by shift, with access for clients, nannies and admins — and an admin calendar showing every shift at a glance.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card reveal" href="work/3pv.html">
+          <div class="p-top"><span>3pv</span><span>Ionic · Ticketing</span></div>
+          <h3>Campus events, one QR code away</h3>
+          <p>A university ticketing app: students sign up, buy tickets to campus events and get in with a QR code.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+      </div>
+      <h3 class="group reveal">Independent projects</h3>
+      <div class="case-cards three">
+        <a class="tile case-card reveal" href="work/sigt.html">
+          <div class="p-top"><span>Sigt</span><span>Flutter · Offline-first</span></div>
+          <h3>A task manager that works behind prison walls</h3>
+          <p>Built solo for the Punta Rieles prison: track tasks, take photos and record audio with no internet, then sync at the office outside.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
+        <a class="tile case-card reveal" href="work/mi-reserva.html">
+          <div class="p-top"><span>Mi Reserva</span><span>WhatsApp bot</span></div>
+          <h3>Book a haircut on WhatsApp</h3>
+          <p>A booking system for barbershops where customers check free days and book a time through a WhatsApp bot.</p>
+          <span class="go">Read case study <span>→</span></span>
+        </a>
       </div>
     </section>
 
     <!-- PATH -->
     <section id="path" class="wrap">
-      <div class="eyebrow reveal">03 — Path</div>
+      <div class="eyebrow reveal">04 — Path</div>
       <h2 class="reveal">The road <em>so far.</em></h2>
       <div class="timeline reveal">
-        <div class="row"><span class="yr now">Now</span><div class="role">Technical Lead<small>BuildOnline</small></div><p>Architecture, infrastructure and delivery across the product.</p></div>
-        <div class="row"><span class="yr">2022</span><div class="role">Team Leader<small>BuildOnline</small></div><p>Guided a multidisciplinary team; planned projects from the first steps alongside the PM.</p></div>
-        <div class="row"><span class="yr">2020</span><div class="role">Software Developer<small>BuildOnline</small></div><p>Deployment process and maintainability; Ionic, Flutter, Electron + Laravel.</p></div>
+        <div class="row"><span class="yr now">Now</span><div class="role">Technical Lead<small>BuildOnline · contractor for Tithely</small></div><p>Architecture, infrastructure and delivery across the product.</p></div>
+        <div class="row"><span class="yr">2022</span><div class="role">Team Leader<small>BuildOnline · Tithely</small></div><p>Guided a multidisciplinary team; planned projects from the first steps alongside the PM.</p></div>
+        <div class="row"><span class="yr">2020</span><div class="role">Software Developer<small>BuildOnline · Tithely</small></div><p>Deployment process and maintainability; Ionic, Flutter, Electron + Laravel.</p></div>
         <div class="row"><span class="yr">2020</span><div class="role">Software Developer<small>Upwork Freelance</small></div><p>Full stack with Vue.js, NativeScript and Laravel.</p></div>
         <div class="row"><span class="yr">2019</span><div class="role">Software Developer<small>Light-it</small></div><p>Full stack with Vue.js, React, Node.js and Laravel.</p></div>
         <div class="row"><span class="yr">2018</span><div class="role">Backend Developer<small>Sitios — Digital Agency</small></div><p>Back-end solutions for many platforms with Laravel.</p></div>
@@ -466,7 +254,7 @@
 
     <!-- CONTACT -->
     <section id="contact" class="contact wrap">
-      <div class="eyebrow reveal">04 — Contact</div>
+      <div class="eyebrow reveal">05 — Contact</div>
       <h2 class="reveal">Got a project?<br><em>Let's build it.</em></h2>
       <div class="links reveal">
         <a class="btn primary" href="https://uy.linkedin.com/in/juan-vargas-807b72142" target="_blank" rel="noopener">
@@ -492,50 +280,6 @@
     </div>
   </footer>
 
-  <script>
-    // theme toggle (remembered per viewer when storage works)
-    (function () {
-      var root = document.documentElement;
-      try { var saved = localStorage.getItem('theme'); if (saved) root.dataset.theme = saved; } catch (e) {}
-      document.getElementById('theme').addEventListener('click', function () {
-        var current = root.dataset.theme || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-        var next = current === 'light' ? 'dark' : 'light';
-        var apply = function () { root.dataset.theme = next; };
-        if (document.startViewTransition) document.startViewTransition(apply); else apply();
-        try { localStorage.setItem('theme', next); } catch (e) {}
-      });
-    })();
-
-    // years since first role + footer bits
-    var now = new Date();
-    document.getElementById('years').textContent = (now.getFullYear() - 2017) + '+';
-    document.getElementById('yr').textContent = now.getFullYear();
-    function tick() {
-      try {
-        document.getElementById('clock').textContent = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Montevideo' }).format(new Date());
-      } catch (e) {}
-    }
-    tick(); setInterval(tick, 30000);
-
-    // scroll reveal
-    var items = document.querySelectorAll('.reveal');
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-      }, { threshold: 0.12 });
-      items.forEach(function (el) { io.observe(el); });
-    } else {
-      items.forEach(function (el) { el.classList.add('in'); });
-    }
-
-    // cursor spotlight on tiles
-    document.querySelectorAll('.tile').forEach(function (el) {
-      el.addEventListener('pointermove', function (ev) {
-        var r = el.getBoundingClientRect();
-        el.style.setProperty('--mx', (ev.clientX - r.left) + 'px');
-        el.style.setProperty('--my', (ev.clientY - r.top) + 'px');
-      });
-    });
-  </script>
+  <script src="site.js"></script>
 </body>
 </html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sigt Offline Tasks</title>
+  <meta name="description" content="Case study — Juan Vargas built Sigt, an offline-first Flutter task manager for the Punta Rieles prison in Uruguay that syncs when staff reach an office with internet.">
+  <meta property="og:title" content="Case study: A task manager that works behind prison walls | Juan Vargas">
+  <meta property="og:type" content="article">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav aria-label="Main">
+    <a href="../index.html" class="logo" aria-label="Home">jv.</a>
+    <a href="../index.html#cases">Case studies</a>
+    <a href="../index.html#path" class="hide-sm">Path</a>
+    <button id="theme" type="button" aria-label="Toggle color theme">◐</button>
+    <a href="../index.html#contact" class="cta">Let's talk</a>
+  </nav>
+
+  <main class="wrap case">
+    <a class="back" href="../index.html#cases">← All case studies</a>
+    <div class="eyebrow">Case study 14 · Sigt</div>
+    <h1>A task manager that works <em>behind prison walls.</em></h1>
+    <p class="lede">I built Sigt on my own: a task manager for the Punta Rieles prison in Uruguay. Inside there is no internet, so the app is offline-first. It syncs at an office outside with a connection, works fully offline inside, and syncs everything back on the way out.</p>
+
+    <dl class="meta">
+      <div><dt>Product</dt><dd>Offline-first task manager</dd></div>
+      <div><dt>Client</dt><dd>Punta Rieles prison, Uruguay</dd></div>
+      <div><dt>Stack</dt><dd>Flutter · mobile</dd></div>
+      <div><dt>Built</dt><dd>Solo, by hand</dd></div>
+    </dl>
+
+    <section class="chapter">
+      <div class="eyebrow">Context</div>
+      <div class="prose">
+        <h2>No signal where the work happens.</h2>
+        <p>Staff at <strong>Punta Rieles</strong> need to track tasks and their progress, with evidence. But inside the prison there is <strong>no internet access</strong>. The only connection is at an <strong>office outside</strong>. A normal online app would be useless exactly where it's needed.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">How it works</div>
+      <div class="prose">
+        <h2>Sync outside. Work inside. Sync again.</h2>
+        <figure class="figure tile">
+          <svg viewBox="0 0 720 230" role="img" aria-label="At the outside office with internet the app syncs; inside the prison, offline, staff track progress, take photos, record audio and create tasks; back at the office everything syncs">
+            <rect class="box" x="10" y="20" width="190" height="190" rx="18"/>
+            <text class="sub" x="26" y="44">OUTSIDE OFFICE</text>
+            <text x="26" y="72">Internet ✓</text>
+            <rect class="hot" x="26" y="92" width="158" height="50" rx="12"/>
+            <text class="hot-text" x="105" y="122" text-anchor="middle">Sync</text>
+            <text class="sub" x="26" y="172">download tasks,</text>
+            <text class="sub" x="26" y="188">upload what's new</text>
+
+            <path class="wire" d="M200 80 C 250 80, 260 80, 300 80"/>
+            <text class="sub" x="214" y="70">go in</text>
+            <path class="wire" d="M300 160 C 260 160, 250 160, 200 160"/>
+            <text class="sub" x="214" y="180">come out</text>
+
+            <rect class="box" x="300" y="20" width="410" height="190" rx="18" fill="none" stroke-dasharray="5 6"/>
+            <text class="sub" x="316" y="44">INSIDE THE PRISON · NO INTERNET</text>
+            <rect class="box" x="316" y="60" width="185" height="56" rx="12"/><text x="408" y="93" text-anchor="middle">Track progress</text>
+            <rect class="box" x="511" y="60" width="185" height="56" rx="12"/><text x="603" y="93" text-anchor="middle">Take photos</text>
+            <rect class="box" x="316" y="128" width="185" height="56" rx="12"/><text x="408" y="161" text-anchor="middle">Record audio</text>
+            <rect class="box" x="511" y="128" width="185" height="56" rx="12"/><text x="603" y="161" text-anchor="middle">Create tasks</text>
+          </svg>
+          <figcaption>Everything done offline is stored on the phone and synced the next time it reaches the office.</figcaption>
+        </figure>
+        <ol class="steps">
+          <li><div><strong>Sync at the office</strong>With internet at the outside office, the app pulls the latest tasks and pushes everything recorded since the last visit.</div></li>
+          <li><div><strong>Work fully offline</strong>Inside, staff keep tracking progress on tasks with no connection at all.</div></li>
+          <li><div><strong>Evidence on the spot</strong>Take photos and record audio as part of a task, stored on the device until the next sync.</div></li>
+          <li><div><strong>New tasks, offline too</strong>Create new tasks inside the prison; they join the shared data once the phone syncs again.</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">The hard part</div>
+      <div class="prose">
+        <h2>Offline-first is a data problem.</h2>
+        <p>Making screens work without internet is the easy part. The real challenge is the <strong>data</strong>: storing tasks, photos and audio safely on the phone, knowing what changed while offline, and bringing it back so the office sees <strong>one consistent picture</strong> after every sync.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Skills</div>
+      <div class="prose">
+        <h2>What this project shows.</h2>
+        <div class="tags"><span>Flutter</span><span>Offline-first</span><span>Data sync</span><span>Photo & audio capture</span></div>
+        <div class="related">
+          <a class="rel tile" href="rural-king.html"><small>Sync on the job</small><b>A store scanner, rendered on the server</b></a>
+          <a class="rel tile" href="breeze-worship.html"><small>Flutter</small><b>Setlists for church bands, in Flutter</b></a>
+        </div>
+      </div>
+    </section>
+
+    <blockquote class="quote">Design for <em>no connection</em> first, and good connections become a bonus.</blockquote>
+
+    <a class="next tile" href="mi-reserva.html">
+      <div><small>Next case study</small><b>Book a haircut on WhatsApp</b></div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="yr">2026</span> Juan Vargas</span>
+      <span>Made in Montevideo · <span id="clock">--:--</span> UYT</span>
+    </div>
+  </footer>
+  <script src="../site.js"></script>
+</body>
+</html>

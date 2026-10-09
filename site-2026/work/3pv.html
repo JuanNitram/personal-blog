@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3pv Ticketing</title>
+  <meta name="description" content="Case study — Juan Vargas on 3pv, an Ionic app for universities: student sign-up, ticket purchase and QR-code entry for campus events.">
+  <meta property="og:title" content="Case study: Campus events, one QR code away | Juan Vargas">
+  <meta property="og:type" content="article">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav aria-label="Main">
+    <a href="../index.html" class="logo" aria-label="Home">jv.</a>
+    <a href="../index.html#cases">Case studies</a>
+    <a href="../index.html#path" class="hide-sm">Path</a>
+    <button id="theme" type="button" aria-label="Toggle color theme">◐</button>
+    <a href="../index.html#contact" class="cta">Let's talk</a>
+  </nav>
+
+  <main class="wrap case">
+    <a class="back" href="../index.html#cases">← All case studies</a>
+    <div class="eyebrow">Case study 13 · 3pv</div>
+    <h1>Campus events, <em>one QR code away.</em></h1>
+    <p class="lede">3pv was a ticketing app for universities. Students signed up, bought tickets to university events, and got in with a QR code. We built it with Ionic.</p>
+
+    <dl class="meta">
+      <div><dt>Product</dt><dd>University ticketing</dd></div>
+      <div><dt>Users</dt><dd>Students · universities</dd></div>
+      <div><dt>Stack</dt><dd>Ionic</dd></div>
+      <div><dt>Built</dt><dd>By hand, pre-AI</dd></div>
+    </dl>
+
+    <section class="chapter">
+      <div class="eyebrow">Context</div>
+      <div class="prose">
+        <h2>Paper tickets don't scale to a campus.</h2>
+        <p>Universities run lots of events, and managing who bought a ticket and who got in by hand is slow and easy to cheat. 3pv moved the whole thing to the <strong>students' phones</strong>.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">The flow</div>
+      <div class="prose">
+        <figure class="figure tile">
+          <svg viewBox="0 0 720 120" role="img" aria-label="Flow: student signs up, buys a ticket, receives a QR code, QR is scanned at the door">
+            <rect class="box" x="10" y="30" width="150" height="60" rx="14"/><text x="85" y="65" text-anchor="middle">Sign up</text>
+            <path class="wire" d="M160 60 L 190 60"/>
+            <rect class="box" x="190" y="30" width="150" height="60" rx="14"/><text x="265" y="65" text-anchor="middle">Buy ticket</text>
+            <path class="wire" d="M340 60 L 370 60"/>
+            <rect class="hot" x="370" y="30" width="150" height="60" rx="14"/><text class="hot-text" x="445" y="65" text-anchor="middle">QR code</text>
+            <path class="wire" d="M520 60 L 550 60"/>
+            <rect class="box" x="550" y="30" width="160" height="60" rx="14"/><text x="630" y="65" text-anchor="middle">Scan at the door</text>
+          </svg>
+          <figcaption>From sign-up to entry, all in the app.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">What I built</div>
+      <div class="prose">
+        <ol class="steps">
+          <li><div><strong>Student accounts</strong>Students register in the app with their university.</div></li>
+          <li><div><strong>Ticket purchase</strong>Students buy tickets to university events directly from their phone.</div></li>
+          <li><div><strong>QR tickets</strong>Each ticket is a QR code, used as the ticketing system at the event entrance.</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">What I learned</div>
+      <div class="prose">
+        <h2>Where my Ionic story started.</h2>
+        <p>3pv was one of my first serious <strong>Ionic</strong> projects. What I learned there, one codebase reaching phones fast, came back later when we built <strong>Sermonly's mobile app</strong>.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Skills</div>
+      <div class="prose">
+        <h2>What this project shows.</h2>
+        <div class="tags"><span>Ionic</span><span>QR ticketing</span><span>Ticket sales</span><span>Student accounts</span></div>
+        <div class="related">
+          <a class="rel tile" href="sermonly.html"><small>Ionic again</small><b>A Notion for churches, built from zero</b></a>
+          <a class="rel tile" href="rural-king.html"><small>Scanning in the real world</small><b>A store scanner, rendered on the server</b></a>
+        </div>
+      </div>
+    </section>
+
+    <blockquote class="quote">The best ticket is the one <em>already in your pocket.</em></blockquote>
+
+    <a class="next tile" href="sigt.html">
+      <div><small>Next case study</small><b>A task manager that works behind prison walls</b></div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="yr">2026</span> Juan Vargas</span>
+      <span>Made in Montevideo · <span id="clock">--:--</span> UYT</span>
+    </div>
+  </footer>
+  <script src="../site.js"></script>
+</body>
+</html>

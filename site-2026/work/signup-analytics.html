@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trustworthy Signup Analytics</title>
+  <meta name="description" content="Case study — how Juan Vargas audited and fixed Tithely's signup analytics (GA4, PostHog, GTM) before cutting marketing over to production data.">
+  <meta property="og:title" content="Case study: Trustworthy signup analytics | Juan Vargas">
+  <meta property="og:type" content="article">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav aria-label="Main">
+    <a href="../index.html" class="logo" aria-label="Home">jv.</a>
+    <a href="../index.html#cases">Case studies</a>
+    <a href="../index.html#path" class="hide-sm">Path</a>
+    <button id="theme" type="button" aria-label="Toggle color theme">◐</button>
+    <a href="../index.html#contact" class="cta">Let's talk</a>
+  </nav>
+
+  <main class="wrap case">
+    <a class="back" href="../index.html#cases">← All case studies</a>
+    <div class="eyebrow">Case study 04 · Tithely · Analytics</div>
+    <h1>Making signup data <em>worth trusting.</em></h1>
+    <p class="lede">Before marketing could switch to production analytics, someone had to prove the numbers were real. I audited the whole signup pipeline by hand, found three silent bugs, fixed them in the right order, and only then shipped the cutover.</p>
+
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Engineering lead, hands-on</dd></div>
+      <div><dt>Org</dt><dd>Tithely · EPD</dd></div>
+      <div><dt>When</dt><dd>2026</dd></div>
+      <div><dt>Stack</dt><dd>GA4 · PostHog · GTM · SQL</dd></div>
+    </dl>
+
+    <section class="chapter">
+      <div class="eyebrow">Context</div>
+      <div class="prose">
+        <h2>Two tools, one funnel, no single truth.</h2>
+        <p>Signup analytics ran through <strong>Google Tag Manager into GA4</strong> for marketing, and <strong>PostHog</strong> for product. The GTM signup events were still pointed at a <em>staging</em> GA4 property. The plan was simple on paper: point them at the real production property so marketing reports reflect real signups.</p>
+        <p>The risk was not the switch itself. The risk was switching on <strong>numbers nobody had checked</strong>. Once phantom users land in marketing-facing reports, they drive spend and decisions, and they are very hard to take back out.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Approach</div>
+      <div class="prose">
+        <h2>Audit first. Rank by what can't be undone.</h2>
+        <p>I ran a production QA pass across the signup instrumentation and audited the GTM container by hand: every tag and trigger fan-out, duplicate tags, and the custom-dimension slot budget. I reconciled the backend and frontend event taxonomies so both tools used the same names for the same moments.</p>
+        <p>Then I ranked every issue <strong>by irreversibility</strong>, not by how loud it was. Anything that would permanently corrupt history went first.</p>
+
+        <figure class="figure tile">
+          <svg viewBox="0 0 720 260" role="img" aria-label="Signup events flow from the app through GTM to GA4 and from the app to PostHog; three bugs are marked on the path">
+            <rect class="box" x="10" y="100" width="130" height="60" rx="14"/>
+            <text x="75" y="126" text-anchor="middle">Signup flow</text>
+            <text class="sub" x="75" y="146" text-anchor="middle">web app</text>
+
+            <path class="wire" d="M140 130 C 200 130, 200 60, 260 60"/>
+            <path class="wire" d="M140 130 C 200 130, 200 200, 260 200"/>
+
+            <rect class="box" x="260" y="30" width="150" height="60" rx="14"/>
+            <text x="335" y="56" text-anchor="middle">GTM container</text>
+            <text class="sub" x="335" y="76" text-anchor="middle">tags · triggers</text>
+
+            <rect class="box" x="260" y="170" width="150" height="60" rx="14"/>
+            <text x="335" y="196" text-anchor="middle">PostHog</text>
+            <text class="sub" x="335" y="216" text-anchor="middle">event mapping</text>
+
+            <path class="wire dash" d="M410 60 L 520 60"/>
+            <rect class="box" x="520" y="0" width="190" height="50" rx="14" opacity=".55"/>
+            <text class="sub" x="615" y="30" text-anchor="middle">GA4 staging (before)</text>
+            <path class="wire" d="M410 60 C 470 60, 470 100, 520 100"/>
+            <rect class="hot" x="520" y="72" width="190" height="56" rx="14"/>
+            <text class="hot-text" x="615" y="105" text-anchor="middle">GA4 production</text>
+
+            <path class="wire" d="M410 200 L 520 200"/>
+            <rect class="box" x="520" y="172" width="190" height="56" rx="14"/>
+            <text x="615" y="205" text-anchor="middle">Product analytics</text>
+
+            <circle class="hot" cx="200" cy="130" r="13"/><text class="hot-text" x="200" y="135" text-anchor="middle">1</text>
+            <circle class="hot" cx="465" cy="200" r="13"/><text class="hot-text" x="465" y="205" text-anchor="middle">2</text>
+            <circle class="hot" cx="335" cy="245" r="13"/><text class="hot-text" x="335" y="250" text-anchor="middle">3</text>
+          </svg>
+          <figcaption>Where the three bugs lived. The production cutover (top right) waited until all three were understood.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Findings</div>
+      <div class="prose">
+        <h2>Three bugs nobody had noticed.</h2>
+        <div class="findings">
+          <div class="finding tile">
+            <span class="n">1</span>
+            <div>
+              <h3>Robots signing up</h3>
+              <p>Signup events were inflated by <strong>load-balancer health checks and a security scanner</strong> hitting the flow. Cutting over as-is would have poured phantom users straight into marketing reports.</p>
+              <span class="sev">Fixed before cutover</span>
+            </div>
+          </div>
+          <div class="finding tile">
+            <span class="n">2</span>
+            <div>
+              <h3>A 3.3× over-count</h3>
+              <p>A KYC-submitted event fired about <strong>3.3 times too often</strong>. The event-mapping gate checked a <em>state</em> ("is submitted") instead of a <em>transition</em> ("just became submitted"), so it fired again on every later update.</p>
+              <span class="sev">State vs. transition</span>
+            </div>
+          </div>
+          <div class="finding tile">
+            <span class="n">3</span>
+            <div>
+              <h3>Attribution silently lost for everyone</h3>
+              <p>Campaign attribution (<code>$initial_utm_source</code>) was missing for <strong>100% of persons</strong>. The cause was one missing setting, <code>person_profiles: 'always'</code>, in the PostHog client config.</p>
+              <span class="sev">Most irreversible — first in line</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Shipping</div>
+      <div class="prose">
+        <h2>Ship the change. Then watch it.</h2>
+        <ol class="steps">
+          <li><div><strong>Delay on purpose</strong>Held the GA4 cutover until the inflation bug was fixed, so the production property would start clean.</div></li>
+          <li><div><strong>Author the change myself</strong>Wrote and published the production GTM container version that moved signup events from staging GA4 to the real property, and registered the custom dimensions it needed.</div></li>
+          <li><div><strong>Verify with live data</strong>Watched live event counts after publish instead of trusting the change. I also caught and corrected my own misread of the GA4 Realtime window before it became a wrong claim.</div></li>
+          <li><div><strong>Don't stop at a 403</strong>When the PostHog billing API refused access, I worked out the cost-tier picture directly with SQL on the event data.</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Outcome</div>
+      <div class="prose">
+        <h2>Marketing got real numbers on day one.</h2>
+        <p>Signup analytics now land in the <strong>production GA4 property</strong>, without bot traffic in them. The over-counted event and the lost attribution were traced to exact root causes in code and config, not patched over in a dashboard.</p>
+        <p>The bigger win is the habit: <strong>check every claim against live data before acting on it</strong>, including my own.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Skills</div>
+      <div class="prose">
+        <h2>What this project shows.</h2>
+        <div class="tags"><span>GA4</span><span>PostHog</span><span>GTM</span><span>SQL</span><span>Root-cause analysis</span><span>Data quality</span></div>
+        <div class="related">
+          <a class="rel tile" href="annual-billing.html"><small>Verify before acting</small><b>Annual billing, de-risked before it ships</b></a>
+          <a class="rel tile" href="test-automation.html"><small>Quality at Tithely</small><b>Test automation, started from scratch</b></a>
+        </div>
+      </div>
+    </section>
+
+    <blockquote class="quote">"The dashboard doesn't show the answer" is where the work <em>starts</em>, not where it stops.</blockquote>
+
+    <a class="next tile" href="annual-billing.html">
+      <div><small>Next case study</small><b>Annual billing, de-risked before it ships</b></div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="yr">2026</span> Juan Vargas</span>
+      <span>Made in Montevideo · <span id="clock">--:--</span> UYT</span>
+    </div>
+  </footer>
+  <script src="../site.js"></script>
+</body>
+</html>

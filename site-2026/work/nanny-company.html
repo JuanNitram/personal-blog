@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nanny Shift Platform</title>
+  <meta name="description" content="Case study — Juan Vargas on Nanny Company, a platform to book nannies by shift, with separate access for clients, nannies and admins and a calendar view of every shift.">
+  <meta property="og:title" content="Case study: Every shift, on one calendar | Juan Vargas">
+  <meta property="og:type" content="article">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav aria-label="Main">
+    <a href="../index.html" class="logo" aria-label="Home">jv.</a>
+    <a href="../index.html#cases">Case studies</a>
+    <a href="../index.html#path" class="hide-sm">Path</a>
+    <button id="theme" type="button" aria-label="Toggle color theme">◐</button>
+    <a href="../index.html#contact" class="cta">Let's talk</a>
+  </nav>
+
+  <main class="wrap case">
+    <a class="back" href="../index.html#cases">← All case studies</a>
+    <div class="eyebrow">Case study 12 · Nanny Company</div>
+    <h1>Every shift, <em>on one calendar.</em></h1>
+    <p class="lede">Nanny Company let families hire nannies by shift. I worked on the platform for all three sides (clients, nannies and admins) and on its centerpiece: an admin calendar that shows every shift at a glance.</p>
+
+    <dl class="meta">
+      <div><dt>Product</dt><dd>Nanny booking by shift</dd></div>
+      <div><dt>Users</dt><dd>Clients · nannies · admins</dd></div>
+      <div><dt>Centerpiece</dt><dd>Admin shift calendar</dd></div>
+      <div><dt>Built</dt><dd>By hand, pre-AI</dd></div>
+    </dl>
+
+    <section class="chapter">
+      <div class="eyebrow">Context</div>
+      <div class="prose">
+        <h2>Childcare runs on time slots.</h2>
+        <p>Families don't hire a nanny "in general". They need someone <strong>for a specific shift</strong>. The platform let clients book nannies by time slot, and gave the business a way to <strong>run all of those shifts</strong> without spreadsheets.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Three sides</div>
+      <div class="prose">
+        <figure class="figure tile">
+          <svg viewBox="0 0 720 200" role="img" aria-label="Clients, nannies and admins each have their own access to the platform; admins see all shifts on a calendar">
+            <rect class="box" x="10" y="14" width="160" height="50" rx="14"/><text x="90" y="44" text-anchor="middle">Clients</text>
+            <rect class="box" x="10" y="76" width="160" height="50" rx="14"/><text x="90" y="106" text-anchor="middle">Nannies</text>
+            <rect class="box" x="10" y="138" width="160" height="50" rx="14"/><text x="90" y="168" text-anchor="middle">Admins</text>
+            <path class="wire" d="M170 39 C 220 39, 220 100, 260 100"/>
+            <path class="wire" d="M170 101 L 260 101"/>
+            <path class="wire" d="M170 163 C 220 163, 220 100, 260 100"/>
+            <rect class="box" x="260" y="70" width="150" height="60" rx="14"/><text x="335" y="105" text-anchor="middle">Platform</text>
+            <path class="wire" d="M410 100 L 450 100"/>
+            <rect class="box" x="450" y="14" width="260" height="174" rx="16"/>
+            <text class="sub" x="466" y="38">ADMIN CALENDAR</text>
+            <rect class="hot" x="466" y="52" width="70" height="26" rx="6"/>
+            <rect class="box" x="546" y="52" width="100" height="26" rx="6"/>
+            <rect class="box" x="466" y="88" width="120" height="26" rx="6"/>
+            <rect class="hot" x="596" y="88" width="98" height="26" rx="6"/>
+            <rect class="box" x="466" y="124" width="60" height="26" rx="6" opacity=".5"/>
+            <rect class="box" x="536" y="124" width="130" height="26" rx="6"/>
+            <text class="sub" x="466" y="176">past · now · upcoming · by type</text>
+          </svg>
+          <figcaption>Each role gets its own access. Admins get the whole picture on one calendar.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">What I built</div>
+      <div class="prose">
+        <ol class="steps">
+          <li><div><strong>Shift booking</strong>Clients hire nannies by shift, for specific time slots.</div></li>
+          <li><div><strong>Access for each role</strong>Separate experiences for clients, nannies and administrators, each seeing what they need.</div></li>
+          <li><div><strong>The admin calendar</strong>The core admin feature: a calendar that clearly shows shifts that already happened, shifts happening now and shifts coming up, plus the type of each shift.</div></li>
+          <li><div><strong>Data processing</strong>Processing behind the scenes to keep shifts, people and bookings consistent.</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">What I learned</div>
+      <div class="prose">
+        <h2>Good admin tools are product too.</h2>
+        <p>Customers never see the admin side, but the business lives in it. Putting <strong>every shift on one readable calendar</strong> turned a pile of bookings into something a person can understand and act on in seconds.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Skills</div>
+      <div class="prose">
+        <h2>What this project shows.</h2>
+        <div class="tags"><span>Scheduling</span><span>Calendar UI</span><span>Role-based access</span><span>Admin tools</span><span>Data processing</span></div>
+        <div class="related">
+          <a class="rel tile" href="mi-reserva.html"><small>Scheduling</small><b>Book a haircut on WhatsApp</b></a>
+          <a class="rel tile" href="cap-photographers.html"><small>Two-sided platform</small><b>Find a photographer on the map</b></a>
+        </div>
+      </div>
+    </section>
+
+    <blockquote class="quote">A calendar is the simplest way to <em>make time visible.</em></blockquote>
+
+    <a class="next tile" href="3pv.html">
+      <div><small>Next case study</small><b>Campus events, one QR code away</b></div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="yr">2026</span> Juan Vargas</span>
+      <span>Made in Montevideo · <span id="clock">--:--</span> UYT</span>
+    </div>
+  </footer>
+  <script src="../site.js"></script>
+</body>
+</html>

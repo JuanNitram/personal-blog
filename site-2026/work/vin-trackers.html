@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vin Trackers Platform</title>
+  <meta name="description" content="Case study — Juan Vargas on Vin Trackers, a platform that centralized private-market vehicle listings, checked them with Carfax and tracked seller replies with Postmark inbound email.">
+  <meta property="og:title" content="Case study: Finding cars before anyone else | Juan Vargas">
+  <meta property="og:type" content="article">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav aria-label="Main">
+    <a href="../index.html" class="logo" aria-label="Home">jv.</a>
+    <a href="../index.html#cases">Case studies</a>
+    <a href="../index.html#path" class="hide-sm">Path</a>
+    <button id="theme" type="button" aria-label="Toggle color theme">◐</button>
+    <a href="../index.html#contact" class="cta">Let's talk</a>
+  </nav>
+
+  <main class="wrap case">
+    <a class="back" href="../index.html#cases">← All case studies</a>
+    <div class="eyebrow">Case study 09 · Vin Trackers</div>
+    <h1>Finding cars <em>before anyone else.</em></h1>
+    <p class="lede">A car dealer wanted to buy from private sellers before the competition did. I helped build the platform that pulled listings from several sources into one place, checked each vehicle, and handled the conversation with the seller.</p>
+
+    <dl class="meta">
+      <div><dt>Product</dt><dd>Vehicle sourcing platform</dd></div>
+      <div><dt>Client</dt><dd>Vin Trackers (car dealer)</dd></div>
+      <div><dt>Key parts</dt><dd>Data APIs · Carfax · Postmark</dd></div>
+      <div><dt>Built</dt><dd>By hand, pre-AI</dd></div>
+    </dl>
+
+    <section class="chapter">
+      <div class="eyebrow">Context</div>
+      <div class="prose">
+        <h2>Private sellers are everywhere. That's the problem.</h2>
+        <p>Cars sold by private owners are spread across many places. Vin Trackers, a car dealer, needed <strong>one view of all of them</strong>: what is for sale, who is selling it, and whether it is worth buying, so their team could <strong>contact the seller fast</strong>.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">How it worked</div>
+      <div class="prose">
+        <figure class="figure tile">
+          <svg viewBox="0 0 720 260" role="img" aria-label="Vehicle data API and Facebook listings flow into the platform, which checks vehicles with Carfax, sends purchase offers, and captures seller replies through Postmark inbound email">
+            <rect class="box" x="10" y="20" width="170" height="54" rx="14"/>
+            <text x="95" y="44" text-anchor="middle">Vehicle sales API</text>
+            <text class="sub" x="95" y="62" text-anchor="middle">private market data</text>
+            <rect class="box" x="10" y="100" width="170" height="54" rx="14"/>
+            <text x="95" y="124" text-anchor="middle">Facebook listings</text>
+            <text class="sub" x="95" y="142" text-anchor="middle">sellers + vehicles</text>
+            <path class="wire" d="M180 47 C 230 47, 230 100, 270 100"/>
+            <path class="wire" d="M180 127 C 230 127, 230 100, 270 100"/>
+            <rect class="hot" x="270" y="70" width="180" height="60" rx="14"/>
+            <text class="hot-text" x="360" y="105" text-anchor="middle">Vin Trackers</text>
+            <path class="wire" d="M450 86 L 520 50"/>
+            <rect class="box" x="520" y="22" width="190" height="54" rx="14"/>
+            <text x="615" y="46" text-anchor="middle">Carfax</text>
+            <text class="sub" x="615" y="64" text-anchor="middle">vehicle quality check</text>
+            <path class="wire" d="M450 114 L 520 150"/>
+            <rect class="box" x="520" y="124" width="190" height="54" rx="14"/>
+            <text x="615" y="148" text-anchor="middle">Offer emails</text>
+            <text class="sub" x="615" y="166" text-anchor="middle">to sellers</text>
+            <path class="wire dash" d="M615 178 L 615 206 L 360 206 L 360 130"/>
+            <rect class="box" x="250" y="196" width="220" height="54" rx="14"/>
+            <text x="360" y="220" text-anchor="middle">Postmark inbound</text>
+            <text class="sub" x="360" y="238" text-anchor="middle">seller replies come back</text>
+          </svg>
+          <figcaption>Listings come in from two sources, Carfax checks the car, and replies to offers come back into the platform as email.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">What I built</div>
+      <div class="prose">
+        <ol class="steps">
+          <li><div><strong>Centralized listings</strong>Integrated an external API with private-market vehicle sales data, and brought it all into one place.</div></li>
+          <li><div><strong>Facebook data</strong>Collected listings from Facebook to learn who was selling which vehicles, adding a second source to the same view.</div></li>
+          <li><div><strong>Carfax checks</strong>Integrated Carfax to judge the quality and history of each vehicle before making an offer.</div></li>
+          <li><div><strong>Inbound email with Postmark</strong>Used Postmark's inbound email feature to capture sellers' replies to purchase offers sent from the platform, so each conversation stayed with its vehicle instead of in someone's inbox.</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">The hard part</div>
+      <div class="prose">
+        <h2>Many sources, one source of truth.</h2>
+        <p>Each source had its own shape and its own gaps. The real work was turning messy external data into <strong>one consistent model</strong> of a vehicle and its seller, then connecting it with a quality check and a <strong>two-way email flow</strong> the dealer could actually work from.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="eyebrow">Skills</div>
+      <div class="prose">
+        <h2>What this project shows.</h2>
+        <div class="tags"><span>Data integration</span><span>Scraping</span><span>Carfax</span><span>Postmark inbound email</span><span>Data modeling</span></div>
+        <div class="related">
+          <a class="rel tile" href="mi-reserva.html"><small>Messaging channels</small><b>Book a haircut on WhatsApp</b></a>
+          <a class="rel tile" href="sermonly.html"><small>Third-party APIs</small><b>A Notion for churches, built from zero</b></a>
+        </div>
+      </div>
+    </section>
+
+    <blockquote class="quote">Integration work is <em>business rules</em> wearing a technical costume.</blockquote>
+
+    <a class="next tile" href="guestio.html">
+      <div><small>Next case study</small><b>A marketplace for podcast guests</b></div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="yr">2026</span> Juan Vargas</span>
+      <span>Made in Montevideo · <span id="clock">--:--</span> UYT</span>
+    </div>
+  </footer>
+  <script src="../site.js"></script>
+</body>
+</html>
