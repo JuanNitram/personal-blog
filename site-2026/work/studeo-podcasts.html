@@ -1,130 +1,104 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Studeo Podcast Platform</title>
-  <meta name="description" content="Case study — Juan Vargas on Studeo, a podcast management platform: RSS feeds for every major player, and a move from a simple load balancer to Kubernetes with autoscaling.">
-  <meta property="og:title" content="Case study: From one load balancer to Kubernetes | Juan Vargas">
-  <meta property="og:type" content="article">
-  <meta name="color-scheme" content="dark light">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A podcast platform, and my first Kubernetes project — Juan Vargas case study</title>
+<meta name="description" content="Case study — Juan Vargas on Studeo, a podcast management platform with RSS feeds for every major player, and his first hands-on project moving production to Kubernetes.">
+<meta name="author" content="Juan Vargas">
+<meta property="og:title" content="A podcast platform, and my first Kubernetes project — Juan Vargas case study">
+<meta property="og:description" content="Case study — Juan Vargas on Studeo, a podcast management platform with RSS feeds for every major player, and his first hands-on project moving production to Kubernetes.">
+<meta property="og:type" content="article">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "A podcast platform, and my first Kubernetes project",
+ "description": "Case study — Juan Vargas on Studeo, a podcast management platform with RSS feeds for every major player, and his first hands-on project moving production to Kubernetes.",
+ "author": {
+  "@type": "Person",
+  "name": "Juan Vargas",
+  "jobTitle": "Technical Lead",
+  "worksFor": {
+   "@type": "Organization",
+   "name": "BuildOnline"
+  },
+  "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Montevideo",
+   "addressCountry": "UY"
+  },
+  "sameAs": [
+   "https://uy.linkedin.com/in/juan-vargas-807b72142",
+   "https://github.com/JuanNitram",
+   "https://www.upwork.com/o/profiles/users/~01c3b3dbb6c4e59e6c/"
+  ]
+ },
+ "about": "Studeo",
+ "keywords": "Kubernetes (first hands-on project), Autoscaling, Load balancing, RSS / XML feeds, Production infrastructure"
+}
+</script>
 </head>
 <body>
-  <div class="aurora" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-
+<header class="site">
+  <a class="name" href="../index.html">Juan Vargas</a>
   <nav aria-label="Main">
-    <a href="../index.html" class="logo" aria-label="Home">jv.</a>
+    <a href="../index.html#about">About</a>
     <a href="../index.html#cases">Case studies</a>
-    <a href="../index.html#path" class="hide-sm">Path</a>
-    <button id="theme" type="button" aria-label="Toggle color theme">◐</button>
-    <a href="../index.html#contact" class="cta">Let's talk</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#contact">Contact</a>
   </nav>
-
-  <main class="wrap case">
-    <a class="back" href="../index.html#cases">← All case studies</a>
-    <div class="eyebrow">Case study 08 · Studeo</div>
-    <h1>From one load balancer <em>to Kubernetes.</em></h1>
-    <p class="lede">Studeo let podcasters manage their shows and episodes in one place, and published them everywhere people listen. When the simple setup it started on stopped being enough, I moved it to Kubernetes with autoscaling and ran it in production.</p>
-
-    <dl class="meta">
-      <div><dt>Product</dt><dd>Podcast management</dd></div>
-      <div><dt>Users</dt><dd>Podcasters</dd></div>
-      <div><dt>My part</dt><dd>Features + infrastructure</dd></div>
-      <div><dt>Built</dt><dd>By hand, pre-AI</dd></div>
-    </dl>
-
-    <section class="chapter">
-      <div class="eyebrow">Context</div>
-      <div class="prose">
+</header>
+<main>
+<article>
+  <p class="kicker">Case study 08 · Studeo</p>
+  <h1>A podcast platform, and my first Kubernetes project.</h1>
+  <p class="lede">Studeo let podcasters manage their shows and episodes in one place, and published them everywhere people listen. When the simple setup it started on stopped being enough, I took on moving it to Kubernetes with autoscaling. It was my first hands-on Kubernetes project, and I learned it as I went.</p>
+  <dl class="facts">
+    <dt>Product</dt><dd>Podcast management</dd>
+    <dt>Users</dt><dd>Podcasters</dd>
+    <dt>My part</dt><dd>Features + infrastructure</dd>
+    <dt>Built</dt><dd>By hand, pre-AI</dd>
+  </dl>
+  <section>
         <h2>Publish once, play everywhere.</h2>
         <p>Podcasters used Studeo to manage their <strong>podcasts and episodes</strong>. For each show, the platform generated an <strong>XML feed</strong> that could be submitted to <strong>Spotify, Apple, Google Podcasts</strong> and any other player that reads podcast feeds. Listeners never see Studeo, but every play depends on that feed being correct and online.</p>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">Architecture</div>
-      <div class="prose">
-        <h2>The infrastructure had to grow up.</h2>
-        <p>Studeo started on a <strong>very simple architecture</strong>: a load balancer in front of a fixed set of servers. That works until traffic stops being predictable. I took on moving it to <strong>Kubernetes with autoscaling</strong>, so capacity follows demand instead of a guess.</p>
-        <figure class="figure tile">
-          <svg viewBox="0 0 720 250" role="img" aria-label="Before: a load balancer in front of fixed servers. After: a Kubernetes cluster with autoscaled pods serving RSS feeds to Spotify, Apple and Google Podcasts">
-            <text class="sub" x="20" y="22">BEFORE</text>
-            <rect class="box" x="20" y="36" width="130" height="50" rx="14"/><text x="85" y="66" text-anchor="middle">Load balancer</text>
-            <path class="wire" d="M150 61 L 190 61"/>
-            <rect class="box" x="190" y="36" width="60" height="50" rx="12"/><text class="sub" x="220" y="66" text-anchor="middle">srv</text>
-            <rect class="box" x="258" y="36" width="60" height="50" rx="12"/><text class="sub" x="288" y="66" text-anchor="middle">srv</text>
-            <text class="sub" x="330" y="66">fixed capacity</text>
-
-            <text class="sub" x="20" y="130">AFTER</text>
-            <rect class="box" x="20" y="144" width="440" height="96" rx="20" fill="none" stroke-dasharray="5 6"/>
-            <text class="sub" x="36" y="232">Kubernetes · autoscaling</text>
-            <rect class="hot" x="40" y="160" width="74" height="44" rx="12"/><text class="hot-text" x="77" y="187" text-anchor="middle">pod</text>
-            <rect class="hot" x="124" y="160" width="74" height="44" rx="12"/><text class="hot-text" x="161" y="187" text-anchor="middle">pod</text>
-            <rect class="hot" x="208" y="160" width="74" height="44" rx="12"/><text class="hot-text" x="245" y="187" text-anchor="middle">pod</text>
-            <rect class="box" x="292" y="160" width="74" height="44" rx="12" opacity=".5" stroke-dasharray="4 4"/><text class="sub" x="329" y="187" text-anchor="middle">+ more</text>
-            <path class="wire" d="M460 182 L 510 182"/>
-            <rect class="box" x="510" y="140" width="200" height="84" rx="14"/>
-            <text x="610" y="170" text-anchor="middle">RSS / XML feeds</text>
-            <text class="sub" x="610" y="192" text-anchor="middle">Spotify · Apple</text>
-            <text class="sub" x="610" y="208" text-anchor="middle">Google Podcasts · others</text>
-          </svg>
-          <figcaption>Fixed servers became pods that scale with demand. The feeds that players read stay up.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">What I built</div>
-      <div class="prose">
-        <ol class="steps">
-          <li><div><strong>Show and episode management</strong>The core product: podcasters create and manage their podcasts and episodes.</div></li>
-          <li><div><strong>Feed generation</strong>Generated the podcast XML feed that streaming platforms read to list and play each show.</div></li>
-          <li><div><strong>Kubernetes migration</strong>Moved production from the load-balancer setup to a Kubernetes cluster.</div></li>
-          <li><div><strong>Autoscaling</strong>Set up autoscaling so the platform adds capacity when load goes up and releases it when it drops.</div></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">Honest take</div>
-      <div class="prose">
-        <h2>Not textbook. In production.</h2>
-        <p>This was my first serious Kubernetes project, and I had to learn a lot of it on the way. I probably didn't follow every best practice. But <strong>I put it into production and it worked</strong>, and that taught me more than any course: how pods, services and scaling behave under real traffic, and what to do better next time.</p>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">Skills</div>
-      <div class="prose">
-        <h2>What this project shows.</h2>
-        <div class="tags"><span>Kubernetes</span><span>Autoscaling</span><span>Load balancing</span><span>RSS / XML feeds</span><span>Production infrastructure</span></div>
-        <div class="related">
-          <a class="rel tile" href="guestio.html"><small>Podcasts</small><b>A marketplace for podcast guests</b></a>
-          <a class="rel tile" href="test-automation.html"><small>Containers & CI</small><b>Test automation, started from scratch</b></a>
-        </div>
-      </div>
-    </section>
-
-    <blockquote class="quote">The best way to learn infrastructure is to <em>own it in production.</em></blockquote>
-
-    <a class="next tile" href="vin-trackers.html">
-      <div><small>Next case study</small><b>Finding cars before anyone else</b></div>
-      <span class="arrow" aria-hidden="true">→</span>
-    </a>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <span>© <span id="yr">2026</span> Juan Vargas</span>
-      <span>Made in Montevideo · <span id="clock">--:--</span> UYT</span>
-    </div>
-  </footer>
-  <script src="../site.js"></script>
+  </section>
+  <section>
+        <h2>Learning Kubernetes on a real project.</h2>
+        <p>Studeo started on a <strong>very simple architecture</strong>: a load balancer in front of a fixed set of servers. That works until traffic stops being predictable. I took on moving it to <strong>Kubernetes with autoscaling</strong>, so capacity could follow demand. I had not worked with Kubernetes before, so a big part of the job was learning it.</p>
+  </section>
+  <section>
+    <h2>What I built</h2>
+    <ol>
+      <li><strong>Show and episode management.</strong> The core product: podcasters create and manage their podcasts and episodes.</li>
+      <li><strong>Feed generation.</strong> Generated the podcast XML feed that streaming platforms read to list and play each show.</li>
+      <li><strong>Kubernetes migration.</strong> Moved production from the load-balancer setup to a Kubernetes cluster.</li>
+      <li><strong>Autoscaling.</strong> Set up autoscaling so the platform adds capacity when load goes up and releases it when it drops.</li>
+    </ol>
+  </section>
+  <section>
+        <h2>Not textbook, but it worked.</h2>
+        <p>I'm not a Kubernetes expert. This was my first real project with it, and I learned most of it on the way. I probably didn't follow every best practice. But <strong>I got it running in production</strong>, and it gave me a practical understanding of how pods, services and autoscaling behave, and what I would do differently next time.</p>
+  </section>
+  <section>
+    <h2>Skills shown</h2>
+    <ul class="tags"><li>Kubernetes (first hands-on project)</li><li>Autoscaling</li><li>Load balancing</li><li>RSS / XML feeds</li><li>Production infrastructure</li></ul>
+    <h2>Related case studies</h2>
+    <ul>
+      <li><a href="guestio.html">A marketplace for podcast guests</a> — Podcasts</li>
+      <li><a href="test-automation.html">Test automation, started from scratch</a> — Containers & CI</li>
+    </ul>
+  </section>
+  <blockquote>You learn a lot when you have to make it work in production.</blockquote>
+  <p class="next">Next case study: <a href="vin-trackers.html">Finding cars before anyone else</a></p>
+</article>
+</main>
+<footer class="site">
+  <p>Juan Vargas · Montevideo, Uruguay · <a href="../llms.txt">llms.txt</a></p>
+</footer>
 </body>
 </html>

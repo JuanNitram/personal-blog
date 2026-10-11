@@ -1,140 +1,110 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Annual Billing Launch</title>
-  <meta name="description" content="Case study — Juan Vargas on owning the technical risk of an annual billing launch at Tithely against a fixed deadline.">
-  <meta property="og:title" content="Case study: Annual billing, de-risked before it ships | Juan Vargas">
-  <meta property="og:type" content="article">
-  <meta name="color-scheme" content="dark light">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annual billing, de-risked before it ships — Juan Vargas case study</title>
+<meta name="description" content="Case study — Juan Vargas on owning the technical risk of an annual billing launch at Tithely against a fixed deadline.">
+<meta name="author" content="Juan Vargas">
+<meta property="og:title" content="Annual billing, de-risked before it ships — Juan Vargas case study">
+<meta property="og:description" content="Case study — Juan Vargas on owning the technical risk of an annual billing launch at Tithely against a fixed deadline.">
+<meta property="og:type" content="article">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Annual billing, de-risked before it ships",
+ "description": "Case study — Juan Vargas on owning the technical risk of an annual billing launch at Tithely against a fixed deadline.",
+ "author": {
+  "@type": "Person",
+  "name": "Juan Vargas",
+  "jobTitle": "Technical Lead",
+  "worksFor": {
+   "@type": "Organization",
+   "name": "BuildOnline"
+  },
+  "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Montevideo",
+   "addressCountry": "UY"
+  },
+  "sameAs": [
+   "https://uy.linkedin.com/in/juan-vargas-807b72142",
+   "https://github.com/JuanNitram",
+   "https://www.upwork.com/o/profiles/users/~01c3b3dbb6c4e59e6c/"
+  ]
+ },
+ "about": "Tithely · Billing",
+ "keywords": "Stripe subscriptions, Program ownership, Code-level risk review, Scope management"
+}
+</script>
 </head>
 <body>
-  <div class="aurora" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-
+<header class="site">
+  <a class="name" href="../index.html">Juan Vargas</a>
   <nav aria-label="Main">
-    <a href="../index.html" class="logo" aria-label="Home">jv.</a>
+    <a href="../index.html#about">About</a>
     <a href="../index.html#cases">Case studies</a>
-    <a href="../index.html#path" class="hide-sm">Path</a>
-    <button id="theme" type="button" aria-label="Toggle color theme">◐</button>
-    <a href="../index.html#contact" class="cta">Let's talk</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#contact">Contact</a>
   </nav>
-
-  <main class="wrap case">
-    <a class="back" href="../index.html#cases">← All case studies</a>
-    <div class="eyebrow">Case study 05 · Tithely · Billing</div>
-    <h1>Annual billing, <em>de-risked</em> before it ships.</h1>
-    <p class="lede">A revenue-critical program with a fixed date: new customers on annual pricing by January 1, 2027. My job was to make sure what we <em>said</em> the system does matched what the code <em>actually</em> does, before customers found the gap.</p>
-
-    <dl class="meta">
-      <div><dt>Role</dt><dd>Engineering lead, program owner</dd></div>
-      <div><dt>Org</dt><dd>Tithely · EPD</dd></div>
-      <div><dt>When</dt><dd>2026 — in progress</dd></div>
-      <div><dt>Domain</dt><dd>Subscriptions · billing · KYC</dd></div>
-    </dl>
-
-    <section class="chapter">
-      <div class="eyebrow">Context</div>
-      <div class="prose">
+</header>
+<main>
+<article>
+  <p class="kicker">Case study 05 · Tithely · Billing</p>
+  <h1>Annual billing, de-risked before it ships.</h1>
+  <p class="lede">A revenue-critical program with a fixed date: new customers on annual pricing by January 1, 2027. My job was to make sure what we <em>said</em> the system does matched what the code <em>actually</em> does, before customers found the gap.</p>
+  <dl class="facts">
+    <dt>Role</dt><dd>Engineering lead, program owner</dd>
+    <dt>Org</dt><dd>Tithely · EPD</dd>
+    <dt>When</dt><dd>2026 — in progress</dd>
+    <dt>Domain</dt><dd>Subscriptions · billing · KYC</dd>
+  </dl>
+  <section>
         <h2>A billing change with no room to slip.</h2>
         <p>Tithely plans in <strong>Planning Increments</strong>, and annual billing is one of the initiatives leadership is tracking. It has an <strong>external deadline</strong>: annual pricing for new customers by January 1, 2027. Billing changes are unforgiving. A wrong assumption shows up as a wrong charge on a real customer's card.</p>
         <p>The work cuts across subscriptions, plan selection and the KYC onboarding flow, and several squads and stakeholders are involved, so <strong>shared understanding</strong> is a risk in itself.</p>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">The catch</div>
-      <div class="prose">
+  </section>
+  <section>
         <h2>The notes said one thing. The code did another.</h2>
         <p>In planning, meeting notes described what happens when a customer switches billing cadence (monthly ↔ annual): <strong>delete the subscription and create a new one</strong>. I went and read the code path. It doesn't do that at all.</p>
-        <figure class="figure tile">
-          <svg viewBox="0 0 720 230" role="img" aria-label="Comparison: meeting notes say delete and recreate the subscription; the code swaps items on the existing subscription">
-            <text class="sub" x="20" y="22">WHAT THE NOTES SAID</text>
-            <rect class="box" x="20" y="36" width="140" height="56" rx="14"/>
-            <text x="90" y="69" text-anchor="middle">Subscription A</text>
-            <path class="wire" d="M160 64 L 210 64"/>
-            <rect class="box" x="210" y="36" width="110" height="56" rx="14" opacity=".55"/>
-            <text x="265" y="69" text-anchor="middle">delete</text>
-            <path class="wire" d="M320 64 L 370 64"/>
-            <rect class="box" x="370" y="36" width="140" height="56" rx="14"/>
-            <text x="440" y="69" text-anchor="middle">Subscription B</text>
-
-            <text class="sub" x="20" y="138">WHAT THE CODE DOES</text>
-            <rect class="box" x="20" y="152" width="140" height="56" rx="14"/>
-            <text x="90" y="185" text-anchor="middle">Subscription A</text>
-            <path class="wire" d="M160 180 L 210 180"/>
-            <rect class="hot" x="210" y="152" width="300" height="56" rx="14"/>
-            <text class="hot-text" x="360" y="185" text-anchor="middle">swap items, same subscription</text>
-            <path class="wire dash" d="M510 180 L 560 180"/>
-            <text class="sub" x="570" y="176">same ID,</text>
-            <text class="sub" x="570" y="192">same history</text>
-          </svg>
-          <figcaption>Two very different behaviors. Proration, history, webhooks and reporting all depend on which one is real.</figcaption>
-        </figure>
         <p>That difference matters: <strong>swapping items on an existing subscription</strong> keeps the same subscription, history and identifiers. Delete-and-recreate doesn't. Downstream decisions about proration, reporting and edge cases were being made on the wrong model. I raised it with the code as evidence, so the team could plan against reality.</p>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">Scope risk</div>
-      <div class="prose">
+  </section>
+  <section>
         <h2>Finding the work nobody had ticketed.</h2>
         <p>Following the customer path end to end, I found a step that had <strong>no ticket at all</strong>: <strong>choosing a plan after KYC</strong> is submitted. Annual pricing for new customers has to work there too. Left alone, it would have surfaced late as a "surprise" blocker close to the deadline.</p>
         <p>I flagged it as a scope risk early, while there was still room in the plan to absorb it.</p>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">How I run it</div>
-      <div class="prose">
-        <ol class="steps">
-          <li><div><strong>Track mechanisms, not just status</strong>A ticket marked "in progress" tells you little. I track the actual behavior each piece depends on, and where it could break.</div></li>
-          <li><div><strong>Verify against code</strong>When notes, docs and code disagree, the code wins. I check pull request diffs and code paths myself instead of relaying assumptions.</div></li>
-          <li><div><strong>Surface risk early, upward</strong>Risks go to leadership at the PI level in a clear, audience-calibrated format — before they become incidents.</div></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">Status</div>
-      <div class="prose">
+  </section>
+  <section>
+    <h2>How I run it</h2>
+    <ol>
+      <li><strong>Track mechanisms, not just status.</strong> A ticket marked "in progress" tells you little. I track the actual behavior each piece depends on, and where it could break.</li>
+      <li><strong>Verify against code.</strong> When notes, docs and code disagree, the code wins. I check pull request diffs and code paths myself instead of relaying assumptions.</li>
+      <li><strong>Surface risk early, upward.</strong> Risks go to leadership at the PI level in a clear, audience-calibrated format — before they become incidents.</li>
+    </ol>
+  </section>
+  <section>
         <h2>In flight, with fewer unknowns.</h2>
         <p>The program is <strong>still in progress</strong> toward the January deadline. What changed is that the team is building against <strong>how the system really behaves</strong>, and the hidden scope is on the board instead of waiting to be discovered.</p>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">Skills</div>
-      <div class="prose">
-        <h2>What this project shows.</h2>
-        <div class="tags"><span>Stripe subscriptions</span><span>Program ownership</span><span>Code-level risk review</span><span>Scope management</span></div>
-        <div class="related">
-          <a class="rel tile" href="guestio.html"><small>Stripe subscriptions</small><b>A marketplace for podcast guests</b></a>
-          <a class="rel tile" href="sermonly.html"><small>Stripe subscriptions</small><b>A Notion for churches, built from zero</b></a>
-        </div>
-      </div>
-    </section>
-
-    <blockquote class="quote">On a billing project, the most expensive bug is a <em>shared wrong assumption.</em></blockquote>
-
-    <a class="next tile" href="test-automation.html">
-      <div><small>Next case study</small><b>Test automation, started from scratch</b></div>
-      <span class="arrow" aria-hidden="true">→</span>
-    </a>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <span>© <span id="yr">2026</span> Juan Vargas</span>
-      <span>Made in Montevideo · <span id="clock">--:--</span> UYT</span>
-    </div>
-  </footer>
-  <script src="../site.js"></script>
+  </section>
+  <section>
+    <h2>Skills shown</h2>
+    <ul class="tags"><li>Stripe subscriptions</li><li>Program ownership</li><li>Code-level risk review</li><li>Scope management</li></ul>
+    <h2>Related case studies</h2>
+    <ul>
+      <li><a href="guestio.html">A marketplace for podcast guests</a> — Stripe subscriptions</li>
+      <li><a href="sermonly.html">A Notion for churches, built from zero</a> — Stripe subscriptions</li>
+    </ul>
+  </section>
+  <blockquote>On a billing project, the most expensive bug is a shared wrong assumption.</blockquote>
+  <p class="next">Next case study: <a href="test-automation.html">Test automation, started from scratch</a></p>
+</article>
+</main>
+<footer class="site">
+  <p>Juan Vargas · Montevideo, Uruguay · <a href="../llms.txt">llms.txt</a></p>
+</footer>
 </body>
 </html>

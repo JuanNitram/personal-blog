@@ -1,96 +1,98 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>APG Measurement Sheets</title>
-  <meta name="description" content="Case study — Juan Vargas on a tool for American Pistachio Growers (APG) to manage pistachio measurement sheets, plus a discovery integration to find US growers without a management system.">
-  <meta property="og:title" content="Case study: Pistachio data, out of the spreadsheets | Juan Vargas">
-  <meta property="og:type" content="article">
-  <meta name="color-scheme" content="dark light">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pistachio data, out of the spreadsheets — Juan Vargas case study</title>
+<meta name="description" content="Case study — Juan Vargas on a tool for American Pistachio Growers (APG) to manage pistachio measurement sheets, plus a discovery integration to find US growers without a management system.">
+<meta name="author" content="Juan Vargas">
+<meta property="og:title" content="Pistachio data, out of the spreadsheets — Juan Vargas case study">
+<meta property="og:description" content="Case study — Juan Vargas on a tool for American Pistachio Growers (APG) to manage pistachio measurement sheets, plus a discovery integration to find US growers without a management system.">
+<meta property="og:type" content="article">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Pistachio data, out of the spreadsheets",
+ "description": "Case study — Juan Vargas on a tool for American Pistachio Growers (APG) to manage pistachio measurement sheets, plus a discovery integration to find US growers without a management system.",
+ "author": {
+  "@type": "Person",
+  "name": "Juan Vargas",
+  "jobTitle": "Technical Lead",
+  "worksFor": {
+   "@type": "Organization",
+   "name": "BuildOnline"
+  },
+  "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Montevideo",
+   "addressCountry": "UY"
+  },
+  "sameAs": [
+   "https://uy.linkedin.com/in/juan-vargas-807b72142",
+   "https://github.com/JuanNitram",
+   "https://www.upwork.com/o/profiles/users/~01c3b3dbb6c4e59e6c/"
+  ]
+ },
+ "about": "APG · American Pistachio Growers",
+ "keywords": "Data management, Third-party API, Market discovery"
+}
+</script>
 </head>
 <body>
-  <div class="aurora" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-
+<header class="site">
+  <a class="name" href="../index.html">Juan Vargas</a>
   <nav aria-label="Main">
-    <a href="../index.html" class="logo" aria-label="Home">jv.</a>
+    <a href="../index.html#about">About</a>
     <a href="../index.html#cases">Case studies</a>
-    <a href="../index.html#path" class="hide-sm">Path</a>
-    <button id="theme" type="button" aria-label="Toggle color theme">◐</button>
-    <a href="../index.html#contact" class="cta">Let's talk</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#contact">Contact</a>
   </nav>
-
-  <main class="wrap case">
-    <a class="back" href="../index.html#cases">← All case studies</a>
-    <div class="eyebrow">Case study 10 · APG · American Pistachio Growers</div>
-    <h1>Pistachio data, <em>out of the spreadsheets.</em></h1>
-    <p class="lede">American Pistachio Growers received sheets full of measurements for the pistachios being sold. We built a manager for those sheets, and a discovery integration to find growers in the US who didn't have a management system yet.</p>
-
-    <dl class="meta">
-      <div><dt>Product</dt><dd>Measurement sheet manager</dd></div>
-      <div><dt>Client</dt><dd>American Pistachio Growers</dd></div>
-      <div><dt>Extra</dt><dd>Grower discovery</dd></div>
-      <div><dt>Domain</dt><dd>Agriculture</dd></div>
-    </dl>
-
-    <section class="chapter">
-      <div class="eyebrow">Context</div>
-      <div class="prose">
+</header>
+<main>
+<article>
+  <p class="kicker">Case study 10 · APG · American Pistachio Growers</p>
+  <h1>Pistachio data, out of the spreadsheets.</h1>
+  <p class="lede">American Pistachio Growers received sheets full of measurements for the pistachios being sold. We built a manager for those sheets, and a discovery integration to find growers in the US who didn't have a management system yet.</p>
+  <dl class="facts">
+    <dt>Product</dt><dd>Measurement sheet manager</dd>
+    <dt>Client</dt><dd>American Pistachio Growers</dd>
+    <dt>Extra</dt><dd>Grower discovery</dd>
+    <dt>Domain</dt><dd>Agriculture</dd>
+  </dl>
+  <section>
         <h2>Every sale comes with a sheet.</h2>
         <p>Pistachios are sold with <strong>measurements</strong>, and those measurements arrived as <strong>sheets</strong>. Keeping them in files makes them hard to find, compare and trust. APG needed one place to manage them.</p>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">What we built</div>
-      <div class="prose">
-        <ol class="steps">
-          <li><div><strong>Sheet manager</strong>A system to receive and manage the measurement sheets for the pistachios being sold, instead of loose files.</div></li>
-          <li><div><strong>Discovery integration</strong>An integration with an external API, built as discovery, to find which growers in the United States still had no management system.</div></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">Why it mattered</div>
-      <div class="prose">
+  </section>
+  <section>
+    <h2>What we built</h2>
+    <ol>
+      <li><strong>Sheet manager.</strong> A system to receive and manage the measurement sheets for the pistachios being sold, instead of loose files.</li>
+      <li><strong>Discovery integration.</strong> An integration with an external API, built as discovery, to find which growers in the United States still had no management system.</li>
+    </ol>
+  </section>
+  <section>
         <h2>A tool, and a map of who needs it.</h2>
         <p>The sheet manager solved today's problem. The discovery work pointed at tomorrow's: <strong>which growers could use a system like this next</strong>. It's the same idea as the Tithely scrapers that checked which churches already had online giving: use data to find who still needs the product.</p>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">Skills</div>
-      <div class="prose">
-        <h2>What this project shows.</h2>
-        <div class="tags"><span>Data management</span><span>Third-party API</span><span>Market discovery</span></div>
-        <div class="related">
-          <a class="rel tile" href="vin-trackers.html"><small>External data sources</small><b>Finding cars before anyone else</b></a>
-          <a class="rel tile" href="nanny-company.html"><small>Admin tools</small><b>Every shift, on one calendar</b></a>
-        </div>
-      </div>
-    </section>
-
-    <blockquote class="quote">Sometimes the most useful query is <em>who doesn't have this yet?</em></blockquote>
-
-    <a class="next tile" href="guestio.html">
-      <div><small>Next case study</small><b>A marketplace for podcast guests</b></div>
-      <span class="arrow" aria-hidden="true">→</span>
-    </a>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <span>© <span id="yr">2026</span> Juan Vargas</span>
-      <span>Made in Montevideo · <span id="clock">--:--</span> UYT</span>
-    </div>
-  </footer>
-  <script src="../site.js"></script>
+  </section>
+  <section>
+    <h2>Skills shown</h2>
+    <ul class="tags"><li>Data management</li><li>Third-party API</li><li>Market discovery</li></ul>
+    <h2>Related case studies</h2>
+    <ul>
+      <li><a href="vin-trackers.html">Finding cars before anyone else</a> — External data sources</li>
+      <li><a href="nanny-company.html">Every shift, on one calendar</a> — Admin tools</li>
+    </ul>
+  </section>
+  <blockquote>Sometimes the most useful query is who doesn't have this yet?</blockquote>
+  <p class="next">Next case study: <a href="guestio.html">A marketplace for podcast guests</a></p>
+</article>
+</main>
+<footer class="site">
+  <p>Juan Vargas · Montevideo, Uruguay · <a href="../llms.txt">llms.txt</a></p>
+</footer>
 </body>
 </html>

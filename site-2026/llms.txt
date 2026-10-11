@@ -1,0 +1,62 @@
+# Juan Vargas
+
+> Technical Lead and hands-on software engineer from Montevideo, Uruguay. Since 2020 I've worked as a contractor through BuildOnline, mostly for Tithely. I've built church software, retail store tools, podcast platforms, marketplaces, payment apps and an offline app for a prison, usually leading the team and always writing code.
+
+## About
+
+I turn business rules into architecture, then build it. Tech lead on almost every project: leading people, assigning work, and connecting the client with the code. Hands-on with Laravel, Flutter, Ionic, Electron, Hotwire and many APIs, with Stripe as the one I know best. Hands-on Kubernetes experience from one production project (not an expert). Bilingual: Spanish and English.
+
+## Case studies
+
+### Through BuildOnline: Tithely and Rural King
+
+- [Sermonly: A Notion for churches, built from zero](work/sermonly.html): Designed and built solo: AI, wording and Bible Gateway integrations, Stripe subscriptions, ~8,000 users — on Electron, web and Ionic.
+- [Media: One media library, everywhere](work/media-picker.html): Tithely's multimedia library and storage, plus the NPM package that opens it as a modal inside many Tithely products.
+- [Breeze Worship: Setlists for church bands, in Flutter](work/breeze-worship.html): CCLI song sheets, MP3s and setlist editing — Flutter with BLoC, and a hand-built bridge to render PDFs with HTML/JS.
+- [Analytics: Making signup data worth trusting](work/signup-analytics.html): Audited GA4, PostHog and GTM by hand, found three silent bugs, then shipped the production cutover — and watched it.
+- [Billing: Annual billing, de-risked before it ships](work/annual-billing.html): Caught where planning notes and code disagreed on subscription behavior, and found unticketed scope before the deadline did.
+- [Quality: Test automation, started from scratch](work/test-automation.html): A new Playwright project from zero, Xray fixed so QA counts, containerized CI — built with AI, reviewed by me.
+- [Rural King: A store scanner, rendered on the server](work/rural-king.html): A replacement for Rural King's in-store handheld app: scan products, manage stock, check other US stores and work through tasks — server-rendered screens inside native iOS and Android wrappers.
+
+### Client work
+
+- [Studeo: A podcast platform, and my first Kubernetes project](work/studeo-podcasts.html): Podcast management with feeds for Spotify, Apple and Google Podcasts, and my first hands-on Kubernetes project: moving production to autoscaling.
+- [Vin Trackers: Finding cars before anyone else](work/vin-trackers.html): Private-market vehicle listings from an API and Facebook in one place, Carfax checks, and seller replies captured with Postmark inbound email.
+- [APG: Pistachio data, out of the spreadsheets](work/apg.html): A manager for American Pistachio Growers' measurement sheets, plus a discovery integration to find US growers without a management system.
+- [Guestio: A marketplace for podcast guests](work/guestio.html): Visibility and bookings for podcasters, with Stripe payments and the subscriptions behind Pro accounts.
+- [Zulio: Card fees, paid by the customer](work/zulio.html): A Flutter payments app that adds the processing fee to the customer's total, with Stripe Tap to Pay and external devices.
+- [CAP: Find a photographer on the map](work/cap-photographers.html): An app for Creative Agent Partners connecting photographers and clients: map search, messaging, photo uploads and payments.
+- [Nanny Company: Every shift, on one calendar](work/nanny-company.html): Book nannies by shift, with access for clients, nannies and admins — and an admin calendar showing every shift at a glance.
+- [3pv: Campus events, one QR code away](work/3pv.html): A university ticketing app: students sign up, buy tickets to campus events and get in with a QR code.
+
+### Independent projects
+
+- [Sigt: A task manager that works behind prison walls](work/sigt.html): Built solo for the Punta Rieles prison: track tasks, take photos and record audio with no internet, then sync at the office outside.
+- [Mi Reserva: Book a haircut on WhatsApp](work/mi-reserva.html): A booking system for barbershops where customers check free days and book a time through a WhatsApp bot.
+
+## APIs and tools
+
+- Stripe: Subscriptions, Price changes, Connect and connected accounts, Refunds, Tap to Pay, Fee pass-through, One-off payments
+- Other APIs: AI APIs, Bible Gateway, Wording and synonyms APIs, CCLI, Carfax, Postmark inbound email, WhatsApp API, Facebook Graph API, Open Graph, Instagram API, Meta APIs, MarketCheck, Mercado Libre, GA4, Google Tag Manager, PostHog, Podcast RSS feeds, Maps, Task and inventory APIs, Jira / Xray
+- Tools: Laravel, PHP, Node.js, Vue / Nuxt, React, Flutter (BLoC), Ionic, Electron, Hotwire, Playwright, Docker, GitHub Actions, Kubernetes (hands-on, one production project), AWS, Google Cloud, MySQL, MongoDB
+
+## Experience
+
+- Now: Technical Lead, BuildOnline · contractor for Tithely. Architecture, integrations, test automation and delivery.
+- 2022: Team Leader, BuildOnline · Tithely. Guided a multidisciplinary team; planned projects from the first steps alongside the PM.
+- 2020: Software Developer, BuildOnline · Tithely. Deployment process and maintainability; Ionic, Flutter, Electron and Laravel.
+- 2020: Software Developer, Upwork, freelance. Full stack with Vue.js, NativeScript and Laravel.
+- 2019: Software Developer, Light-it. Full stack with Vue.js, React, Node.js and Laravel.
+- 2018: Backend Developer, Sitios, digital agency. Back-end solutions with Laravel, including a car CRM that synced every new vehicle to Mercado Libre.
+- 2017: Software Developer, Freelance. Vue/Nuxt front-ends; Node/Express and Laravel back-ends.
+
+## Education
+
+- Computer Engineering, Universidad de la República
+- Technological Bachelor in IT (2012), UTU, Universidad del Trabajo del Uruguay
+
+## Contact
+
+- LinkedIn: https://uy.linkedin.com/in/juan-vargas-807b72142
+- GitHub: https://github.com/JuanNitram
+- Upwork: https://www.upwork.com/o/profiles/users/~01c3b3dbb6c4e59e6c/

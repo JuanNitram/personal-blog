@@ -1,132 +1,106 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rural King Store App</title>
-  <meta name="description" content="Case study — Juan Vargas on the in-store app built for Rural King through BuildOnline: product scanning, stock across US stores and an employee task manager, built with Laravel and Hotwire inside native iOS and Android wrappers.">
-  <meta property="og:title" content="Case study: A store scanner, rendered on the server | Juan Vargas">
-  <meta property="og:type" content="article">
-  <meta name="color-scheme" content="dark light">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A store scanner, rendered on the server — Juan Vargas case study</title>
+<meta name="description" content="Case study — Juan Vargas on the in-store app built for Rural King through BuildOnline: product scanning, stock across US stores and an employee task manager, built with Laravel and Hotwire inside native iOS and Android wrappers.">
+<meta name="author" content="Juan Vargas">
+<meta property="og:title" content="A store scanner, rendered on the server — Juan Vargas case study">
+<meta property="og:description" content="Case study — Juan Vargas on the in-store app built for Rural King through BuildOnline: product scanning, stock across US stores and an employee task manager, built with Laravel and Hotwire inside native iOS and Android wrappers.">
+<meta property="og:type" content="article">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "A store scanner, rendered on the server",
+ "description": "Case study — Juan Vargas on the in-store app built for Rural King through BuildOnline: product scanning, stock across US stores and an employee task manager, built with Laravel and Hotwire inside native iOS and Android wrappers.",
+ "author": {
+  "@type": "Person",
+  "name": "Juan Vargas",
+  "jobTitle": "Technical Lead",
+  "worksFor": {
+   "@type": "Organization",
+   "name": "BuildOnline"
+  },
+  "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Montevideo",
+   "addressCountry": "UY"
+  },
+  "sameAs": [
+   "https://uy.linkedin.com/in/juan-vargas-807b72142",
+   "https://github.com/JuanNitram",
+   "https://www.upwork.com/o/profiles/users/~01c3b3dbb6c4e59e6c/"
+  ]
+ },
+ "about": "Rural King · via BuildOnline",
+ "keywords": "Laravel, Hotwire, iOS & Android wrappers, Barcode scanning, Inventory, API sync, Working within client constraints"
+}
+</script>
 </head>
 <body>
-  <div class="aurora" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-
+<header class="site">
+  <a class="name" href="../index.html">Juan Vargas</a>
   <nav aria-label="Main">
-    <a href="../index.html" class="logo" aria-label="Home">jv.</a>
+    <a href="../index.html#about">About</a>
     <a href="../index.html#cases">Case studies</a>
-    <a href="../index.html#path" class="hide-sm">Path</a>
-    <button id="theme" type="button" aria-label="Toggle color theme">◐</button>
-    <a href="../index.html#contact" class="cta">Let's talk</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#contact">Contact</a>
   </nav>
-
-  <main class="wrap case">
-    <a class="back" href="../index.html#cases">← All case studies</a>
-    <div class="eyebrow">Case study 07 · Rural King · via BuildOnline</div>
-    <h1>A store scanner, <em>rendered on the server.</em></h1>
-    <p class="lede">Through BuildOnline we built Rural King a replacement for the internal app their staff use on in-store handheld devices, the kind that look like a POS. Scan a product, check stock here and in other stores across the US, and work through your task list. The client required Laravel and Hotwire, so every screen is rendered on the server inside native iOS and Android wrappers.</p>
-
-    <dl class="meta">
-      <div><dt>Role</dt><dd>Developer · BuildOnline team</dd></div>
-      <div><dt>Users</dt><dd>Rural King store employees</dd></div>
-      <div><dt>Devices</dt><dd>In-store handhelds</dd></div>
-      <div><dt>Stack</dt><dd>Laravel · Hotwire · native wrappers</dd></div>
-    </dl>
-
-    <section class="chapter">
-      <div class="eyebrow">Context</div>
-      <div class="prose">
+</header>
+<main>
+<article>
+  <p class="kicker">Case study 07 · Rural King · via BuildOnline</p>
+  <h1>A store scanner, rendered on the server.</h1>
+  <p class="lede">Through BuildOnline we built Rural King a replacement for the internal app their staff use on in-store handheld devices, the kind that look like a POS. Scan a product, check stock here and in other stores across the US, and work through your task list. The client required Laravel and Hotwire, so every screen is rendered on the server inside native iOS and Android wrappers.</p>
+  <dl class="facts">
+    <dt>Role</dt><dd>Developer · BuildOnline team</dd>
+    <dt>Users</dt><dd>Rural King store employees</dd>
+    <dt>Devices</dt><dd>In-store handhelds</dd>
+    <dt>Stack</dt><dd>Laravel · Hotwire · native wrappers</dd>
+  </dl>
+  <section>
         <h2>A tool every store depends on.</h2>
         <p>Rural King staff carry handheld devices on the store floor. The existing internal app on those devices was being <strong>replaced</strong>, and the new one had to cover the daily work of store employees: knowing what a product is, how much of it there is, and where else it can be found.</p>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">Features</div>
-      <div class="prose">
-        <ol class="steps">
-          <li><div><strong>Product scanner</strong>The main feature: scan a product in the store to bring up everything about it.</div></li>
-          <li><div><strong>Stock availability</strong>See and manage the stock available in the current store.</div></li>
-          <li><div><strong>Stock in other stores</strong>Check which other Rural King stores across the United States have the product in stock.</div></li>
-          <li><div><strong>Inventory tools</strong>A whole set of features around managing stock inside the stores.</div></li>
-          <li><div><strong>Task manager</strong>A built-in task manager that syncs with a separate API, so each employee has their own backlog of tasks on the same device.</div></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">Architecture</div>
-      <div class="prose">
+  </section>
+  <section>
+    <h2>Features</h2>
+    <ol>
+      <li><strong>Product scanner.</strong> The main feature: scan a product in the store to bring up everything about it.</li>
+      <li><strong>Stock availability.</strong> See and manage the stock available in the current store.</li>
+      <li><strong>Stock in other stores.</strong> Check which other Rural King stores across the United States have the product in stock.</li>
+      <li><strong>Inventory tools.</strong> A whole set of features around managing stock inside the stores.</li>
+      <li><strong>Task manager.</strong> A built-in task manager that syncs with a separate API, so each employee has their own backlog of tasks on the same device.</li>
+    </ol>
+  </section>
+  <section>
         <h2>The constraint was the design.</h2>
         <p>The client set a clear requirement: build it with <strong>Laravel and Hotwire</strong>. That shaped everything. Instead of a native app with its own client-side logic, the screens are <strong>rendered server-side</strong> and shown inside thin <strong>iOS and Android wrappers</strong> on the devices.</p>
-        <figure class="figure tile">
-          <svg viewBox="0 0 720 230" role="img" aria-label="Laravel with Hotwire renders screens on the server and sends them to native iOS and Android wrappers on store handhelds; the server also syncs tasks with a separate task API">
-            <rect class="box" x="10" y="40" width="200" height="150" rx="18"/>
-            <text class="sub" x="26" y="64">HANDHELD DEVICE</text>
-            <rect class="box" x="26" y="78" width="168" height="44" rx="10"/><text x="110" y="105" text-anchor="middle">iOS / Android wrapper</text>
-            <rect class="box" x="26" y="132" width="168" height="44" rx="10"/><text x="110" y="159" text-anchor="middle">Scanner</text>
-            <path class="wire" d="M210 90 L 300 90"/>
-            <text class="sub" x="222" y="80">request</text>
-            <path class="wire" d="M300 130 L 210 130"/>
-            <text class="sub" x="222" y="148">HTML screen</text>
-            <rect class="hot" x="300" y="70" width="190" height="80" rx="16"/>
-            <text class="hot-text" x="395" y="104" text-anchor="middle">Laravel + Hotwire</text>
-            <text class="hot-text" x="395" y="124" text-anchor="middle" style="font-size:11px;font-weight:400">screens rendered server-side</text>
-            <path class="wire" d="M490 90 L 540 60"/>
-            <rect class="box" x="540" y="30" width="170" height="56" rx="14"/>
-            <text x="625" y="54" text-anchor="middle">Store &amp; stock data</text>
-            <text class="sub" x="625" y="72" text-anchor="middle">this store + others</text>
-            <path class="wire" d="M490 130 L 540 160"/>
-            <rect class="box" x="540" y="134" width="170" height="56" rx="14"/>
-            <text x="625" y="158" text-anchor="middle">Task API</text>
-            <text class="sub" x="625" y="176" text-anchor="middle">employee backlogs</text>
-          </svg>
-          <figcaption>The device shows what the server renders. Data and tasks live behind the server.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">The hard part</div>
-      <div class="prose">
+  </section>
+  <section>
         <h2>Native feel, server brain.</h2>
         <p>With Hotwire, the logic lives on the server and the native shell mostly displays it. That keeps one codebase in charge and lets a server change reach every device. The challenge is making server-rendered screens work like a <strong>tool people use all day on the store floor</strong>, with the scanner at the center, inside two native wrappers.</p>
         <p>It's the same kind of problem I met in <strong>Breeze Worship</strong>, where we bridged Flutter with HTML and JavaScript: <strong>web content living inside a native app</strong>, and making the seam invisible.</p>
-      </div>
-    </section>
-
-    <section class="chapter">
-      <div class="eyebrow">Skills</div>
-      <div class="prose">
-        <h2>What this project shows.</h2>
-        <div class="tags"><span>Laravel</span><span>Hotwire</span><span>iOS & Android wrappers</span><span>Barcode scanning</span><span>Inventory</span><span>API sync</span><span>Working within client constraints</span></div>
-        <div class="related">
-          <a class="rel tile" href="breeze-worship.html"><small>Web inside native</small><b>Setlists for church bands, in Flutter</b></a>
-          <a class="rel tile" href="sigt.html"><small>Sync on the job</small><b>A task manager that works behind prison walls</b></a>
-        </div>
-      </div>
-    </section>
-
-    <blockquote class="quote">A client constraint isn't a limit. It's <em>the first design decision.</em></blockquote>
-
-    <a class="next tile" href="studeo-podcasts.html">
-      <div><small>Next case study</small><b>From one load balancer to Kubernetes</b></div>
-      <span class="arrow" aria-hidden="true">→</span>
-    </a>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <span>© <span id="yr">2026</span> Juan Vargas</span>
-      <span>Made in Montevideo · <span id="clock">--:--</span> UYT</span>
-    </div>
-  </footer>
-  <script src="../site.js"></script>
+  </section>
+  <section>
+    <h2>Skills shown</h2>
+    <ul class="tags"><li>Laravel</li><li>Hotwire</li><li>iOS & Android wrappers</li><li>Barcode scanning</li><li>Inventory</li><li>API sync</li><li>Working within client constraints</li></ul>
+    <h2>Related case studies</h2>
+    <ul>
+      <li><a href="breeze-worship.html">Setlists for church bands, in Flutter</a> — Web inside native</li>
+      <li><a href="sigt.html">A task manager that works behind prison walls</a> — Sync on the job</li>
+    </ul>
+  </section>
+  <blockquote>A client constraint isn't a limit. It's the first design decision.</blockquote>
+  <p class="next">Next case study: <a href="studeo-podcasts.html">A podcast platform, and my first Kubernetes project</a></p>
+</article>
+</main>
+<footer class="site">
+  <p>Juan Vargas · Montevideo, Uruguay · <a href="../llms.txt">llms.txt</a></p>
+</footer>
 </body>
 </html>
