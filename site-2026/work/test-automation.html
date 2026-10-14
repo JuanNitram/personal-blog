@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Test automation, started from scratch — Juan Vargas case study</title>
-<meta name="description" content="Case study — Juan Vargas on starting a Playwright test automation project from scratch at Tithely, making QA visible, and building with AI.">
+<title>Starting a test automation project from scratch — Juan Vargas</title>
+<meta name="description" content="Started a new Playwright project from zero, fixed test management so manual QA counts, and built containerized CI with GitHub Actions. Built with AI, reviewed by me.">
 <meta name="author" content="Juan Vargas">
-<meta property="og:title" content="Test automation, started from scratch — Juan Vargas case study">
-<meta property="og:description" content="Case study — Juan Vargas on starting a Playwright test automation project from scratch at Tithely, making QA visible, and building with AI.">
+<meta property="og:title" content="Starting a test automation project from scratch — Juan Vargas">
+<meta property="og:description" content="Started a new Playwright project from zero, fixed test management so manual QA counts, and built containerized CI with GitHub Actions. Built with AI, reviewed by me.">
 <meta property="og:type" content="article">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" type="image/png" href="../favicon.png">
@@ -16,8 +16,8 @@
 {
  "@context": "https://schema.org",
  "@type": "Article",
- "headline": "Test automation, started from scratch",
- "description": "Case study — Juan Vargas on starting a Playwright test automation project from scratch at Tithely, making QA visible, and building with AI.",
+ "headline": "Starting a test automation project from scratch",
+ "description": "Started a new Playwright project from zero, fixed test management so manual QA counts, and built containerized CI with GitHub Actions. Built with AI, reviewed by me.",
  "author": {
   "@type": "Person",
   "name": "Juan Vargas",
@@ -37,8 +37,8 @@
    "https://www.upwork.com/o/profiles/users/~01c3b3dbb6c4e59e6c/"
   ]
  },
- "about": "Tithely · Quality",
- "keywords": "Playwright, Docker, GitHub Actions, CI/CD, Xray, QA process, Integrations, AI-assisted development"
+ "about": "Church-tech SaaS",
+ "keywords": "Playwright, Docker, GitHub Actions, CI/CD, Xray, Team leadership, AI-assisted development"
 }
 </script>
 </head>
@@ -54,54 +54,57 @@
 </header>
 <main>
 <article>
-  <p class="kicker">Case study 06 · Tithely · Quality</p>
-  <h1>Test automation, started from scratch.</h1>
-  <p class="lede">Today I work as a developer and SDET at Tithely, owning integrations and building automated tests with Playwright. A couple of test projects already existed, but I started a new one from zero, and this time with AI writing most of the code while I make the decisions.</p>
+  <p class="kicker">Case study 03 · Church-tech SaaS</p>
+  <h1>Starting a test automation project from scratch</h1>
+  <p class="lede">Today I lead a 15-person outsourced team, and I also work on integrations and automated tests myself. A couple of test projects already existed, but I decided to start a new one from zero. This one is AI-era: most of the code is generated with AI, and my job is the decisions and the review.</p>
   <dl class="facts">
-    <dt>Role</dt><dd>Developer · SDET · lead</dd>
-    <dt>Era</dt><dd>AI-assisted</dd>
-    <dt>Stack</dt><dd>Playwright · Docker · CI</dd>
-    <dt>Also</dt><dd>Integrations · Jira/Xray</dd>
+    <dt>Industry</dt><dd>Church-tech SaaS</dd>
+    <dt>Role</dt><dd>Lead · developer · SDET</dd>
+    <dt>Team</dt><dd>Leading a 15-person outsourced team</dd>
+    <dt>Stack</dt><dd>Playwright · Docker · GitHub Actions · Jira/Xray</dd>
   </dl>
   <section>
-        <h2>Testing existed. Nobody could see it.</h2>
-        <p>The team mixes in-house developers with contract SDETs. They did QA, but nothing in reporting showed it, and critical flows like <strong>sign-in</strong> relied mostly on people clicking through by hand.</p>
-  </section>
-  <section>
-        <h2>The tool was there. The setup was broken.</h2>
-        <p>The org already had <strong>Xray</strong> for test management. Looking closely, I found why it showed nothing:</p>
+    <h2>My role and responsibilities</h2>
     <ul>
-      <li><strong>Tests with no type.</strong> Test issues were created with no Test Type, so they never counted as real tests in coverage reports.</li>
-      <li><strong>Executions linked to nothing.</strong> Test Executions were logged with no linked Tests, so finished QA runs proved nothing to anyone reading the board.</li>
+      <li>Lead a 15-person outsourced team, with near-daily visibility on tickets, blockers and risk per person.</li>
+      <li>Own several of the product's integrations.</li>
+      <li>Drive QA process and test infrastructure, instead of leaving it to someone else.</li>
     </ul>
   </section>
   <section>
-    <h2>What I built</h2>
-
-    <ol>
-      <li><strong>A new automation project, from zero.</strong> Started a fresh Playwright project instead of patching the existing ones, with coverage for the QA hub and the sign-in flows.</li>
-      <li><strong>Fix Xray adoption.</strong> Set proper Test Types and linked executions to their tests, so manual QA shows up in coverage and reporting.</li>
-      <li><strong>Containerized CI/CD.</strong> Set up a containerized environment so tests run the same way locally and in the pipeline, and tuned CI timeouts so slow is not mistaken for broken.</li>
-      <li><strong>GitHub Actions.</strong> Workflows that pull images from different projects and codebases, spin them up together in containers, and run the test suites automatically.</li>
-      <li><strong>Own the integrations.</strong> Beyond tests, I take care of several of the product's integrations.</li>
-      <li><strong>Team status tooling.</strong> Wrote a <code>/team-status</code> Claude Code command that gathers tickets, story points, blockers and risk per person into one view.</li>
-    </ol>
+    <h2>Key decisions</h2>
+    <ul>
+      <li><strong>Start a new project instead of patching the old ones.</strong> A clean base for Playwright end-to-end coverage of the QA hub and sign-in flows.</li>
+      <li><strong>Fix test management before adding more tests.</strong> Xray existed but was misconfigured: tests had no type and executions were linked to nothing, so finished QA proved nothing in reports.</li>
+      <li><strong>Containerize everything.</strong> Tests should run the same way locally and in CI.</li>
+      <li><strong>Let AI write, keep humans deciding.</strong> AI generates most of the code; I decide what to test, shape the architecture and review the output.</li>
+    </ul>
   </section>
   <section>
-        <h2>Same judgment, different keyboard.</h2>
-        <p>Most projects on this site I wrote by hand. This one is different: <strong>the code is generated with AI</strong>. My job moved to deciding what to test, shaping the architecture, and reviewing what comes out. The years of handcrafting are exactly what make that review worth something.</p>
+    <h2>What we built</h2>
+    <ul>
+      <li><strong>Playwright E2E suite.</strong> For the QA hub and the sign-in flows.</li>
+      <li><strong>GitHub Actions workflows.</strong> That pull images from different projects and codebases, spin them up together in containers, and run the tests automatically.</li>
+      <li><strong>Visible manual QA.</strong> Proper test types and linked executions, so manual testing shows up in coverage.</li>
+      <li><strong>Team status tooling.</strong> A <code>/team-status</code> Claude Code command that gathers tickets, story points, blockers and risk per person into one view.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>The hard part</h2>
+    <p>Getting a mixed, outsourced team to treat quality as shared work, and making that work visible to people who only read reports.</p>
+    <h2>What I learned</h2>
+    <p>AI writes the code; someone still has to know what good looks like. Years of writing everything by hand are what make the review worth something.</p>
   </section>
   <section>
     <h2>Skills shown</h2>
-    <ul class="tags"><li>Playwright</li><li>Docker</li><li>GitHub Actions</li><li>CI/CD</li><li>Xray</li><li>QA process</li><li>Integrations</li><li>AI-assisted development</li></ul>
+    <ul class="tags"><li>Playwright</li><li>Docker</li><li>GitHub Actions</li><li>CI/CD</li><li>Xray</li><li>Team leadership</li><li>AI-assisted development</li></ul>
     <h2>Related case studies</h2>
     <ul>
-      <li><a href="signup-analytics.html">Making signup data worth trusting</a> — Evidence first</li>
-      <li><a href="studeo-podcasts.html">A podcast platform, and my first Kubernetes project</a> — Infrastructure</li>
+      <li><a href="signup-analytics.html">Making signup analytics trustworthy before a production cutover</a> — Same team</li>
+      <li><a href="podcast-platform.html">A podcast platform, and my first Kubernetes project</a> — Infrastructure</li>
     </ul>
   </section>
-  <blockquote>AI writes the code. Someone still has to know what good looks like.</blockquote>
-  <p class="next">Next case study: <a href="rural-king.html">A store scanner, rendered on the server</a></p>
+  <p class="next">Next case study: <a href="church-workspace.html">A content workspace for churches, built from zero</a></p>
 </article>
 </main>
 <footer class="site">

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Annual billing, de-risked before it ships — Juan Vargas case study</title>
-<meta name="description" content="Case study — Juan Vargas on owning the technical risk of an annual billing launch at Tithely against a fixed deadline.">
+<title>De-risking an annual billing launch with a fixed deadline — Juan Vargas</title>
+<meta name="description" content="Owned the technical risk of a revenue-critical billing program: caught where planning notes and code disagreed about subscriptions, and surfaced unticketed scope early.">
 <meta name="author" content="Juan Vargas">
-<meta property="og:title" content="Annual billing, de-risked before it ships — Juan Vargas case study">
-<meta property="og:description" content="Case study — Juan Vargas on owning the technical risk of an annual billing launch at Tithely against a fixed deadline.">
+<meta property="og:title" content="De-risking an annual billing launch with a fixed deadline — Juan Vargas">
+<meta property="og:description" content="Owned the technical risk of a revenue-critical billing program: caught where planning notes and code disagreed about subscriptions, and surfaced unticketed scope early.">
 <meta property="og:type" content="article">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" type="image/png" href="../favicon.png">
@@ -16,8 +16,8 @@
 {
  "@context": "https://schema.org",
  "@type": "Article",
- "headline": "Annual billing, de-risked before it ships",
- "description": "Case study — Juan Vargas on owning the technical risk of an annual billing launch at Tithely against a fixed deadline.",
+ "headline": "De-risking an annual billing launch with a fixed deadline",
+ "description": "Owned the technical risk of a revenue-critical billing program: caught where planning notes and code disagreed about subscriptions, and surfaced unticketed scope early.",
  "author": {
   "@type": "Person",
   "name": "Juan Vargas",
@@ -37,7 +37,7 @@
    "https://www.upwork.com/o/profiles/users/~01c3b3dbb6c4e59e6c/"
   ]
  },
- "about": "Tithely · Billing",
+ "about": "Church-tech SaaS",
  "keywords": "Stripe subscriptions, Program ownership, Code-level risk review, Scope management"
 }
 </script>
@@ -54,53 +54,53 @@
 </header>
 <main>
 <article>
-  <p class="kicker">Case study 05 · Tithely · Billing</p>
-  <h1>Annual billing, de-risked before it ships.</h1>
-  <p class="lede">A revenue-critical program with a fixed date: new customers on annual pricing by January 1, 2027. My job was to make sure what we <em>said</em> the system does matched what the code <em>actually</em> does, before customers found the gap.</p>
+  <p class="kicker">Case study 02 · Church-tech SaaS</p>
+  <h1>De-risking an annual billing launch with a fixed deadline</h1>
+  <p class="lede">A revenue-critical program with an external deadline: annual pricing for new customers by January 1, 2027. My job was to make sure what the team said the system does matched what the code actually does, before customers found the gap.</p>
   <dl class="facts">
+    <dt>Industry</dt><dd>Church-tech SaaS</dd>
     <dt>Role</dt><dd>Engineering lead, program owner</dd>
-    <dt>Org</dt><dd>Tithely · EPD</dd>
-    <dt>When</dt><dd>2026 — in progress</dd>
-    <dt>Domain</dt><dd>Subscriptions · billing · KYC</dd>
+    <dt>Team</dt><dd>Leading a 15-person outsourced team</dd>
+    <dt>Domain</dt><dd>Subscriptions · billing · onboarding</dd>
   </dl>
   <section>
-        <h2>A billing change with no room to slip.</h2>
-        <p>Tithely plans in <strong>Planning Increments</strong>, and annual billing is one of the initiatives leadership is tracking. It has an <strong>external deadline</strong>: annual pricing for new customers by January 1, 2027. Billing changes are unforgiving. A wrong assumption shows up as a wrong charge on a real customer's card.</p>
-        <p>The work cuts across subscriptions, plan selection and the KYC onboarding flow, and several squads and stakeholders are involved, so <strong>shared understanding</strong> is a risk in itself.</p>
+    <h2>My role and responsibilities</h2>
+    <ul>
+      <li>Owned the program on the engineering side, tracking risk at the mechanism level, not just ticket status.</li>
+      <li>Read pull request diffs and code paths myself instead of relaying assumptions.</li>
+      <li>Reported risk upward at the planning-increment level, in a format leadership could act on.</li>
+    </ul>
   </section>
   <section>
-        <h2>The notes said one thing. The code did another.</h2>
-        <p>In planning, meeting notes described what happens when a customer switches billing cadence (monthly ↔ annual): <strong>delete the subscription and create a new one</strong>. I went and read the code path. It doesn't do that at all.</p>
-        <p>That difference matters: <strong>swapping items on an existing subscription</strong> keeps the same subscription, history and identifiers. Delete-and-recreate doesn't. Downstream decisions about proration, reporting and edge cases were being made on the wrong model. I raised it with the code as evidence, so the team could plan against reality.</p>
+    <h2>Key decisions</h2>
+    <ul>
+      <li><strong>Trust the code over the meeting notes.</strong> Notes said switching billing cadence deletes and recreates the subscription; the code actually swaps items on the existing subscription. Proration, history and reporting depend on which one is real, so I raised it with the code as evidence.</li>
+      <li><strong>Flag unticketed scope early.</strong> Following the customer path end to end, I found that choosing a plan after onboarding verification had no ticket at all, and raised it while there was still room in the plan.</li>
+    </ul>
   </section>
   <section>
-        <h2>Finding the work nobody had ticketed.</h2>
-        <p>Following the customer path end to end, I found a step that had <strong>no ticket at all</strong>: <strong>choosing a plan after KYC</strong> is submitted. Annual pricing for new customers has to work there too. Left alone, it would have surfaced late as a "surprise" blocker close to the deadline.</p>
-        <p>I flagged it as a scope risk early, while there was still room in the plan to absorb it.</p>
+    <h2>What we built</h2>
+    <ul>
+      <li><strong>A shared, correct model of billing behavior.</strong> The team plans against how the system really behaves.</li>
+      <li><strong>Hidden scope on the board.</strong> Instead of a late surprise close to the deadline.</li>
+    </ul>
   </section>
   <section>
-    <h2>How I run it</h2>
-    <ol>
-      <li><strong>Track mechanisms, not just status.</strong> A ticket marked "in progress" tells you little. I track the actual behavior each piece depends on, and where it could break.</li>
-      <li><strong>Verify against code.</strong> When notes, docs and code disagree, the code wins. I check pull request diffs and code paths myself instead of relaying assumptions.</li>
-      <li><strong>Surface risk early, upward.</strong> Risks go to leadership at the PI level in a clear, audience-calibrated format — before they become incidents.</li>
-    </ol>
-  </section>
-  <section>
-        <h2>In flight, with fewer unknowns.</h2>
-        <p>The program is <strong>still in progress</strong> toward the January deadline. What changed is that the team is building against <strong>how the system really behaves</strong>, and the hidden scope is on the board instead of waiting to be discovered.</p>
+    <h2>The hard part</h2>
+    <p>Billing changes are unforgiving: a wrong assumption shows up as a wrong charge on a real card. The work cuts across several squads, so shared understanding is a risk in itself.</p>
+    <h2>What I learned</h2>
+    <p>On a billing project, the most expensive bug is a shared wrong assumption. The program is still in progress, with fewer unknowns.</p>
   </section>
   <section>
     <h2>Skills shown</h2>
     <ul class="tags"><li>Stripe subscriptions</li><li>Program ownership</li><li>Code-level risk review</li><li>Scope management</li></ul>
     <h2>Related case studies</h2>
     <ul>
-      <li><a href="guestio.html">A marketplace for podcast guests</a> — Stripe subscriptions</li>
-      <li><a href="sermonly.html">A Notion for churches, built from zero</a> — Stripe subscriptions</li>
+      <li><a href="podcast-marketplace.html">A marketplace for booking podcast guests</a> — Subscriptions</li>
+      <li><a href="church-workspace.html">A content workspace for churches, built from zero</a> — Subscriptions</li>
     </ul>
   </section>
-  <blockquote>On a billing project, the most expensive bug is a shared wrong assumption.</blockquote>
-  <p class="next">Next case study: <a href="test-automation.html">Test automation, started from scratch</a></p>
+  <p class="next">Next case study: <a href="test-automation.html">Starting a test automation project from scratch</a></p>
 </article>
 </main>
 <footer class="site">

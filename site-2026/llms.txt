@@ -1,38 +1,44 @@
 # Juan Vargas
 
-> Technical Lead and hands-on software engineer from Montevideo, Uruguay. Since 2020 I've worked as a contractor through BuildOnline, mostly for Tithely. I've built church software, retail store tools, podcast platforms, marketplaces, payment apps and an offline app for a prison, usually leading the team and always writing code.
+> Technical Lead from Montevideo, Uruguay. Today I lead a 15-person outsourced team as a contractor through BuildOnline. Before that, I led small teams of 3–4 developers as tech lead and project manager, while still writing code, on products for churches, retail, podcasting, payments, childcare, agriculture and more.
 
 ## About
 
-I turn business rules into architecture, then build it. Tech lead on almost every project: leading people, assigning work, and connecting the client with the code. Hands-on with Laravel, Flutter, Ionic, Electron, Hotwire and many APIs, with Stripe as the one I know best. Hands-on Kubernetes experience from one production project (not an expert). Bilingual: Spanish and English.
+Tech lead and project manager on almost every project, while still writing code. Currently leading a 15-person outsourced team; previously small teams of 3–4 developers. Hands-on with Laravel, Flutter, Ionic, Electron, Hotwire and many APIs, with Stripe as the one I know best. Hands-on Kubernetes experience from one production project (not an expert). Bilingual: Spanish and English.
 
-## Case studies
+## Experience by project
 
-### Through BuildOnline: Tithely and Rural King
+### Leading a 15-person outsourced team
 
-- [Sermonly: A Notion for churches, built from zero](work/sermonly.html): Designed and built solo: AI, wording and Bible Gateway integrations, Stripe subscriptions, ~8,000 users — on Electron, web and Ionic.
-- [Media: One media library, everywhere](work/media-picker.html): Tithely's multimedia library and storage, plus the NPM package that opens it as a modal inside many Tithely products.
-- [Breeze Worship: Setlists for church bands, in Flutter](work/breeze-worship.html): CCLI song sheets, MP3s and setlist editing — Flutter with BLoC, and a hand-built bridge to render PDFs with HTML/JS.
-- [Analytics: Making signup data worth trusting](work/signup-analytics.html): Audited GA4, PostHog and GTM by hand, found three silent bugs, then shipped the production cutover — and watched it.
-- [Billing: Annual billing, de-risked before it ships](work/annual-billing.html): Caught where planning notes and code disagreed on subscription behavior, and found unticketed scope before the deadline did.
-- [Quality: Test automation, started from scratch](work/test-automation.html): A new Playwright project from zero, Xray fixed so QA counts, containerized CI — built with AI, reviewed by me.
-- [Rural King: A store scanner, rendered on the server](work/rural-king.html): A replacement for Rural King's in-store handheld app: scan products, manage stock, check other US stores and work through tasks — server-rendered screens inside native iOS and Android wrappers.
+My current work, through BuildOnline, for a church-tech SaaS platform (Tithely). I lead a 15-person outsourced team and stay hands-on with integrations, analytics and test automation.
 
-### Client work
+- [Making signup analytics trustworthy before a production cutover](work/signup-analytics.html) (Church-tech SaaS): Audited the GA4, PostHog and GTM signup pipeline by hand, found three silent bugs, fixed them in order of irreversibility, then shipped the cutover and verified it with live data.
+- [De-risking an annual billing launch with a fixed deadline](work/annual-billing.html) (Church-tech SaaS): Owned the technical risk of a revenue-critical billing program: caught where planning notes and code disagreed about subscriptions, and surfaced unticketed scope early.
+- [Starting a test automation project from scratch](work/test-automation.html) (Church-tech SaaS): Started a new Playwright project from zero, fixed test management so manual QA counts, and built containerized CI with GitHub Actions. Built with AI, reviewed by me.
 
-- [Studeo: A podcast platform, and my first Kubernetes project](work/studeo-podcasts.html): Podcast management with feeds for Spotify, Apple and Google Podcasts, and my first hands-on Kubernetes project: moving production to autoscaling.
-- [Vin Trackers: Finding cars before anyone else](work/vin-trackers.html): Private-market vehicle listings from an API and Facebook in one place, Carfax checks, and seller replies captured with Postmark inbound email.
-- [APG: Pistachio data, out of the spreadsheets](work/apg.html): A manager for American Pistachio Growers' measurement sheets, plus a discovery integration to find US growers without a management system.
-- [Guestio: A marketplace for podcast guests](work/guestio.html): Visibility and bookings for podcasters, with Stripe payments and the subscriptions behind Pro accounts.
-- [Zulio: Card fees, paid by the customer](work/zulio.html): A Flutter payments app that adds the processing fee to the customer's total, with Stripe Tap to Pay and external devices.
-- [CAP: Find a photographer on the map](work/cap-photographers.html): An app for Creative Agent Partners connecting photographers and clients: map search, messaging, photo uploads and payments.
-- [Nanny Company: Every shift, on one calendar](work/nanny-company.html): Book nannies by shift, with access for clients, nannies and admins — and an admin calendar showing every shift at a glance.
-- [3pv: Campus events, one QR code away](work/3pv.html): A university ticketing app: students sign up, buy tickets to campus events and get in with a QR code.
+### Tech lead and project manager on small teams
 
-### Independent projects
+In each of these projects I led a small team of 3–4 developers, acted as project manager, and also implemented features myself: the link between the client and the code. Most of them were written by hand, before AI coding tools.
 
-- [Sigt: A task manager that works behind prison walls](work/sigt.html): Built solo for the Punta Rieles prison: track tasks, take photos and record audio with no internet, then sync at the office outside.
-- [Mi Reserva: Book a haircut on WhatsApp](work/mi-reserva.html): A booking system for barbershops where customers check free days and book a time through a WhatsApp bot.
+- [A content workspace for churches, built from zero](work/church-workspace.html) (Church-tech SaaS): Designed and built a Notion-like workspace for churches from the first line: AI, wording and Bible verse integrations, Stripe subscriptions, ~8,000 users, on desktop, web and mobile.
+- [A media library delivered as an embeddable package](work/media-library.html) (Church-tech SaaS): A multimedia library and storage for client organizations, plus the NPM package that opens it as a modal inside many other products.
+- [A Flutter app for worship setlists, with a hand-built PDF bridge](work/worship-setlists.html) (Church-tech SaaS): Setlist planning with song sheets from a large music database and MP3 uploads; Flutter with BLoC and a bridge to render PDFs with HTML and JavaScript. All by hand.
+- [An in-store handheld app for a US retail chain](work/retail-store-app.html) (US retail chain): A replacement for a retail chain's internal handheld app: scan products, manage stock, check other US stores and work through tasks, built with Laravel and Hotwire inside native wrappers.
+- [A podcast platform, and my first Kubernetes project](work/podcast-platform.html) (Podcast SaaS): Show and episode management with RSS feeds for Spotify, Apple and Google Podcasts, and my first hands-on project moving production to Kubernetes with autoscaling.
+- [A vehicle sourcing platform for a car dealer](work/vehicle-sourcing.html) (Car dealer): Private-market vehicle listings from an external API and Facebook in one place, Carfax quality checks, and seller replies captured with Postmark inbound email.
+- [Measurement sheets and grower discovery for an agricultural association](work/ag-measurements.html) (US agricultural association): A manager for the measurement sheets that came with every sale, plus a discovery integration to find US growers without a management system.
+- [A marketplace for booking podcast guests](work/podcast-marketplace.html) (Podcast marketplace): Visibility and bookings for podcasters, with Stripe one-off payments and the subscriptions behind Pro accounts.
+- [A Flutter payments app that passes card fees to the customer](work/fee-pass-through.html) (Payments startup): A Flutter payments app that adds the processing fee to the customer's total, with Stripe Tap to Pay and external devices.
+- [A marketplace that connects photographers and clients](work/photographer-marketplace.html) (Photography marketplace): Find photographers on a map, message them, receive the photos and pay, all in one app.
+- [Shift booking for nannies, with an admin calendar at the center](work/nanny-scheduling.html) (Childcare staffing company): Book nannies by shift, with separate access for clients, nannies and admins, and an admin calendar that shows every shift at a glance.
+- [QR ticketing for university events](work/campus-ticketing.html) (University events): An Ionic app where students sign up, buy tickets to campus events and get in with a QR code.
+
+### Solo projects
+
+Projects I designed and built on my own.
+
+- [An offline-first task manager for a prison in Uruguay](work/offline-tasks.html) (Public sector, Uruguay): Built solo in Flutter: track tasks, take photos and record audio with no internet inside a prison, then sync at an office outside.
+- [Booking for barbershops through a WhatsApp bot](work/whatsapp-booking.html) (Small businesses): A small booking system for barbershops and similar businesses where customers check free days and book a time through WhatsApp.
 
 ## APIs and tools
 
@@ -40,11 +46,11 @@ I turn business rules into architecture, then build it. Tech lead on almost ever
 - Other APIs: AI APIs, Bible Gateway, Wording and synonyms APIs, CCLI, Carfax, Postmark inbound email, WhatsApp API, Facebook Graph API, Open Graph, Instagram API, Meta APIs, MarketCheck, Mercado Libre, GA4, Google Tag Manager, PostHog, Podcast RSS feeds, Maps, Task and inventory APIs, Jira / Xray
 - Tools: Laravel, PHP, Node.js, Vue / Nuxt, React, Flutter (BLoC), Ionic, Electron, Hotwire, Playwright, Docker, GitHub Actions, Kubernetes (hands-on, one production project), AWS, Google Cloud, MySQL, MongoDB
 
-## Experience
+## Work history
 
-- Now: Technical Lead, BuildOnline · contractor for Tithely. Architecture, integrations, test automation and delivery.
-- 2022: Team Leader, BuildOnline · Tithely. Guided a multidisciplinary team; planned projects from the first steps alongside the PM.
-- 2020: Software Developer, BuildOnline · Tithely. Deployment process and maintainability; Ionic, Flutter, Electron and Laravel.
+- Now: Technical Lead, BuildOnline · contractor for Tithely. Leading a 15-person outsourced team; integrations, analytics, billing and test automation.
+- 2022: Team Leader, BuildOnline. Led small teams of 3–4 developers across several client products, also as project manager.
+- 2020: Software Developer, BuildOnline. Deployment process and maintainability; Ionic, Flutter, Electron and Laravel.
 - 2020: Software Developer, Upwork, freelance. Full stack with Vue.js, NativeScript and Laravel.
 - 2019: Software Developer, Light-it. Full stack with Vue.js, React, Node.js and Laravel.
 - 2018: Backend Developer, Sitios, digital agency. Back-end solutions with Laravel, including a car CRM that synced every new vehicle to Mercado Libre.
