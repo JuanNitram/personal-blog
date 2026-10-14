@@ -1,65 +1,60 @@
 # Juan Vargas
 
-> Technical Lead from Montevideo, Uruguay. Today I lead a 15-person outsourced team as a contractor through BuildOnline. Before that, I led small teams of 3–4 developers as tech lead and project manager, while still writing code, on products for churches, retail, podcasting, payments, childcare, agriculture and more.
+> Juan Vargas, software engineer and Technical Lead from Montevideo, Uruguay, with about nine years in the industry. Good technical skills, and a focus on sharing knowledge, solving problems together and good communication.
 
-## About
+## About me
 
-Tech lead and project manager on almost every project, while still writing code. Currently leading a 15-person outsourced team; previously small teams of 3–4 developers. Hands-on with Laravel, Flutter, Ionic, Electron, Hotwire and many APIs, with Stripe as the one I know best. Hands-on Kubernetes experience from one production project (not an expert). Bilingual: Spanish and English.
+I'm Juan, a software engineer from Montevideo, Uruguay. I've been working in the industry for about nine years. I started as a freelancer, went through agencies and product teams, and over time grew into leading teams.
 
-## Experience by project
+Today I work as a Technical Lead at BuildOnline, where I lead a team of fifteen people. Before that I led smaller teams of three or four developers, often taking care of project management while still writing code alongside them.
 
-### Leading a 15-person outsourced team
+What I enjoy most is the people side of building software. I like sharing what I know with my teammates and learning from them, working through problems together instead of alone, and making room for open, honest conversation. In my experience, good communication matters as much as the technical solution, and I try to bring both to every team I'm part of.
 
-My current work, through BuildOnline, for a church-tech SaaS platform (Tithely). I lead a 15-person outsourced team and stay hands-on with integrations, analytics and test automation.
+## What I focus on
 
-- [Making signup analytics trustworthy before a production cutover](work/signup-analytics.html) (Church-tech SaaS): Audited the GA4, PostHog and GTM signup pipeline by hand, found three silent bugs, fixed them in order of irreversibility, then shipped the cutover and verified it with live data.
-- [De-risking an annual billing launch with a fixed deadline](work/annual-billing.html) (Church-tech SaaS): Owned the technical risk of a revenue-critical billing program: caught where planning notes and code disagreed about subscriptions, and surfaced unticketed scope early.
-- [Starting a test automation project from scratch](work/test-automation.html) (Church-tech SaaS): Started a new Playwright project from zero, fixed test management so manual QA counts, and built containerized CI with GitHub Actions. Built with AI, reviewed by me.
+- Building reliable products that are easy to maintain over time.
+- Helping teams work well together: clear priorities, shared knowledge and space to ask questions.
+- Being a bridge between what the business needs and what the team builds.
 
-### Tech lead and project manager on small teams
+## Experience
 
-In each of these projects I led a small team of 3–4 developers, acted as project manager, and also implemented features myself: the link between the client and the code. Most of them were written by hand, before AI coding tools.
+- Now: Technical Lead, BuildOnline. Leading a team of fifteen people working for a church-tech platform.
+- 2022: Team Leader, BuildOnline. Leading small teams of three or four developers, also as project manager.
+- 2020: Software Developer, BuildOnline.
+- 2020: Software Developer, Upwork, freelance.
+- 2019: Software Developer, Light-it.
+- 2018: Backend Developer, Sitios, digital agency.
+- 2017: Software Developer, Freelance.
 
-- [A content workspace for churches, built from zero](work/church-workspace.html) (Church-tech SaaS): Designed and built a Notion-like workspace for churches from the first line: AI, wording and Bible verse integrations, Stripe subscriptions, ~8,000 users, on desktop, web and mobile.
-- [A media library delivered as an embeddable package](work/media-library.html) (Church-tech SaaS): A multimedia library and storage for client organizations, plus the NPM package that opens it as a modal inside many other products.
-- [A Flutter app for worship setlists, with a hand-built PDF bridge](work/worship-setlists.html) (Church-tech SaaS): Setlist planning with song sheets from a large music database and MP3 uploads; Flutter with BLoC and a bridge to render PDFs with HTML and JavaScript. All by hand.
-- [An in-store handheld app for a US retail chain](work/retail-store-app.html) (US retail chain): A replacement for a retail chain's internal handheld app: scan products, manage stock, check other US stores and work through tasks, built with Laravel and Hotwire inside native wrappers.
-- [A podcast platform, and my first Kubernetes project](work/podcast-platform.html) (Podcast SaaS): Show and episode management with RSS feeds for Spotify, Apple and Google Podcasts, and my first hands-on project moving production to Kubernetes with autoscaling.
-- [A vehicle sourcing platform for a car dealer](work/vehicle-sourcing.html) (Car dealer): Private-market vehicle listings from an external API and Facebook in one place, Carfax quality checks, and seller replies captured with Postmark inbound email.
-- [Measurement sheets and grower discovery for an agricultural association](work/ag-measurements.html) (US agricultural association): A manager for the measurement sheets that came with every sale, plus a discovery integration to find US growers without a management system.
-- [A marketplace for booking podcast guests](work/podcast-marketplace.html) (Podcast marketplace): Visibility and bookings for podcasters, with Stripe one-off payments and the subscriptions behind Pro accounts.
-- [A Flutter payments app that passes card fees to the customer](work/fee-pass-through.html) (Payments startup): A Flutter payments app that adds the processing fee to the customer's total, with Stripe Tap to Pay and external devices.
-- [A marketplace that connects photographers and clients](work/photographer-marketplace.html) (Photography marketplace): Find photographers on a map, message them, receive the photos and pay, all in one app.
-- [Shift booking for nannies, with an admin calendar at the center](work/nanny-scheduling.html) (Childcare staffing company): Book nannies by shift, with separate access for clients, nannies and admins, and an admin calendar that shows every shift at a glance.
-- [QR ticketing for university events](work/campus-ticketing.html) (University events): An Ionic app where students sign up, buy tickets to campus events and get in with a QR code.
+## Some of the projects I've worked on
 
-### Solo projects
+- A content workspace for churches, built from scratch for desktop, web and mobile.
+- A media library shared across several products as an embeddable package.
+- A mobile app for church worship teams to plan their setlists.
+- An in-store handheld app for a retail chain in the United States.
+- A podcast management platform, where I had my first hands-on experience with Kubernetes.
+- A marketplace for booking podcast guests.
+- A vehicle sourcing platform for a car dealer.
+- A payments app that passes card fees on to the customer.
+- A marketplace connecting photographers with clients.
+- A shift booking platform for a childcare company.
+- A data tool for an agricultural association.
+- A ticketing app for university events.
+- An offline-first task manager for a prison in Uruguay.
+- A small WhatsApp booking system for barbershops.
 
-Projects I designed and built on my own.
+## Skills
 
-- [An offline-first task manager for a prison in Uruguay](work/offline-tasks.html) (Public sector, Uruguay): Built solo in Flutter: track tasks, take photos and record audio with no internet inside a prison, then sync at an office outside.
-- [Booking for barbershops through a WhatsApp bot](work/whatsapp-booking.html) (Small businesses): A small booking system for barbershops and similar businesses where customers check free days and book a time through WhatsApp.
-
-## APIs and tools
-
-- Stripe: Subscriptions, Price changes, Connect and connected accounts, Refunds, Tap to Pay, Fee pass-through, One-off payments
-- Other APIs: AI APIs, Bible Gateway, Wording and synonyms APIs, CCLI, Carfax, Postmark inbound email, WhatsApp API, Facebook Graph API, Open Graph, Instagram API, Meta APIs, MarketCheck, Mercado Libre, GA4, Google Tag Manager, PostHog, Podcast RSS feeds, Maps, Task and inventory APIs, Jira / Xray
-- Tools: Laravel, PHP, Node.js, Vue / Nuxt, React, Flutter (BLoC), Ionic, Electron, Hotwire, Playwright, Docker, GitHub Actions, Kubernetes (hands-on, one production project), AWS, Google Cloud, MySQL, MongoDB
-
-## Work history
-
-- Now: Technical Lead, BuildOnline · contractor for Tithely. Leading a 15-person outsourced team; integrations, analytics, billing and test automation.
-- 2022: Team Leader, BuildOnline. Led small teams of 3–4 developers across several client products, also as project manager.
-- 2020: Software Developer, BuildOnline. Deployment process and maintainability; Ionic, Flutter, Electron and Laravel.
-- 2020: Software Developer, Upwork, freelance. Full stack with Vue.js, NativeScript and Laravel.
-- 2019: Software Developer, Light-it. Full stack with Vue.js, React, Node.js and Laravel.
-- 2018: Backend Developer, Sitios, digital agency. Back-end solutions with Laravel, including a car CRM that synced every new vehicle to Mercado Libre.
-- 2017: Software Developer, Freelance. Vue/Nuxt front-ends; Node/Express and Laravel back-ends.
+- Backend: Laravel, PHP, Node.js
+- Frontend and mobile: Vue, React, Flutter, Ionic, Electron, Hotwire
+- Payments and integrations: Stripe (my favorite) and many third-party APIs
+- Quality and infrastructure: Playwright, Docker, GitHub Actions, and some hands-on Kubernetes
+- Languages: Spanish and English
 
 ## Education
 
 - Computer Engineering, Universidad de la República
-- Technological Bachelor in IT (2012), UTU, Universidad del Trabajo del Uruguay
+- Technological Bachelor in IT, UTU, Universidad del Trabajo del Uruguay
 
 ## Contact
 
