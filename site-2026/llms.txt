@@ -1,10 +1,10 @@
 # Juan Vargas
 
-> Juan Vargas, Head of Engineering at BuildOnline, from Montevideo, Uruguay, with about nine years in the industry. Good technical skills, and a focus on sharing knowledge, solving problems together and good communication.
+> Juan Vargas, Head of Engineering at Buildonline, from Montevideo, Uruguay, with about nine years in the industry. Good technical skills, and a focus on sharing knowledge, solving problems together and good communication.
 
 ## About me
 
-I'm Juan, a software engineer from Montevideo, Uruguay, with about nine years in the industry. I'm currently Head of Engineering at BuildOnline, where I lead a 15-person staff augmentation team working with Tithely.
+I'm Juan, a software engineer from Montevideo, Uruguay, with about nine years in the industry. I'm currently Head of Engineering at Buildonline, where I lead a 15-person staff augmentation team working with Tithely.
 
 What I enjoy most is the people side of software: sharing knowledge with my teammates, solving problems together, and keeping communication open and honest.
 
@@ -16,9 +16,9 @@ What I enjoy most is the people side of software: sharing knowledge with my team
 
 ## Experience
 
-- Now: Head of Engineering, BuildOnline. Leading a 15-person staff augmentation team working with Tithely.
-- 2022: Team Leader, BuildOnline. Leading small teams of three or four developers, also as project manager.
-- 2020: Software Developer, BuildOnline.
+- Now: Head of Engineering, Buildonline. Leading a 15-person staff augmentation team working with Tithely.
+- 2022: Team Leader, Buildonline. Leading small teams of three or four developers, also as project manager.
+- 2020: Software Developer, Buildonline.
 - 2020: Software Developer, Upwork, freelance.
 - 2019: Software Developer, Light-it.
 - 2018: Backend Developer, Sitios, digital agency.
