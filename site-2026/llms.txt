@@ -1,14 +1,12 @@
 # Juan Vargas
 
-> Juan Vargas, software engineer and Technical Lead from Montevideo, Uruguay, with about nine years in the industry. Good technical skills, and a focus on sharing knowledge, solving problems together and good communication.
+> Juan Vargas, Head of Engineering at BuildOnline, from Montevideo, Uruguay, with about nine years in the industry. Good technical skills, and a focus on sharing knowledge, solving problems together and good communication.
 
 ## About me
 
-I'm Juan, a software engineer from Montevideo, Uruguay. I've been working in the industry for about nine years. I started as a freelancer, went through agencies and product teams, and over time grew into leading teams.
+I'm Juan, a software engineer from Montevideo, Uruguay, with about nine years in the industry. I'm currently Head of Engineering at BuildOnline, where I lead a 15-person staff augmentation team working with Tithely.
 
-Today I work as a Technical Lead at BuildOnline, where I lead a team of fifteen people. Before that I led smaller teams of three or four developers, often taking care of project management while still writing code alongside them.
-
-What I enjoy most is the people side of building software. I like sharing what I know with my teammates and learning from them, working through problems together instead of alone, and making room for open, honest conversation. In my experience, good communication matters as much as the technical solution, and I try to bring both to every team I'm part of.
+What I enjoy most is the people side of software: sharing knowledge with my teammates, solving problems together, and keeping communication open and honest.
 
 ## What I focus on
 
@@ -18,7 +16,7 @@ What I enjoy most is the people side of building software. I like sharing what I
 
 ## Experience
 
-- Now: Technical Lead, BuildOnline. Leading a team of fifteen people working for a church-tech platform.
+- Now: Head of Engineering, BuildOnline. Leading a 15-person staff augmentation team working with Tithely.
 - 2022: Team Leader, BuildOnline. Leading small teams of three or four developers, also as project manager.
 - 2020: Software Developer, BuildOnline.
 - 2020: Software Developer, Upwork, freelance.
