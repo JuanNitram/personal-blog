@@ -76,3 +76,6 @@ blockquote { margin: 2.4rem 0 1rem; padding-left: 16px; border-left: 3px solid v
   .facts { grid-template-columns: 1fr; }
   .facts dd { margin-bottom: 6px; }
 }
+
+.gh-chart { display: block; overflow-x: auto; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.gh-chart img { display: block; width: 100%; min-width: 560px; height: auto; }
